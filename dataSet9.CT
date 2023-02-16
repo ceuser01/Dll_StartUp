@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>277</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>DBVMX.bigpointer</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>278</ID>
+      <Description>"No description"</Description>
+      <LastState Value="00410000" RealAddress="001F0000"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>DBVMX.bigpointer</Address>
+      <Offsets>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>283</ID>
+      <Description>"No description"</Description>
+      <LastState Value="00000000" RealAddress="001F0004"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>DBVMX.bigpointer</Address>
+      <Offsets>
+        <Offset>4</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>280</ID>
+      <Description>"TestDebug"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi+c],0
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+mov esi,[eax+edi]
+mov [ebx],esi
+jmp end2
+
+end3:
+ret
+
+createThread(00401000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>281</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi+c],0
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi]
+mov [ebx+ecx],esi
+add ecx,4
+jmp end2
+
+end3:
+ret
+
+createThread(00401000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>282</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi+c],0
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+add ecx,4
+jmp end2
+
+end3:
+ret
+
+createThread(00401000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>284</ID>
+      <Description>"testdebugx"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi+c],0
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+ret
+
+createThread(00401000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>285</ID>
+      <Description>"No description"</Description>
+      <LastState Value="00000000" RealAddress="004100E2"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>004100E2</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>286</ID>
+      <Description>"No description"</Description>
+      <LastState Value="7369445B" RealAddress="001F00E2"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>001F00E2</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>287</ID>
+      <Description>"No description"</Description>
+      <LastState Value="656C6261" RealAddress="001F00E6"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>001F00E2+4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>288</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+ret
+
+createThread(00401000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>289</ID>
+      <Description>"debg"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+ret
+
+createThread(00401000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>290</ID>
+      <Description>"No description"</Description>
+      <LastState RealAddress="00420000"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>1</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>DBVMX.bigpointer</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>298</ID>
+      <Description>"No description"</Description>
+      <LastState RealAddress="00430000"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>1</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>DBVMX.bigpointer</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>c</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>291</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+
+mov ebx,[eax+8]
+
+mov ecx,[eax]
+mov [ebx],ecx
+
+
+ret
+
+createThread(00401000)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>292</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+mov edx,[eax+8]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+
+mov [edx+ecx],esi
+
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+ret
+
+createThread(00401000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>293</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+mov edx,[eax+8]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+
+//mov [edx+ecx],esi
+
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+mov ebx,[eax]
+mov ecx,[ebx]
+mov esi,[ecx]
+mov [edx],esi
+ret
+
+createThread(00401000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>294</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+mov edx,[eax+8]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+
+//mov [edx+ecx],esi
+
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+xor edi,edi
+end4:
+mov ebx,[eax]
+mov ecx,[ebx]
+movzx esi,[ecx+edi]
+mov [edx+edi],esi
+add edi,2
+cmp [ecx+edi],0
+jne end4
+ret
+
+createThread(00401000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>295</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+label(end4)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+mov edx,[eax+8]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+
+//mov [edx+ecx],esi
+
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+xor edi,edi
+end4:
+mov ebx,[eax]
+mov ecx,[ebx]
+movzx esi,[ecx+edi]
+mov [edx+edi],esi
+add edi,2
+cmp [ecx+edi],0
+jne end4
+ret
+
+createThread(00401000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>296</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+label(end4)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+mov edx,[eax+8]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+
+//mov [edx+ecx],esi
+
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+xor edi,edi
+xor esi,esi
+end4:
+mov ebx,[eax]
+mov ecx,[ebx]
+movzx ebx,[ecx+esi]
+mov [edx+edi],ebx
+add edi,2
+inc esi
+cmp [ecx+esi],0
+jne end4
+ret
+
+createThread(00401000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>297</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+label(end4)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+mov edx,[eax+8]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+
+//mov [edx+ecx],esi
+
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+xor edi,edi
+xor esi,esi
+end4:
+mov ebx,[eax]
+mov ecx,[ebx]
+movzx ebx,[ecx+esi]
+mov [edx+edi],ebx
+add edi,2
+inc esi
+cmp [ecx+esi],0
+jne end4
+ret
+
+createThread(00401000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>299</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+
+
+
+00401000:
+label(end1)
+label(end2)
+label(end3)
+label(end4)
+xor edi,edi
+xor ecx,ecx
+xor edx,edx
+mov eax,[DBVMX.bigpointer]
+mov ebx,[eax]
+mov edx,[eax+8]
+dec edi
+////////////start
+end2:
+inc edi
+cmp [eax+edi],7C7C0A0D
+je end1
+cmp [eax+edi],7369445B
+je end3
+jmp end2
+
+
+end1:
+mov [eax+edi],0
+lea esi,[eax+edi+4]
+mov [ebx+ecx],esi
+
+//mov [edx+ecx],esi
+
+add ecx,4
+add [eax+4],1
+jmp end2
+
+end3:
+cmp [eax+edi+4],656C6261
+jne end2
+
+xor edi,edi
+xor esi,esi
+
+
+end4:
+mov ebx,[eax]
+mov ecx,[ebx]
+movzx ebx,[ecx+esi]
+mov [edx+edi],ebx
+add edi,2
+inc esi
+cmp [ecx+esi],0
+jne end4
+
+mov edi,[DBVMX.bigpointer]
+mov edi,[edi+c]
+mov [edi],edx
+
+ret
+
+createThread(00401000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

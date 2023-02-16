@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"--------------------ErrorList--------------------"</Description>
+      <LastState/>
+      <Color>00FF00</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"함수 네임 리스트"</Description>
+      <LastState Activated="1"/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(main,00401000)
+Registersymbol(main)
+/////////////////////////////쓰레드 시작점
+define(MChapi,00501000)
+Registersymbol(MChapi)
+////////////////////////////문자 변환 api
+define(LoginMain,00502000)
+Registersymbol(LoginMain)
+////////////////////////////////로그인 api
+define(LoginGui,00503000)
+Registersymbol(LoginGui)
+////////////////////////////////로그인 GUI
+define(memsetapi,00504000)
+Registersymbol(memsetapi)
+////////////////////////////////메모리Set
+
+
+
+
+
+
+
+define(Msize,00A00000)//문자 사이즈
+Registersymbol(Msize)
+
+
+define(copyMemory,00B00000) //복제해서 대입 할 문자열
+Registersymbol(copyMemory)
+
+define(basemeta,00B10000) //기본문자열
+Registersymbol(basemeta) //
+
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"4byte변수"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Msize:
+dd #2000
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"문자열"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+basemeta:
+db 'fuck'
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"멀티바이트 변환 logic"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+MChapi://00501000
+push [Msize]//
+push copyMemory //빈공간에 로드할 address
+push basemeta //기본 문자열
+call ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [Msize] //size
+push basemeta //기본 문자열
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call kernel32.MultiByteToWideChar
+ret
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"메모리 셋api"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+label(goto1)
+label(goto2)
+memsetapi:
+push ebp
+mov ebp,esp
+sub esp,48
+push 44
+push 00
+lea eax,[ebp-48]
+push eax
+call ntdll.memset
+add esp,0C
+lea ecx,[ebp-48]
+push ecx
+call kernel32.GetStartupInfoW
+mov edx,[ebp-1C]
+and edx,01
+je goto1
+movzx eax,wordptr[ebp-18]
+mov [ebp-04],eax
+jmp goto2
+goto1:
+mov [ebp-04],0000000A
+goto2:
+mov ax,[ebp-04]
+mov esp,ebp
+pop ebp
+ret
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"LoginMainGui"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+LoginMain:
+push ebp
+mov ebp,esp
+sub esp,08
+call memsetapi
+movzx eax,ax
+mov [ebp-04],eax
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+push ecx
+mov edx,[ebp-08]
+push edx
+push 00
+push 00400000//header
+call LoginGui
+mov esp,ebp
+pop ebp
+ret
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"쓰레드 스타트"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+main: //startapiX
+
+push 0
+push 0
+push MChapi//start
+push MChapi//start
+push 0
+push 0
+call createThread
+ret
+
+createThread(main)
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

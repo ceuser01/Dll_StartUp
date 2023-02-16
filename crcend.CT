@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"No description"</Description>
+      <LastState Value="76810F00" RealAddress="00A68144"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>MapleStory.exe+668144</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"No description"</Description>
+      <LastState Value="76810F00" RealAddress="00A68144"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>MapleStory.exe+668144</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+label(dbvmx)
+00C84400:
+push 0
+push 0
+push 00C84000
+push 00C84000
+push 0
+push 0
+call [MapleStory.exe+6680C4]
+
+push MapleStory.exe+74AC25
+call [MapleStory.exe+668064]
+add eax,5e2
+mov [00C843C0],eax
+dbvmx:
+push #30000
+call [MapleStory.exe+668144]
+push 0
+push 0
+push [00C843C0]
+push [00C843C0]
+push 0
+push 0
+call [MapleStory.exe+6680C4]
+jmp dbvmx
+
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

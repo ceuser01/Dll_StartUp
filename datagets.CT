@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"핸들 저장"</Description>
+      <LastState Value="00281606" RealAddress="00519000"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>handleX</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"GUI코어"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+define(Debugs,00510000)
+Registersymbol(Debugs)
+label(Rets)
+label(stackCheack)
+////////////////////////////////
+define(datalist,00511000)
+Registersymbol(datalist)
+////////////////////////////////////////
+define(start,00512000)
+Registersymbol(start)
+//////////////////////////////
+define(memsetX,00513000)
+Registersymbol(memsetX)
+label(goto2)
+label(goto3)
+/////////////////////////////
+define(Switch,00514000)
+Registersymbol(Switch)
+label(xors)
+label(Post)
+label(UsersBeginePaint)
+label(GetSystem)
+label(EndX)
+//////////////////////
+define(WinGUI,00515000)
+Registersymbol(WinGUI)
+//////////////////////
+define(main,00516000)
+Registersymbol(main)
+define(loaddll,00517000)
+Registersymbol(loaddll)
+define(Pointers,00518000)
+Registersymbol(Pointers)
+
+define(handleX,00519000)
+Registersymbol(handleX)//Static
+
+define(Static,0051A000)
+Registersymbol(Static)//Static
+
+
+
+
+
+define(sizefilesa,00762000)
+Registersymbol(sizefilesa)
+define(loadMemory,00765000)//malloc
+Registersymbol(loadMemory)
+define(unaddress,00775000)
+Registersymbol(unaddress)
+define(startapiX,0076f000)
+Registersymbol(startapiX)
+
+
+
+sizefilesa:
+dd #428
+unaddress:
+db '.\etc\logo\main.bmp' 00
+unaddress+40:
+db '.\etc\logo\main.bmp' 00
+
+startapiX:
+push [sizefilesa] //size
+push loadMemory //빈공간에 로드할 address
+push unaddress //멀티바이트 어드레스
+call ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [sizefilesa] //size
+push unaddress //멀티바이트 어드레스
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call kernel32.MultiByteToWideChar
+
+push [sizefilesa] //size
+push loadMemory //빈공간에 로드할 address
+push unaddress+40 //멀티바이트 어드레스
+call ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [sizefilesa] //size
+push unaddress+40 //멀티바이트 어드레스
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call kernel32.MultiByteToWideChar
+
+ret
+
+
+Static:
+db 's' 00 't' 00 'a' 00 't' 00 'i' 00 'c' 00 00 00 //static
+
+Static-50:
+db //84 BC BC D2 20 00 74 D0 AD B9 00 00 //createBunt
+
+Static-100:
+db 62 00 72 00 6F 00 61 00 2E 00 62 00 6D 00 70 00 00 00 00 00 00 00 00 00 01 C8 A9 C6 00 00 00 00 00 00
+
+
+Debugs:
+push ebp
+mov ebp,esp
+sub esp,08
+mov [ebp-04],ecx
+mov eax,[ebp-04]
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+movzx edx,byte ptr [ecx]
+test edx,edx
+je Rets
+call kernel32.GetCurrentThreadId
+jne Rets
+
+Rets:
+mov esp,ebp
+pop ebp
+ret
+
+stackCheack:
+repne jne stackCheack+5
+repne ret
+push ebp
+mov ebp,esp
+sub esp,00
+push eax
+
+
+
+
+datalist:
+dd 1
+datalist+8://헬로 윈도우 프롬트 창
+db 48 00 45 00 4C 00 4C 00 4F 00 57 00 49 00 4E 00 44 00 4F 00 57 00 53 00 00 00 00 00 00 00 00 00 1F AA
+datalist+100://제목 출력
+db 44 00 42 00 56 00 4D 00 20 00 57 00 65 00 62 00 20 00 42 00 72 00 6F 00 73 00 65 00 72 00 00 00 70 00
+datalist+200: //프로즌 헬로 윈도우 PE
+db 48 00 45 00 4C 00 4C 00 4F 00 57 00 49 00 4E 00 44 00 4F 00 57 00 53 00 00 00 //헬로 윈도우
+datalist+300:
+db 'A' 00 'B' 00 'A' 00 'N' 00 'D' 00 'O' 00 'N' 00 'W' 00 'a' 00 'r' 00 'e' 00 'v' 00 'e' 00 'r' 00 '1' 00 00 00 00 00 00 00
+
+
+
+Switch:
+push ebp
+mov ebp,esp
+sub esp,00000130 { 304 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-70]
+mov ecx,0000001C { 28 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov ecx,datalist
+call Debugs
+mov eax,[ebp+0C]
+mov [ebp-00000130],eax
+cmp dword ptr [ebp-00000130],01 { 1 }
+je xors
+cmp dword ptr [ebp-00000130],02 { 2 }
+je Post//dllgotosgui.WndProc5+C5
+cmp dword ptr [ebp-00000130],0F { 15 }
+je UsersBeginePaint//dllgotosgui.WndProc5+59
+jmp GetSystem//dllgotosgui.WndProc5+DA
+xors:
+xor eax,eax
+jmp EndX//dllgotosgui.WndProc5+F9
+UsersBeginePaint:
+mov esi,esp
+lea eax,[ebp-50]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.BeginPaint//win32u.NtUserBeginPaint //UsersBeginePaint//dword ptr [dllgotosgui._imp__BeginPaint] { -&gt;-&gt;win32u.NtUserBeginPaint } //UsersBeginePaint
+cmp esi,esp
+call stackCheack
+mov [ebp-08],eax
+mov esi,esp
+lea eax,[ebp-68]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.GetClientRect//dword ptr [dllgotosgui._imp__GetClientRect] { -&gt;USER32.GetClientRect }
+cmp esi,esp
+call stackCheack
+mov esi,esp
+push 25 { 37 }
+lea eax,[ebp-68]
+push eax
+push -01 { 255 }
+push datalist+300//dllgotosgui.dll+178CC //mesage{ ("Hello, Windows!") }
+mov ecx,[ebp-08]
+push ecx
+call USER32.DrawTextW //dword ptr [dllgotosgui._imp__DrawTextW] { -&gt;USER32.DrawTextW }
+cmp esi,esp
+call stackCheack
+mov esi,esp
+lea eax,[ebp-50]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.EndPaint//dword ptr [dllgotosgui._imp__EndPaint] { -&gt;-&gt;win32u.NtUserEndPaint }
+cmp esi,esp
+call stackCheack
+xor eax,eax
+jmp EndX//dllgotosgui.WndProc5+F9
+Post:
+mov esi,esp
+push 00 { 0 }
+call USER32.PostQuitMessage//dword ptr [dllgotosgui._imp__PostQuitMessage] { -&gt;USER32.PostQuitMessage }
+cmp esi,esp
+call stackCheack
+xor eax,eax
+jmp EndX//dllgotosgui.WndProc5+F9
+GetSystem:
+mov esi,esp
+mov eax,[ebp+14]
+push eax
+mov ecx,[ebp+10]
+push ecx
+mov edx,[ebp+0C]
+push edx
+mov eax,[ebp+08]
+push eax
+call ntdll.NtdllDefWindowProc_W
+//USER32.GetSystemMetricsForDpi+D0//00404000//00404000/USER32.gapfnScSendMessage+AD8// USER32.GetSystemMetricsForDpi+D0//USER32.gapfnScSendMessage+AD8//USER32.GetSystemMetricsForDpi+D0//dword ptr [dllgotosgui._imp__DefWindowProcW] { -&gt;-&gt;USER32.GetSystemMetricsForDpi+D0 }
+cmp esi,esp
+call stackCheack
+EndX:
+push edx
+mov ecx,ebp
+push eax
+mov edx,2 { (2) }//lea edx,[dllgotosgui.WndProc5+120] { (2) }
+//call dllgotosgui.dll+111CC
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,00000130 { 304 }
+cmp ebp,esp
+call stackCheack
+mov esp,ebp
+pop ebp
+ret 0010 { 16 }
+
+
+
+
+WinGUI:
+push ebp
+mov ebp,esp
+sub esp,00000120 { 288 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-60]
+mov ecx,00000018 { 24 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov ecx,datalist//dllgotosgui.dll+1C016 { (1) }
+call Debugs//dllgotosgui.dll+112DF
+mov [ebp-5C],00000003 { 3 }
+mov [ebp-58],Switch //dllgotosgui.dll+11078 { (418793) }
+mov [ebp-54],00000000 { 0 }
+mov [ebp-50],00000000 { 0 }
+mov eax,[ebp+08]
+mov [ebp-4C],eax
+mov esi,esp
+push 00007F00 { 32512 }
+push 00 { 0 }
+call USER32.LoadIconW //dword ptr [dllgotosgui._imp__LoadIconW] { -&gt;USER32.LoadIconW }
+cmp esi,esp
+call stackCheack//stackCheack
+mov [ebp-48],eax
+mov esi,esp
+push 00007F00 { 32512 }
+push 00 { 0 }
+call USER32.LoadCursorW//dword ptr [dllgotosgui._imp__LoadCursorW] { -&gt;USER32.LoadCursorW }
+cmp esi,esp
+call stackCheack//stackCheack
+mov [ebp-44],eax
+mov esi,esp
+push 00 { 0 }
+call GDI32.GetStockObject//dword ptr [dllgotosgui._imp__GetStockObject] { -&gt;GDI32.GetStockObject }
+cmp esi,esp
+call stackCheack//stackCheack
+mov [ebp-40],eax
+mov [ebp-3C],00000000 { 0 }
+mov [ebp-38],datalist+8//ClassOwnUTF////dllgotosgui.dll+1A000 { ("HELLOWINDOWS") }
+mov esi,esp
+lea eax,[ebp-5C]
+push eax
+call USER32.RegisterClassW //dword ptr [dllgotosgui._imp__RegisterClassW] { -&gt;USER32.RegisterClassW }
+cmp esi,esp
+call stackCheack
+cmp esi,esp
+call stackCheack
+mov esi,esp
+push 00 { 0 }
+mov eax,[ebp+08]
+push eax
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push #600// X 0000012C { 300 }
+push #1200// Y 00000258 { 600 }
+push 64 { 100 }
+push 64 { 100 }
+push 10CF0000 { 282001408 }  // WS_OVERLAPPEDWINDOW } //WS_VISIBLE
+push datalist+100//dllgotosgui.dll+1788C// DBVM Web Broser//{ ("Hello Windows Application") }
+push datalist+200//datalist+200// Type dllgotosgui.dll+1A000 { ("HELLOWINDOWS") }
+push 00 { 0 }
+call USER32.CreateWindowExW
+call stackCheack
+mov [handleX],eax
+mov [ebp-08],eax
+
+
+
+
+mov esi,esp
+push Static-50{ (-759382908) }
+push 00 { 0 }
+push 00 { 0 }
+mov eax,[ebp-08]
+push eax
+call USER32.FindWindowExW { -&gt;USER32.FindWindowExW }
+cmp esi,esp
+call stackCheack
+
+mov [handleX+4],eax
+mov [ebp-68],eax
+
+
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+mov eax,[ebp-08]
+push eax
+push #1220//64 { 100 }
+push #200//000000C8 { 200 }//??
+push #125//17D { 125 }
+push 000001AA { 170 }
+push 5000000E { 1342177294 }
+push 00 { 0 }
+push Static{ ("Static") }
+push 00 { 0 }
+call USER32.CreateWindowExW { -&gt;USER32.CreateWindowExW }
+cmp esi,esp
+call stackCheack
+//save??
+mov [handleX+8],eax
+mov [ebp-68],eax
+
+push 10 { 16 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push loadMemory//path //Static-100 //imagi
+push 00 { 0 }
+call USER32.LoadImageW { -&gt;USER32.LoadImageW }
+cmp esi,esp
+call stackCheack
+
+mov [handleX+C],eax
+
+
+mov esi,esp
+mov eax,[handleX+C] { (2114267942) }
+push eax
+push 00 { 0 }
+push 00000172 { 370 }
+mov ecx,[handleX+8] { (853824) }
+push ecx
+call USER32.SendMessageW  { -&gt;USER32.SendMessageW }
+call stackCheack
+mov [ebp-68],eax
+
+
+
+mov esi,esp
+mov eax,[ebp+14]
+push eax
+mov ecx,[ebp-08]
+push ecx
+call USER32.ShowWindow//win32u.NtUserShowWindow
+cmp esi,esp
+call stackCheack
+mov esi,esp
+mov eax,[ebp-08]
+push eax
+call USER32.UpdateWindow
+cmp esi,esp
+call stackCheack
+GetMesageun24loop:
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+lea eax,[ebp-2C]
+push eax
+call USER32.GetMessageW
+cmp esi,esp
+call stackCheack
+mov esi,esp
+lea eax,[ebp-2C]
+push eax
+call USER32.TranslateMessage
+cmp esi,esp
+call stackCheack
+mov esi,esp
+lea eax,[ebp-2C]
+push eax
+call USER32.DispatchMessageW
+cmp esi,esp
+call stackCheack
+jmp GetMesageun24loop
+mov eax,[ebp-24]
+push edx
+mov ecx,ebp
+push eax
+mov edx,2
+
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,00000120 { 288 }
+cmp ebp,esp
+call stackCheack
+mov esp,ebp
+pop ebp
+ret
+
+
+memsetX:
+push ebp
+mov ebp,esp
+sub esp,48
+push 44
+push 00
+lea eax,[ebp-48]
+push eax
+call ntdll.memset
+add esp,0C
+lea ecx,[ebp-48]
+push ecx
+call kernel32.GetStartupInfoW
+mov edx,[ebp-1C]
+and edx,01
+je goto2
+movzx eax,wordptr[ebp-18]
+mov [ebp-04],eax
+jmp goto3
+goto2:
+mov [ebp-04],0000000A
+goto3:
+mov ax,[ebp-04]
+mov esp,ebp
+pop ebp
+ret
+
+
+datalist+400:
+db 'C:Windows/SysWOW64/dvapi32.dll'
+datalist+440:
+db 'C:WindowsSysWOW64/msvcrt.dll'
+datalist+480:
+db 'C:Windows/SysWOW64/msvcp140d.dll'
+datalist+4c0:
+db 'C:Windows/SysWOW64/winnsi.dll'
+datalist+500:
+db '.load64/mfc140ud.dll'
+datalist+540:
+db '.load64/ucrtbased.dll'
+
+main+200:
+//push #20
+//call sleep
+push ebp
+mov ebp,esp
+sub esp,08
+call memsetX
+movzx eax,ax
+mov [ebp-04],eax
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+push ecx
+mov edx,[ebp-08]
+push edx
+push 00
+push 00400000//header
+call WinGUI
+mov esp,ebp
+pop ebp
+ret
+
+
+
+main: //startapiX
+push 0
+push 0
+push startapiX//start
+push startapiX//start
+push 0
+push 0
+call createThread
+
+push #75
+call sleep
+
+push 0
+push 0
+push main+200//start
+push main+200//start
+push 0
+push 0
+call createThread
+ret
+
+createThread(main)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"GUI Windows 디스토리 코어"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(ThreadClose,00505000)
+Registersymbol(ThreadClose)
+
+ThreadClose:
+push handleX//ntdll.NtdllDefWindowProc_W
+call USER32.DestroyWindow
+ret
+
+createThread(ThreadClose)
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"db로드 코어"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//ValueGare //C:\Users\Administrator\Downloads\c++baseCore\Web\Project1d2\Project1d2\database\savedata
+define(savesize,00604520)
+Registersymbol(savesize)
+define(Bugde,00604324)
+Registersymbol(Bugde)
+define(saveValue1,00604500)
+Registersymbol(saveValue1)
+define(loaddataalloc,00606500)
+Registersymbol(loaddataalloc)
+define(loaddata,00608500)
+Registersymbol(loaddata)
+
+define(databasemain,00615200)
+Registersymbol(databasemain)
+label(Bug1)
+label(Bug2)
+label(Bug3)
+label(Bug4)
+
+define(read1,00004000)
+Registersymbol(read1)
+define(DatabasePath,00604a00)
+Registersymbol(DatabasePath)
+
+DatabasePath:
+db '.\DB\test.txt' 00
+
+databasemain:
+mov [Bugde],esp
+push loaddataalloc//read1
+push DatabasePath
+call kernel32.FindFirstFileA
+Bug4:
+cmp eax,-1
+je Bug3
+cmp eax,0
+je Bug3
+mov [savesize],eax//Getinza
+push [savesize]
+call kernel32.FindClose
+Bug2:
+push read1//read1
+push DatabasePath
+call ucrtbased.open
+cmp eax,-1
+je Bug1
+cmp eax,0
+je Bug1
+mov [saveValue1],eax//Getinza
+push [loaddataalloc+20] //szie
+push loaddata //loadMemory
+push eax
+call ucrtbased.read
+push [saveValue1]
+call ucrtbased.close
+mov esp,[Bugde] //add esp,18
+ret
+
+Bug1:
+mov esp,[Bugde]
+push 1
+call sleep
+jmp Bug2
+
+Bug3:
+mov esp,[Bugde]
+push 1
+call sleep
+jmp Bug4
+
+
+createThread(databasemain)
+[DISABLE]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"다이아그램 미완성 코어"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(Path,0051B000)
+Registersymbol(Path)//Path
+define(PathDiagram,0051C000)
+Registersymbol(PathDiagram)//Path
+Path:
+db 'x.bmp' 00 00 0A 0A 0A 0A 0A 0A 0A
+
+PathDiagram:
+xor esi,esi
+mov eax,byte ptr [path]
+
+cmp byte ptr [Path+esi]
+ret
+
+
+//createThread(PathDiagram)
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"파일생성"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(createFileas,00525300)
+Registersymbol(createFileas)
+
+alloc(dataSet2222,218)
+Registersymbol(dataSet2222)
+alloc(name2222,228)
+alloc(interrupt2222,128)
+alloc(MemoryLoads,1128)
+Registersymbol(MemoryLoads)
+
+name2222:
+db 'savedb'
+
+MemoryLoads:
+db 'odddpenMemory'
+
+MemoryLoads+90:
+//db 'openMemory'
+
+
+createFileas:
+push 00
+push 00000080
+push 02
+push dataSet2222//큰수
+push 3
+push 40000000
+push name2222//name //
+call kernel32.CreateFileA
+mov [interrupt2222],eax//인자
+push 00
+push MemoryLoads //적용 메모리 주소
+push 7//size
+push MemoryLoads+90 //데이터 할당
+push eax
+call kernel32.WriteFile
+mov eax,[interrupt2222]
+push eax
+call kernel32.CloseHandle
+ret
+
+ createThread(createFileas)
+ 
+[DISABLE]
+
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"입력 값"</Description>
+          <LastState RealAddress="00D60242"/>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>String</VariableType>
+          <Length>10</Length>
+          <Unicode>0</Unicode>
+          <CodePage>0</CodePage>
+          <ZeroTerminate>1</ZeroTerminate>
+          <Address>MemoryLoads+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"로드 메모리"</Description>
+          <LastState RealAddress="00D602CE"/>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>String</VariableType>
+          <Length>10</Length>
+          <Unicode>0</Unicode>
+          <CodePage>0</CodePage>
+          <ZeroTerminate>1</ZeroTerminate>
+          <Address>MemoryLoads+90</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"멀티바이트 로직"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(sizefilesa,00762000)
+Registersymbol(sizefilesa)
+define(loadMemory,00765000)//malloc
+Registersymbol(loadMemory)
+define(unaddress,00775000)
+Registersymbol(unaddress)
+define(startapiX,0076f000)
+Registersymbol(startapiX)
+
+
+sizefilesa:
+dd #128
+unaddress:
+db 'fuck' 00
+startapiX:
+push [sizefilesa] //size
+push loadMemory //빈공간에 로드할 address
+push unaddress //멀티바이트 어드레스
+call ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [sizefilesa] //size
+push unaddress //멀티바이트 어드레스
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call kernel32.MultiByteToWideChar
+ret
+createThread(startapiX)
+[DISABLE]
+
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"size"</Description>
+          <LastState Value="428" RealAddress="00762000"/>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>sizefilesa</Address>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>14</ID>
+              <Description>"loadMemory"</Description>
+              <LastState RealAddress="00765000"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>String</VariableType>
+              <Length>10</Length>
+              <Unicode>0</Unicode>
+              <CodePage>0</CodePage>
+              <ZeroTerminate>1</ZeroTerminate>
+              <Address>loadMemory</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>15</ID>
+                  <Description>"유니코드"</Description>
+                  <LastState RealAddress="00775000"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>String</VariableType>
+                  <Length>10</Length>
+                  <Unicode>0</Unicode>
+                  <CodePage>0</CodePage>
+                  <ZeroTerminate>1</ZeroTerminate>
+                  <Address>unaddress</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>16</ID>
+                      <Description>"변경된 메모리 ??"</Description>
+                      <LastState RealAddress="00567000"/>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>String</VariableType>
+                      <Length>10</Length>
+                      <Unicode>0</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>chMemory</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"No description"</Description>
+      <LastState Value="76D93BC0" RealAddress="76053188"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>MSCTF.dll+C3188</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"No description"</Description>
+      <LastState Value="76D93BC0" RealAddress="794169E0"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>mfc140ud.dll+6469E0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"No description"</Description>
+      <LastState Value="88 31 05 76" RealAddress="76032C3A"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>4</ByteLength>
+      <Address>MSCTF.dll+A2C3A</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+define(Debugs,00510000)
+Registersymbol(Debugs)
+label(Rets)
+label(stackCheack)
+////////////////////////////////
+define(datalist,00511000)
+Registersymbol(datalist)
+////////////////////////////////////////
+define(start,00512000)
+Registersymbol(start)
+//////////////////////////////
+define(memsetX,00513000)
+Registersymbol(memsetX)
+label(goto2)
+label(goto3)
+/////////////////////////////
+define(Switch,00514000)
+Registersymbol(Switch)
+label(xors)
+label(Post)
+label(UsersBeginePaint)
+label(GetSystem)
+label(EndX)
+//////////////////////
+define(WinGUI,00515000)
+Registersymbol(WinGUI)
+//////////////////////
+define(main,00516000)
+Registersymbol(main)
+define(loaddll,00517000)
+Registersymbol(loaddll)
+define(Pointers,00518000)
+Registersymbol(Pointers)
+
+define(handleX,00519000)
+Registersymbol(handleX)//Static
+
+define(Static,0051A000)
+Registersymbol(Static)//Static
+
+
+
+
+
+define(sizefilesa,00762000)
+Registersymbol(sizefilesa)
+define(loadMemory,00765000)//malloc
+Registersymbol(loadMemory)
+define(unaddress,00775000)
+Registersymbol(unaddress)
+define(startapiX,0076f000)
+Registersymbol(startapiX)
+
+
+
+sizefilesa:
+dd #428
+unaddress:
+db '.\etc\logo\main.bmp' 00
+unaddress+40:
+db '.\etc\logo\main.bmp' 00
+
+startapiX:
+push [sizefilesa] //size
+push loadMemory //빈공간에 로드할 address
+push unaddress //멀티바이트 어드레스
+call ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [sizefilesa] //size
+push unaddress //멀티바이트 어드레스
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call kernel32.MultiByteToWideChar
+
+push [sizefilesa] //size
+push loadMemory //빈공간에 로드할 address
+push unaddress+40 //멀티바이트 어드레스
+call ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [sizefilesa] //size
+push unaddress+40 //멀티바이트 어드레스
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call kernel32.MultiByteToWideChar
+
+ret
+
+
+Static:
+db 's' 00 't' 00 'a' 00 't' 00 'i' 00 'c' 00 00 00 //static
+
+Static-50:
+db //84 BC BC D2 20 00 74 D0 AD B9 00 00 //createBunt
+
+Static-100:
+db 62 00 72 00 6F 00 61 00 2E 00 62 00 6D 00 70 00 00 00 00 00 00 00 00 00 01 C8 A9 C6 00 00 00 00 00 00
+
+
+Debugs:
+push ebp
+mov ebp,esp
+sub esp,08
+mov [ebp-04],ecx
+mov eax,[ebp-04]
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+movzx edx,byte ptr [ecx]
+test edx,edx
+je Rets
+call kernel32.GetCurrentThreadId
+jne Rets
+
+Rets:
+mov esp,ebp
+pop ebp
+ret
+
+stackCheack:
+repne jne stackCheack+5
+repne ret
+push ebp
+mov ebp,esp
+sub esp,00
+push eax
+
+
+
+
+datalist:
+dd 1
+datalist+8://헬로 윈도우 프롬트 창
+db 48 00 45 00 4C 00 4C 00 4F 00 57 00 49 00 4E 00 44 00 4F 00 57 00 53 00 00 00 00 00 00 00 00 00 1F AA
+datalist+100://제목 출력
+db 44 00 42 00 56 00 4D 00 20 00 57 00 65 00 62 00 20 00 42 00 72 00 6F 00 73 00 65 00 72 00 00 00 70 00
+datalist+200: //프로즌 헬로 윈도우 PE
+db 48 00 45 00 4C 00 4C 00 4F 00 57 00 49 00 4E 00 44 00 4F 00 57 00 53 00 00 00 //헬로 윈도우
+datalist+300:
+db 00 00 'A' 00 'B' 00 'A' 00 'N' 00 'D' 00 'O' 00 'N' 00 'W' 00 'a' 00 'r' 00 'e' 00 'v' 00 'e' 00 'r' 00 '1' 00 00 00 00 00 00 00
+
+
+
+Switch:
+push ebp
+mov ebp,esp
+sub esp,00000130 { 304 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-70]
+mov ecx,0000001C { 28 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov ecx,datalist
+call Debugs
+mov eax,[ebp+0C]
+mov [ebp-00000130],eax
+cmp dword ptr [ebp-00000130],01 { 1 }
+je xors
+cmp dword ptr [ebp-00000130],02 { 2 }
+je Post//dllgotosgui.WndProc5+C5
+cmp dword ptr [ebp-00000130],0F { 15 }
+je UsersBeginePaint//dllgotosgui.WndProc5+59
+jmp GetSystem//dllgotosgui.WndProc5+DA
+xors:
+xor eax,eax
+jmp EndX//dllgotosgui.WndProc5+F9
+UsersBeginePaint:
+mov esi,esp
+lea eax,[ebp-50]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.BeginPaint//win32u.NtUserBeginPaint //UsersBeginePaint//dword ptr [dllgotosgui._imp__BeginPaint] { -&gt;-&gt;win32u.NtUserBeginPaint } //UsersBeginePaint
+cmp esi,esp
+call stackCheack
+mov [ebp-08],eax
+mov esi,esp
+lea eax,[ebp-68]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.GetClientRect//dword ptr [dllgotosgui._imp__GetClientRect] { -&gt;USER32.GetClientRect }
+cmp esi,esp
+call stackCheack
+mov esi,esp
+push 25 { 37 }
+lea eax,[ebp-68]
+push eax
+push -01 { 255 }
+push datalist+300//dllgotosgui.dll+178CC //mesage{ ("Hello, Windows!") }
+mov ecx,[ebp-08]
+push ecx
+call USER32.DrawTextW //dword ptr [dllgotosgui._imp__DrawTextW] { -&gt;USER32.DrawTextW }
+cmp esi,esp
+call stackCheack
+mov esi,esp
+lea eax,[ebp-50]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.EndPaint//dword ptr [dllgotosgui._imp__EndPaint] { -&gt;-&gt;win32u.NtUserEndPaint }
+cmp esi,esp
+call stackCheack
+xor eax,eax
+jmp EndX//dllgotosgui.WndProc5+F9
+Post:
+mov esi,esp
+push 00 { 0 }
+call USER32.PostQuitMessage//dword ptr [dllgotosgui._imp__PostQuitMessage] { -&gt;USER32.PostQuitMessage }
+cmp esi,esp
+call stackCheack
+xor eax,eax
+jmp EndX//dllgotosgui.WndProc5+F9
+GetSystem:
+mov esi,esp
+mov eax,[ebp+14]
+push eax
+mov ecx,[ebp+10]
+push ecx
+mov edx,[ebp+0C]
+push edx
+mov eax,[ebp+08]
+push eax
+call ntdll.NtdllDefWindowProc_W
+//USER32.GetSystemMetricsForDpi+D0//00404000//00404000/USER32.gapfnScSendMessage+AD8// USER32.GetSystemMetricsForDpi+D0//USER32.gapfnScSendMessage+AD8//USER32.GetSystemMetricsForDpi+D0//dword ptr [dllgotosgui._imp__DefWindowProcW] { -&gt;-&gt;USER32.GetSystemMetricsForDpi+D0 }
+cmp esi,esp
+call stackCheack
+EndX:
+push edx
+mov ecx,ebp
+push eax
+mov edx,2 { (2) }//lea edx,[dllgotosgui.WndProc5+120] { (2) }
+//call dllgotosgui.dll+111CC
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,00000130 { 304 }
+cmp ebp,esp
+call stackCheack
+mov esp,ebp
+pop ebp
+ret 0010 { 16 }
+
+
+
+
+WinGUI:
+push ebp
+mov ebp,esp
+sub esp,00000120 { 288 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-60]
+mov ecx,00000018 { 24 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov ecx,datalist//dllgotosgui.dll+1C016 { (1) }
+call Debugs//dllgotosgui.dll+112DF
+mov [ebp-5C],00000003 { 3 }
+mov [ebp-58],Switch //dllgotosgui.dll+11078 { (418793) }
+mov [ebp-54],00000000 { 0 }
+mov [ebp-50],00000000 { 0 }
+mov eax,[ebp+08]
+mov [ebp-4C],eax
+mov esi,esp
+push 00007F00 { 32512 }
+push 00 { 0 }
+call USER32.LoadIconW //dword ptr [dllgotosgui._imp__LoadIconW] { -&gt;USER32.LoadIconW }
+cmp esi,esp
+call stackCheack//stackCheack
+mov [ebp-48],eax
+mov esi,esp
+push 00007F00 { 32512 }
+push 00 { 0 }
+call USER32.LoadCursorW//dword ptr [dllgotosgui._imp__LoadCursorW] { -&gt;USER32.LoadCursorW }
+cmp esi,esp
+call stackCheack//stackCheack
+mov [ebp-44],eax
+mov esi,esp
+push 00 { 0 }
+call GDI32.GetStockObject//dword ptr [dllgotosgui._imp__GetStockObject] { -&gt;GDI32.GetStockObject }
+cmp esi,esp
+call stackCheack//stackCheack
+mov [ebp-40],eax
+mov [ebp-3C],00000000 { 0 }
+mov [ebp-38],datalist+8//ClassOwnUTF////dllgotosgui.dll+1A000 { ("HELLOWINDOWS") }
+mov esi,esp
+lea eax,[ebp-5C]
+push eax
+call USER32.RegisterClassW //dword ptr [dllgotosgui._imp__RegisterClassW] { -&gt;USER32.RegisterClassW }
+cmp esi,esp
+call stackCheack
+cmp esi,esp
+call stackCheack
+mov esi,esp
+push 00 { 0 }
+mov eax,[ebp+08]
+push eax
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push #380// X 0000012C { 300 }
+push #430// Y 00000258 { 600 }
+push 64 { 100 }
+push 64 { 100 }
+push 10CF0000 { 282001408 }  // WS_OVERLAPPEDWINDOW } //WS_VISIBLE
+push datalist+100//dllgotosgui.dll+1788C// DBVM Web Broser//{ ("Hello Windows Application") }
+push datalist+200//datalist+200// Type dllgotosgui.dll+1A000 { ("HELLOWINDOWS") }
+push 00 { 0 }
+call USER32.CreateWindowExW
+call stackCheack
+mov [handleX],eax
+mov [ebp-08],eax
+
+
+
+
+mov esi,esp
+push Static-50{ (-759382908) }
+push 00 { 0 }
+push 00 { 0 }
+mov eax,[ebp-08]
+push eax
+call USER32.FindWindowExW { -&gt;USER32.FindWindowExW }
+cmp esi,esp
+call stackCheack
+
+mov [handleX+4],eax
+mov [ebp-68],eax
+
+
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+mov eax,[ebp-08] //위치 세이브
+push eax
+push 64{ 100 }
+push 64 { 100 }
+push 10 { 25 }// 오른쪽왼쪽
+push 0 { 70 } //오른쪽 왼쪽
+push 5000000E { 1342177294 }
+push 00 { 0 }
+
+
+push Static{ ("Static") }
+push 00 { 0 }
+call USER32.CreateWindowExW { -&gt;USER32.CreateWindowExW }
+cmp esi,esp
+call stackCheack
+//save??
+mov [handleX+8],eax
+mov [ebp-68],eax
+
+push 10 { 16 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push loadMemory//path //Static-100 //imagi
+push 00 { 0 }
+call USER32.LoadImageW { -&gt;USER32.LoadImageW }
+cmp esi,esp
+call stackCheack
+
+mov [handleX+C],eax
+
+
+mov esi,esp
+mov eax,[handleX+C] { (2114267942) }
+push eax
+push 00 { 0 }
+push 00000172 { 370 }
+mov ecx,[handleX+8] { (853824) }
+push ecx
+call USER32.SendMessageW  { -&gt;USER32.SendMessageW }
+call stackCheack
+mov [ebp-68],eax
+
+
+
+mov esi,esp
+mov eax,[ebp+14]
+push eax
+mov ecx,[ebp-08]
+push ecx
+call USER32.ShowWindow//win32u.NtUserShowWindow
+cmp esi,esp
+call stackCheack
+mov esi,esp
+mov eax,[ebp-08]
+push eax
+call USER32.UpdateWindow
+cmp esi,esp
+call stackCheack
+GetMesageun24loop:
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+lea eax,[ebp-2C]
+push eax
+call USER32.GetMessageW
+cmp esi,esp
+call stackCheack
+mov esi,esp
+lea eax,[ebp-2C]
+push eax
+call USER32.TranslateMessage
+cmp esi,esp
+call stackCheack
+mov esi,esp
+lea eax,[ebp-2C]
+push eax
+call USER32.DispatchMessageW
+cmp esi,esp
+call stackCheack
+jmp GetMesageun24loop
+mov eax,[ebp-24]
+push edx
+mov ecx,ebp
+push eax
+mov edx,2
+
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,00000120 { 288 }
+cmp ebp,esp
+call stackCheack
+mov esp,ebp
+pop ebp
+ret
+
+
+memsetX:
+push ebp
+mov ebp,esp
+sub esp,48
+push 44
+push 00
+lea eax,[ebp-48]
+push eax
+call ntdll.memset
+add esp,0C
+lea ecx,[ebp-48]
+push ecx
+call kernel32.GetStartupInfoW
+mov edx,[ebp-1C]
+and edx,01
+je goto2
+movzx eax,wordptr[ebp-18]
+mov [ebp-04],eax
+jmp goto3
+goto2:
+mov [ebp-04],0000000A
+goto3:
+mov ax,[ebp-04]
+mov esp,ebp
+pop ebp
+ret
+
+
+datalist+400:
+db 'C:Windows/SysWOW64/dvapi32.dll'
+datalist+440:
+db 'C:WindowsSysWOW64/msvcrt.dll'
+datalist+480:
+db 'C:Windows/SysWOW64/msvcp140d.dll'
+datalist+4c0:
+db 'C:Windows/SysWOW64/winnsi.dll'
+datalist+500:
+db '.load64/mfc140ud.dll'
+datalist+540:
+db '.load64/ucrtbased.dll'
+
+main+200:
+//push #20
+//call sleep
+push ebp
+mov ebp,esp
+sub esp,08
+call memsetX
+movzx eax,ax
+mov [ebp-04],eax
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+push ecx
+mov edx,[ebp-08]
+push edx
+push 00
+push 00400000//header
+call WinGUI
+mov esp,ebp
+pop ebp
+ret
+
+
+
+main: //startapiX
+push 0
+push 0
+push startapiX//start
+push startapiX//start
+push 0
+push 0
+call createThread
+
+push #75
+call sleep
+
+push 0
+push 0
+push main+200//start
+push main+200//start
+push 0
+push 0
+call createThread
+ret
+
+createThread(main)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"KERNEL32.DLL"+1DF20</Address>
+      <Comment>kernel32.GetCurrentThreadId
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>

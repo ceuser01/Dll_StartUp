@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"--------------------ErrorList--------------------"</Description>
+      <LastState/>
+      <Color>00FF00</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"함수 네임 리스트"</Description>
+      <LastState Activated="1"/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(main,00401000)
+Registersymbol(main)
+/////////////////////////////쓰레드 시작점
+define(MChapi,00501000)
+Registersymbol(MChapi)
+////////////////////////////문자 변환 api
+define(LoginMain,00502000)
+Registersymbol(LoginMain)
+////////////////////////////////로그인 api
+define(LoginGui,00503000)
+Registersymbol(LoginGui)
+////////////////////////////////로그인 GUI
+define(memsetapi,00504000)
+Registersymbol(memsetapi)
+////////////////////////////////메모리Set
+define(Switch,00505000)
+Registersymbol(Switch)
+////////////////////////////////메모리Set
+
+
+
+
+
+
+define(Msize,00A00000)//문자 사이즈
+Registersymbol(Msize)
+
+
+define(copyMemory,00B00000) //복제해서 대입 할 문자열
+Registersymbol(copyMemory)
+
+define(basemeta,00B10000) //기본문자열
+Registersymbol(basemeta) //
+
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"4byte변수"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Msize:
+dd #2000
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"문자열"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+basemeta:
+db 'zemog'
+
+basemeta+20:
+db 'Hello Windows Application'
+basemeta+40:
+db 'HELLOWINDOWS'
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"멀티바이트 변환 logic"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+MChapi://00501000
+push [Msize]//
+push copyMemory //빈공간에 로드할 address
+push basemeta //기본 문자열
+call ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [Msize] //size
+push basemeta //기본 문자열
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call kernel32.MultiByteToWideChar
+ret
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"메모리 셋api"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+label(goto1)
+label(goto2)
+memsetapi:
+push ebp
+mov ebp,esp
+sub esp,48
+push 44
+push 00
+lea eax,[ebp-48]
+push eax
+call ntdll.memset
+add esp,0C
+lea ecx,[ebp-48]
+push ecx
+call kernel32.GetStartupInfoW
+mov edx,[ebp-1C]
+and edx,01
+je goto1
+movzx eax,wordptr[ebp-18]
+mov [ebp-04],eax
+jmp goto2
+goto1:
+mov [ebp-04],0000000A
+goto2:
+mov ax,[ebp-04]
+mov esp,ebp
+pop ebp
+ret
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"로그인 메인"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+LoginMain:
+push ebp
+mov ebp,esp
+sub esp,08
+call memsetapi
+movzx eax,ax
+mov [ebp-04],eax
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+push ecx
+mov edx,[ebp-08]
+push edx
+push 00
+push 00400000//header
+call LoginGui
+mov esp,ebp
+pop ebp
+ret
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"GUI스위치"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+label(xors)//초기화
+label(Post)//포스트
+label(UsersBeginePaint)//처음 그리기
+label(GetSystem)//시스템으로 가다
+label(EndX)//마지막
+
+
+Switch:
+push ebp
+mov ebp,esp
+sub esp,00000130 { 304 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-70]
+mov ecx,0000001C { 28 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov eax,[ebp+0C]
+mov [ebp-00000130],eax
+cmp dword ptr [ebp-00000130],01 { 1 }
+je xors
+cmp dword ptr [ebp-00000130],02 { 2 }
+je Post//dllgotosgui.WndProc5+C5
+cmp dword ptr [ebp-00000130],0F { 15 }
+je UsersBeginePaint//dllgotosgui.WndProc5+59
+jmp GetSystem//GetSystem//dllgotosgui.WndProc5+DA
+xors:
+xor eax,eax
+jmp EndX//인자를 초기화후 가준다.
+UsersBeginePaint:
+mov esi,esp
+lea eax,[ebp-50]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.BeginPaint//win32u.NtUserBeginPaint //UsersBeginePaint//dword ptr [dllgotosgui._imp__BeginPaint] { -&gt;-&gt;win32u.NtUserBeginPaint } //UsersBeginePaint
+
+mov [ebp-08],eax
+mov esi,esp
+lea eax,[ebp-68]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.GetClientRect//dword ptr [dllgotosgui._imp__GetClientRect] { -&gt;USER32.GetClientRect }
+
+mov esi,esp
+push 25 { 37 }
+lea eax,[ebp-68]
+push eax
+push -01 { 255 }
+push basemeta//제목
+mov ecx,[ebp-08]
+push ecx
+call USER32.DrawTextW
+
+mov esi,esp
+lea eax,[ebp-50]
+push eax
+mov ecx,[ebp+08]
+push ecx
+call USER32.EndPaint
+
+xor eax,eax
+jmp EndX
+Post:
+mov esi,esp
+push 00 { 0 }
+call USER32.PostQuitMessage
+xor eax,eax
+jmp EndX
+GetSystem:
+mov esi,esp
+mov eax,[ebp+14]
+push eax
+mov ecx,[ebp+10]
+push ecx
+mov edx,[ebp+0C]
+push edx
+mov eax,[ebp+08]
+push eax
+call ntdll.NtdllDefWindowProc_W
+
+EndX:
+push edx
+mov ecx,ebp
+push eax
+mov edx,2
+
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,00000130 { 304 }
+mov esp,ebp
+pop ebp
+ret 0010 { 16 }
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>17</ID>
+          <Description>"LoginGui"</Description>
+          <LastState Activated="1"/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+label(GetMesageun24loop)
+LoginGui:
+push ebp
+mov ebp,esp
+sub esp,00000120 { 288 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-60]
+mov ecx,00000018 { 24 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov [ebp-5C],00000003 { 3 }
+mov [ebp-58],Switch //dllgotosgui.dll+11078 { (418793) }
+mov [ebp-54],00000000 { 0 }
+mov [ebp-50],00000000 { 0 }
+mov eax,[ebp+08]
+mov [ebp-4C],eax
+mov esi,esp
+push 00007F00 { 32512 }
+push 00 { 0 }
+call USER32.LoadIconW //dword ptr [dllgotosgui._imp__LoadIconW] { -&gt;USER32.LoadIconW }
+
+mov [ebp-48],eax
+mov esi,esp
+push 00007F00 { 32512 }
+push 00 { 0 }
+call USER32.LoadCursorW//dword ptr [dllgotosgui._imp__LoadCursorW] { -&gt;USER32.LoadCursorW }
+
+mov [ebp-44],eax
+mov esi,esp
+push 00 { 0 }
+call GDI32.GetStockObject//dword ptr [dllgotosgui._imp__GetStockObject] { -&gt;GDI32.GetStockObject }
+
+mov [ebp-40],eax
+mov [ebp-3C],00000000 { 0 }
+mov [ebp-38],basemeta+40//ClassOwnUTF////dllgotosgui.dll+1A000 { ("HELLOWINDOWS") }
+mov esi,esp
+lea eax,[ebp-5C]
+push eax
+call USER32.RegisterClassW //dword ptr [dllgotosgui._imp__RegisterClassW] { -&gt;USER32.RegisterClassW }
+
+mov esi,esp
+push 00 { 0 }
+mov eax,[ebp+08]
+push eax
+push 00 { 0 }
+push 00 { 0 }
+push 80000000 { -2147483648 }
+push 80000000 { -2147483648 }
+push 80000000 { -2147483648 }
+push 80000000 { -2147483648 }
+push 00400000+8F0000 { (0) }
+push basemeta+40//dllgotosgui.dll+1788C// DBVM Web Broser//{ ("Hello Windows Application") }
+push basemeta+40//datalist+200// Type dllgotosgui.dll+1A000 { ("HELLOWINDOWS") }
+push 00 { 0 }
+call USER32.CreateWindowExW
+
+mov [ebp-08],eax
+mov esi,esp
+mov eax,[ebp+14]
+push eax
+mov ecx,[ebp-08]
+push ecx
+call USER32.ShowWindow//win32u.NtUserShowWindow
+
+mov esi,esp
+mov eax,[ebp-08]
+push eax
+call USER32.UpdateWindow
+
+GetMesageun24loop:
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+lea eax,[ebp-2C]
+push eax
+call USER32.GetMessageW
+
+mov esi,esp
+lea eax,[ebp-2C]
+push eax
+call USER32.TranslateMessage
+
+mov esi,esp
+lea eax,[ebp-2C]
+push eax
+call USER32.DispatchMessageW
+
+jmp GetMesageun24loop
+mov eax,[ebp-24]
+push edx
+mov ecx,ebp
+push eax
+mov edx,2
+
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,00000120 { 288 }
+
+mov esp,ebp
+pop ebp
+ret
+
+[DISABLE]
+
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"쓰레드 스타트"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+main: //startapiX
+push 0
+push 0
+push MChapi//start
+push MChapi//start
+push 0
+push 0
+call createThread
+
+
+push #200
+call sleep
+
+push 0
+push 0
+push LoginMain//start
+push LoginMain//start
+push 0
+push 0
+call createThread
+ret
+
+createThread(main)
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
