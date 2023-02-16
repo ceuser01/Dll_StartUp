@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"--------------------캡슐화--------------------"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(main,00401000)
+Registersymbol(main)
+/////////////////////////////
+define(MetaChapi1,00501000)
+Registersymbol(MetaChapi1)
+
+define(metasize,00A00000)
+Registersymbol(metasize)
+//////
+metasize:
+dd #200
+
+define(saveMemory,00B00000)
+Registersymbol(saveMemory)
+
+define(TypeMe1,00B00000)
+Registersymbol(TypeMe1) //
+
+define(TypeMe2,00B10000)
+Registersymbol(TypeMe2) //
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"함수 네임 리스트"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(main,00401000)
+Registersymbol(main)
+/////////////////////////////쓰레드 시작점
+define(MChapi,00501000)
+Registersymbol(MChapi)
+////////////////////////////////문자 변환api
+
+define(Msize,00A00000)//문자 사이즈
+Registersymbol(Msize)
+
+
+define(alloc1,00B00000)
+Registersymbol(alloc1)
+
+define(alloc2,00B00000)
+Registersymbol(alloc2) //
+
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"4byte변수"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Msize:
+dd #200
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"쓰레드 스타트"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+MChapi://00501000
+push [Msize]//
+push alloc1 //빈공간에 로드할 address
+push alloc2 //딱 달라붙는 타입의 메모리가 할당된다.
+call ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [Msize] //size
+push alloc2 //멀티바이트 어드레스
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call kernel32.MultiByteToWideChar
+ret
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

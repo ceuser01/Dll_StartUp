@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"iat"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(filea,KERNEL32.CreateFileA)
+Registersymbol(filea)
+define(wirte,KERNEL32.WriteFile)
+Registersymbol(wirte)
+define(CloseH,KERNEL32.CloseHandle)
+Registersymbol(CloseH)
+define(findx,KERNEL32.FindFirstFileA)
+Registersymbol(findx)
+define(fnext,KERNEL32.FindNextFileA)
+Registersymbol(fnext)
+define(fcloseh,KERNEL32.FindClose)
+Registersymbol(fcloseh)
+//KERNEL32.CloseHandle
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>43</ID>
+      <Description>"Uncode symbol"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+//esi count
+//ebx 예외처리
+//-800~-700영역 예외처리영역
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"apidefine"</Description>
+      <LastState Activated="1"/>
+      <Color>FF00FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(mainx,00431000)
+Registersymbol(mainx)
+define(sizegetx,mainx+1000)
+Registersymbol(sizegetx)
+
+define(debuga,00451000)
+Registersymbol(debuga)
+
+define(SleepX,00452000)
+Registersymbol(SleepX)
+define(PointerACC1,00453000)
+Registersymbol(PointerACC1)
+
+
+SleepX:
+push 80000000
+call sleep
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>38</ID>
+          <Description>"ApiGate"</Description>
+          <LastState Activated="1"/>
+          <Color>FF0000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+PointerACC1:
+
+label(ACClopp)
+
+
+mov [ebp-800],ebx//인터럽트
+
+
+lea ebx,[ebx+esi] //addresaver
+sub ebx,5
+xor esi,esi //esi count
+
+ACClopp:
+inc esi
+cmp byte ptr [ebx+esi],00
+jne ACClopp
+add ebx,2
+add ebx,esi
+mov esi,[PointerCount]
+mov [Poin1+esi],ebx
+add [PointerCount],4
+ret
+
+SleepX:
+push 80000000
+call sleep
+ret
+
+
+mov [Poin1],ebx
+
+mov edx,[Poin2]
+mov [edx],ebx
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"4byte static"</Description>
+      <LastState Activated="1"/>
+      <Color>FF00FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(sizes,00680100)
+Registersymbol(sizes)
+
+define(filehandles,00680104)
+Registersymbol(filehandles)
+
+define(countX2,00680108)
+Registersymbol(countX2)
+
+define(countX3,0068010c)
+Registersymbol(countX3)
+
+define(dataget,00680150)//50byte
+Registersymbol(dataget)//50byte
+
+define(acPath,00685100)//50byte
+Registersymbol(acPath)//50byte
+
+define(countdbvmx,00685200)//50byte
+Registersymbol(countdbvmx)//50byte
+
+define(nullp,00685300)//50byte
+Registersymbol(nullp)//50byte
+
+
+define(Error41,00685600)//50byte
+Registersymbol(Error41)//50byte
+
+Error41:
+db 'Error dbvmnullPointer'
+
+nullp:
+push Error41
+call msvcrt.printf
+add esp,4
+push 800000000
+call sleep
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>33</ID>
+      <Description>"Pointer"</Description>
+      <LastState Activated="1"/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(Poin1,01800000)
+Registersymbol(Poin1)
+
+define(ArryPointer,01800000+4) //ArrPointer
+Registersymbol(ArryPointer) //ArrPointer
+define(Poin3,01800000+8)
+Registersymbol(Poin3)
+define(Poin4,01800000+c)
+Registersymbol(Poin4)
+define(Poin5,01800000+10)
+Registersymbol(Poin5)
+define(Poin6,01800000+14)
+Registersymbol(Poin6)
+//PointerCount
+define(PointerCount,01800000+100)
+Registersymbol(PointerCount)
+Poin1:
+dd 04000000
+ArryPointer:
+dd Arr1
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"비효율적인 staticaddress"</Description>
+      <LastState Activated="1"/>
+      <Color>FF00FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(static1,01680100)
+Registersymbol(static1)
+define(closeCount,01680104)
+Registersymbol(closeCount)
+
+define(countw1,01680108)
+Registersymbol(countw1)
+define(countw2,0168010c)
+Registersymbol(countw2)
+
+acPath:
+db '.\data\*.img' 00 00
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"start"</Description>
+      <LastState Activated="1"/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+define(debugapi,00501000)
+Registersymbol(debugapi)
+
+
+
+
+sizegetx:
+
+label(sizelackstart)
+label(restartDrowing)
+label(end1)
+label(goto2)
+label(goto3)
+
+label(Claer1)
+
+
+push 0
+push 0
+push sizelackstart
+push sizelackstart
+push 4900
+push 0
+call createThread
+push eax
+call closeh
+ret
+
+sizelackstart:
+//시작
+
+push 4800
+push 0
+lea eax,[ebp-4900-8]
+push eax
+call ntdll.memset
+add esp,c
+push dataget //
+push acPath
+call findx//findx
+//////////end
+
+
+
+
+mov [filehandles],eax //Handle
+restartDrowing:
+push 1
+call sleep
+jmp debugapi
+
+debugapi:
+lea ecx,[ebp-140]
+push ecx
+push [filehandles]
+call fnext
+
+lea ebx,[ebp-140] //ebx소모
+add ebx,2c
+mov ebx,[ebx]
+test ebx,ebx
+je nullp
+xor edi,edi
+goto2:
+mov ecx,[acPath+edi-1]
+inc edi
+ //-1 주소를 감안한 주소다.
+mov edx,[Poin1]
+mov [edx+edi-2],ecx //ebp-2c pathname
+cmp ecx,'.img'
+jne goto2
+mov edx,[Poin1]
+mov [edx+edi-2],0//되기는 하는데 절대적인 문제 해결이 아니다. .img의 경로의 사이즈가 많아지면 수정
+mov [edx+edi-3],0 //*을 지우는 것이기에 연산 속도가 비효율.
+//.img가 바뀔떄 수정해야 할 요소.
+//debug
+
+
+xor esi,esi
+label(ACFileter)
+ACFileter:
+lea ebx,[ebp-140] //ebx소모
+add ebx,2c
+mov esi,[countw1]
+
+mov ebx,[ebx+esi]
+test ebx,ebx
+je nullp
+
+
+
+
+mov edx,[Poin1]
+add edx,esi
+mov [edx+edi-3],ebx
+add [countw1],1
+cmp ebx,'.img'
+jne ACFileter
+
+
+Claer1:
+//call SleepX
+mov [countw1],0
+cmp eax,0
+je end1
+lea ebx,[edx+esi]
+test ebx,ebx
+je nullp
+add ebx,2
+
+jmp 00981000
+
+00981000:
+
+call PointerACC1
+jmp restartDrowing
+
+
+end1:
+push [filehandles]
+call fcloseh
+inc [closeCount]
+ret
+
+goto3://de
+
+createThread(sizegetx)
+
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"No description"</Description>
+      <LastState RealAddress="006801FC"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>006801FC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"No description"</Description>
+      <LastState Value="0" RealAddress="006801D0"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>006801D0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"No description"</Description>
+      <LastState Value="0" RealAddress="006801D0"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>dataget+80</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"debuga 의 어드레스는debuga이다."</Description>
+      <LastState Value="0" RealAddress="00451000"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>debuga</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"클로즈 카운트"</Description>
+      <LastState Value="1" RealAddress="01680104"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>closeCount</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26</ID>
+      <Description>"No description"</Description>
+      <LastState RealAddress="04000000"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>51</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>04000000</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"No description"</Description>
+      <LastState Value="2E 5C 64 61 74 61 5C 63 6F 72 65 32 2E 69 6D 67 00 00 2E 5C 64 61 74 61 5C 50 45 2E 69 6D 67 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" RealAddress="04000000"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>245</ByteLength>
+      <Address>04000000</Address>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>97</Key>
+          </Keys>
+          <Value>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</Value>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>41</ID>
+      <Description>"ArryPointer"</Description>
+      <LastState Value="00000000" RealAddress="04000021"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <Color>0000FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ArryPointer</Address>
+      <Offsets>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>45</ID>
+      <Description>"ArryPointer"</Description>
+      <LastState Value="00000000" RealAddress="04000021"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <Color>0000FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ArryPointer</Address>
+      <Offsets>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>42</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+//esi count
+//ebx 예외처리
+//-800~-700영역 예외처리영역
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>44</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+//esi count
+//ebx 예외처리
+//-800~-700영역 예외처리영역
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>46</ID>
+      <Description>"ArryPointer"</Description>
+      <LastState Value="04000021" RealAddress="01800004"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ArryPointer</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>47</ID>
+      <Description>"PointerCount"</Description>
+      <LastState Value="8" RealAddress="01800100"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>PointerCount</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>48</ID>
+      <Description>"No description"</Description>
+      <LastState Value="04000012" RealAddress="01800000"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Poin1</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>49</ID>
+      <Description>"No description"</Description>
+      <LastState Value="04000021" RealAddress="01800004"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ArryPointer</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

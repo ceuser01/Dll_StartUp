@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"HandleList 00901000~00902000"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(startsHandle,00901000)
+Registersymbol(startsHandle)
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"Value 00701000~007F1000"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(Mode1,00701000)
+Registersymbol(Mode1)
+define(NullPointerC,00701004)
+Registersymbol(NullPointerC)
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"Meta 00801000~00900000"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(Meta1,00801000)
+Registersymbol(Meta1)
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"API 00401000~00501000"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(mainX,00411000)
+Registersymbol(mainX)
+define(CreateThreadStart,mainX+1000)
+Registersymbol(CreateThreadStart)
+define(printfx,mainX+2000)
+Registersymbol(printfx)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Th Start::CreateThreadStart"</Description>
+      <LastState Activated="1"/>
+      <Color>00FF00</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+CreateThreadStart:
+push esi
+mov esi,[Project1._imp__CreateThread] { (75250F10) }
+mov [Project1.exe+3388],00000000 { (12),0 }
+push Project1.exe+3384 { (31192) }
+push 00 { 0 }
+push 00 { 0 }
+push Project1.ThreadProc { (204835670) }
+push 00 { 0 }
+push 00 { 0 }
+call esi
+mov ecx,[Project1.exe+3388] { (12) }
+mov [ecx*4+Project1.exe+338C],eax
+test eax,eax
+je Project1.main+B6
+inc ecx
+mov [Project1.exe+3388],ecx { (12) }
+cmp ecx,0C { 12 }
+jl Project1.main+42
+push -01 { 255 }
+push 01 { 1 }
+push Project1.exe+338C { (200) }
+push 0C { 12 }
+call dword ptr [Project1._imp__WaitForMultipleObjects] { -&gt;-&gt;KERNELBASE.WaitForMultipleObjects }
+mov esi,[Project1._imp__CloseHandle] { (224) }
+xor eax,eax
+mov [Project1.exe+3388],eax { (12) }
+push [eax*4+Project1.exe+338C]
+call esi
+mov eax,[Project1.exe+3388] { (12) }
+inc eax
+mov [Project1.exe+3388],eax { (12) }
+cmp eax,0C { 12 }
+jl Project1.main+91
+push [Project1.ghSemaphore] { (204) }
+call esi
+xor eax,eax
+pop esi
+ret
+call dword ptr [Project1._imp__GetLastError] { -&gt;-&gt;KERNELBASE.GetLastError }
+push eax
+push Project1.exe+213C { ("CreateThread error: %d
+") }
+call Project1.printf
+add esp,08 { 8 }
+mov eax,00000001 { 1 }
+pop esi
+ret
+
+/*
+inc [NullPointerC]
+push 9000000
+call sleep
+ret
+*/
+
+//createThread(printfx)
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Th Start Main"</Description>
+      <LastState Activated="1"/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+mainX:
+push 00 { 0 }
+push 0A { 10 }
+push 0A { 10 }
+push 00 { 0 }
+call KERNELBASE.CreateSemaphoreW //dword ptr [Project1._imp__CreateSemaphoreW] { -&gt;-&gt;KERNELBASE.CreateSemaphoreW }
+mov [startsHandle],eax { (260) }
+test eax,eax
+jne CreateThreadStart
+call dword ptr [Project1._imp__GetLastError] { -&gt;-&gt;KERNELBASE.GetLastError }
+push eax
+push Project1.exe+2120 { ("CreateSemaphore error: %d
+") }
+call Project1.printf
+add esp,08 { 8 }
+mov eax,00000001 { 1 }
+ret
+push esi
+mov esi,[Project1._imp__CreateThread] { (75250F10) }
+mov [Project1.exe+3388],00000000 { (12),0 }
+push Project1.exe+3384 { (17980) }
+push 00 { 0 }
+push 00 { 0 }
+push Project1.ThreadProc { (204835670) }
+push 00 { 0 }
+push 00 { 0 }
+call esi
+mov ecx,[Project1.exe+3388] { (12) }
+mov [ecx*4+Project1.exe+338C],eax
+test eax,eax
+je Project1.main+B6
+inc ecx
+mov [Project1.exe+3388],ecx { (12) }
+cmp ecx,0C { 12 }
+jl Project1.main+42
+push -01 { 255 }
+push 01 { 1 }
+push Project1.exe+338C { (264) }
+push 0C { 12 }
+call dword ptr [Project1._imp__WaitForMultipleObjects] { -&gt;-&gt;KERNELBASE.WaitForMultipleObjects }
+mov esi,[Project1._imp__CloseHandle] { (224) }
+xor eax,eax
+mov [Project1.exe+3388],eax { (12) }
+push [eax*4+Project1.exe+338C]
+call esi
+mov eax,[Project1.exe+3388] { (12) }
+inc eax
+mov [Project1.exe+3388],eax { (12) }
+cmp eax,0C { 12 }
+jl Project1.main+91
+push [startsHandle] { (260) }
+call esi
+xor eax,eax
+pop esi
+ret
+call dword ptr [Project1._imp__GetLastError] { -&gt;-&gt;KERNELBASE.GetLastError }
+push eax
+push Project1.exe+213C { ("CreateThread error: %d
+") }
+call Project1.printf
+add esp,08 { 8 }
+mov eax,00000001 { 1 }
+pop esi
+ret
+
+
+createThread(mainX)
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

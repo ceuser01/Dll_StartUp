@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"lib"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(GetModules,00403098)
+Registersymbol(GetModules)
+define(GProc,00403108)
+Registersymbol(GProc)
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>68</ID>
+      <Description>"DefineValeSymbol"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Define(SetME,50)
+Registersymbol(SetMe)
+Define(INFI,7D2B7500)//2100000000
+Registersymbol(INFI)
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>55</ID>
+      <Description>"iatList"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(filea,KERNEL32.CreateFileA)
+Registersymbol(filea)
+define(wirte,KERNEL32.WriteFile)
+Registersymbol(wirte)
+define(CloseH,KERNEL32.CloseHandle)
+Registersymbol(CloseH)
+define(findx,KERNEL32.FindFirstFileA)
+Registersymbol(findx)
+define(fnext,KERNEL32.FindNextFileA)
+Registersymbol(fnext)
+define(fcloseh,KERNEL32.FindClose)
+Registersymbol(fcloseh)
+
+define(loaddllx,KERNEL32.loadlibrarya)
+Registersymbol(loaddllx)
+//KERNEL32.CloseHandle
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"API(00451000~00501000)"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(mainx,00451000)
+Registersymbol(mainx)
+
+define(sizegetx,mainx+1000)
+Registersymbol(sizegetx)
+define(SleepX,mainx+2000)
+Registersymbol(SleepX)
+define(PointerACC1,mainx+3000)
+Registersymbol(PointerACC1)
+define(debuga,mainx+4000)
+Registersymbol(debuga)
+
+
+define(WontimeCode,mainx+5000)
+Registersymbol(WontimeCode)//4000 ValueaddDe
+
+
+
+define(ThreadLackAC,mainx+9000)
+Registersymbol(ThreadLackAC)
+define(IateGateAC,mainx+A000)
+Registersymbol(IateGateAC)//4000 ValueaddDe
+
+
+define(coresub,mainx+B000)
+Registersymbol(coresub)//4000 ValueaddDe
+
+define(IATFilea,mainx+C000)
+Registersymbol(IATFilea)//4000 ValueaddDe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define(debugapi,00501000)
+Registersymbol(debugapi)
+[DISABLE]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"satic 문자열 00F01000~01001000 meta::IATGate"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+Define(staticmain,00F01000)
+Registersymbol(staticmain)
+
+define(dataget,staticmain+40)//50byte
+Registersymbol(dataget)//50byte
+
+define(acPath,staticmain+80)//50byte
+Registersymbol(acPath)//50byte
+
+define(countdbvmx,staticmain+E0)//50byte
+Registersymbol(countdbvmx)//50byte
+
+define(nullp,staticmain+120)//50byte
+Registersymbol(nullp)//50byte
+
+
+define(Error41,staticmain+160)//50byte
+Registersymbol(Error41)//50byte
+
+
+
+define(IATGate,Error41+SetMe)//예측 착탄점 00F011B0
+Registersymbol(IATGate)
+
+//+10000
+define(DLLList,IATGate+10000)//예측 착탄점 00F011B0+50
+Registersymbol(DLLList)
+
+define(ShortMetaDLL,IATGate+20000) //size 100000 big
+Registersymbol(ShortMetaDLL)
+
+define(crefileList,IATGate+30000) //iatfileName
+Registersymbol(crefileList)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>75</ID>
+      <Description>"01001000 아트플레이트 배열영역"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+define(artarr,01001000) //iatfileName
+Registersymbol(artarr)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>44</ID>
+      <Description>"Arr List  01301000~01391000_Type 4byte"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(Arrmain,01301000)
+Registersymbol(Arrmain)
+define(sizes,Arrmain+4)
+Registersymbol(sizes)
+
+define(filehandles,Arrmain+8)
+Registersymbol(filehandles)
+
+define(countX2,Arrmain+c)
+Registersymbol(countX2)
+
+define(countX3,Arrmain+10)
+Registersymbol(countX3)
+
+define(Arr1,Arrmain+14)
+Registersymbol(Arr1)
+
+define(fileH,Arrmain+18)
+Registersymbol(fileH)
+
+define(IATCount,Arrmain+90000)
+Registersymbol(IATCount)
+
+//IATgatge 예측: 01301000+1000 ~5000
+define(IatGateAD,Arrmain+1000)
+Registersymbol(IatGateAD)
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>33</ID>
+      <Description>"Pointer 01391000~01501000"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(Poin6,01391000)
+Registersymbol(Poin6)
+define(Pointermain,01393000)
+Registersymbol(Pointermain)
+
+define(pathdata,Pointermain+4)
+Registersymbol(pathdata)
+
+define(Poin1,Pointermain+4)
+Registersymbol(Poin1)
+
+define(Poin2,Pointermain+8) //ArrPointer
+Registersymbol(Poin2) //ArrPointer
+define(Poin3,Pointermain+c)
+Registersymbol(Poin3)
+define(Poin4,Pointermain+10)
+Registersymbol(Poin4)
+define(Poin5,Pointermain+14)
+Registersymbol(Poin5)
+define(Poin7,Pointermain+18)
+Registersymbol(Poin7)
+
+[DISABLE]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"변수 저장소 01501000~01601000 dll count"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(mainval,01501000)
+Registersymbol(mainval)
+define(static1,mainval+4)
+Registersymbol(static1)
+define(closeCount,mainval+8)
+Registersymbol(closeCount)
+define(countw1,mainval+c)
+Registersymbol(countw1)
+
+define(countw2,mainval+10)
+Registersymbol(countw2)
+
+define(ThreadLack,mainval+14)
+Registersymbol(ThreadLack)
+define(dllPointer,mainval+18)
+Registersymbol(dllPointer)
+define(DebugdllCount,mainval+1C)
+Registersymbol(DebugdllCount)
+define(DebugdllCount2,mainval+20)
+Registersymbol(DebugdllCount2)
+define(4addx,DebugdllCount2+4)
+Registersymbol(4addx)
+[DISABLE]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>73</ID>
+      <Description>"아트플레이트 영역"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(artp,01701000)
+Registersymbol(artp)
+[DISABLE]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"EndPoint"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>0</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>45</ID>
+          <Description>"Meta 문자 골조 처리용"</Description>
+          <LastState/>
+          <Color>0000FF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+acPath:
+db '.\core\*.core' 00 00 00
+
+Error41:
+db 'Error dbvmnullPointer' 00
+
+IATGate:
+db 'ntdll.dll' 00 00
+
+ShortMetaDLL:
+db 'memset' 00 00
+
+ 
+[DISABLE]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>46</ID>
+          <Description>"API골조 저장소 예외처리 용"</Description>
+          <LastState/>
+          <Color>0000FF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+PointerACC1:
+mov [Poin1],ebx
+
+mov edx,[Poin2]
+mov [edx],ebx
+add [Poin2],4
+ret
+
+
+SleepX:
+push 80000000
+call sleep
+ret
+
+
+nullp:
+push Error41
+call msvcrt.printf
+add esp,4
+push 800000000
+call sleep
+ret
+[DISABLE]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>39</ID>
+          <Description>"Arr 골조 처리"</Description>
+          <LastState/>
+          <Color>0000FF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+Poin1:
+dd 04000000
+Poin6:
+dd artp
+[DISABLE]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>54</ID>
+          <Description>"글로벌 인터프리터 락"</Description>
+          <LastState/>
+          <Color>0000FF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+ThreadLackAC:
+label(loopAC1)
+label(RetxDBVMS2)
+cmp [ThreadLackAC],1
+je loopAC1
+RetxDBVMS2:
+ret
+
+loopAC1:
+push 1
+call sleep
+jmp ThreadLackAC
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>47</ID>
+              <Description>"Pointer골조 처리"</Description>
+              <LastState/>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+pathdata:
+dd Pointermain
+Poin7:
+dd 01001000
+[DISABLE]
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>52</ID>
+      <Description>"Wnttime Code :: Level 1"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//ecx 밀어내기
+WontimeCode:
+mov [ThreadLack],1
+push 0
+push 0
+push [ebp+20] //PathValue
+push [ebp+20] //API
+push [ebp+18]//Size
+push 0
+call createThread
+push eax
+call closeh
+push 1
+call sleep
+mov [ThreadLack],0
+ret
+
+
+
+WontimeCode+50:
+mov edx,[ebp+1c]
+push edx
+push 0
+mov edx,[ebp+20]
+lea eax,[ebp]
+sub eax,edx
+push eax
+call ntdll.memset
+add esp,c
+ret
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>57</ID>
+      <Description>"ArtP"</Description>
+      <LastState/>
+      <Color>C0C0C0</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[enable]
+label(startart)
+label(loop)
+label(loop2)
+label(loop3)
+coresub:
+push 1
+call [art.exe+30A8] //sleep
+push 0
+push 0
+push startart
+push startart
+push 4900//size
+push 0
+call [art.exe+30F4] //createThread
+test eax,eax
+je coresub
+push eax
+call [art.exe+30EC] //closeh
+ret
+
+
+startart:
+//mov [Pointermain],pathdata
+push ShortMetaDLL//memset
+push IATGate //meset
+call [GetModules]
+push eax
+call [GProc]
+mov [IatGateAD],eax
+push 4800
+push 0
+lea ebx,[ebp-4900-8]
+push ebx
+call [IatGateAD]//ntdll.memset
+add esp,c
+
+
+//Claer
+
+push dataget
+push acPath
+call [art.exe+31B0]
+mov [ebp-1400],eax //1400핸들 저장
+
+loop:
+mov edx,Pointermain
+add edx,[DebugdllCount]
+push edx
+push [ebp-1400]
+call [art.exe+3048] //findnext
+mov [ebp-1100],eax
+
+push [ebp-1100]
+call [art.exe+3068]  //findclose
+
+xor edi,edi
+lea ecx,[ebp-1F00]
+mov edx,[acPath]
+mov [ecx],edx
+mov edx,[acPath+3]
+mov [ecx+3],edx
+
+label(loop2)
+
+loop2:
+
+mov edx,Pointermain
+add edx,[DebugdllCount]
+add edx,2c
+mov esi,[edx+edi]
+test esi,esi
+je loop3//endloop
+mov [ecx+7+edi],esi
+inc edi
+cmp esi,'core'
+jne loop2
+
+
+mov edx,Pointermain
+add edx,[DebugdllCount]
+add edx,20
+mov edx,[edx]
+mov [ebp-1800],edx
+push 0
+push 0800027
+push 3
+push 0
+push 01
+push 80000000
+mov edx,Pointermain
+add edx,[DebugdllCount]
+add edx,2c //path
+//push edx //path
+lea ecx,[ebp-1f00]
+push ecx
+//push [ebp-1800] //size
+call [art.exe+30C4]//createfilea
+mov [ebp-1500],eax //eax fileh
+//read
+push 00
+lea edx,[ebp+c]
+push edx //dumy
+
+push [ebp-1800] //size
+
+mov edx,[Poin6]//artp
+add edx,[4addx]
+mov ecx,[4addx]
+mov [artarr+ecx],edx
+push edx //address
+
+push [ebp-1500]
+call [art.exe+31C8]
+
+push [ebp-1500]
+call [art.exe+30EC]
+
+mov edx,[ebp-1800]
+add edx,4
+add [Poin6],edx
+
+lea ecx,[ebp-1F00]
+mov [ecx],0
+mov [ecx+4],0
+mov [ecx+8],0
+mov [ecx+c],0
+mov [ecx+10],0
+mov [ecx+14],0
+mov [ecx+18],0
+mov [ecx+1C],0
+mov [ecx+20],0
+mov [ecx+24],0
+mov [ecx+28],0
+mov [ecx+2c],0
+mov [ecx+30],0
+mov [ecx+34],0
+mov [ecx+38],0
+mov [ecx+3c],0
+mov [ecx+40],0
+mov [ecx+48],0
+mov [ecx+4C],0
+mov [ecx+50],0
+
+add [4addx],4
+add [DebugdllCount],70
+inc [DebugdllCount2]
+
+
+
+//claer1
+cmp [ebp-1100],0
+jne loop
+loop3:
+mov [DebugdllCount],0
+mov [DebugdllCount2],0
+push [ebp-1400]
+call [art.exe+3068]  //findclose
+ret
+//createTHread(coresub)
+[disable]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>69</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>pathdata</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>70</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>10</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>01400000+50</Address>
+      <Offsets>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>76</ID>
+      <Description>"Pointer9 Path"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>Poin7</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"KERNEL32.DLL"+1DF20</Address>
+      <Comment>kernel32.GetCurrentThreadId
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>

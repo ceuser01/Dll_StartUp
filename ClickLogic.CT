@@ -1,0 +1,3984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>206</ID>
+      <Description>"--------------------ErrorList--------------------"</Description>
+      <LastState/>
+      <Color>00FF00</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>207</ID>
+      <Description>"함수 네임 리스트"</Description>
+      <LastState/>
+      <Color>FF0000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+define(baseP,00442000) //KEYCount
+Registersymbol(baseP)//KEYCount
+define(GetModules,00403098)
+Registersymbol(GetModules)
+
+define(GProc,00403108)
+Registersymbol(GProc)
+/////////////////////////////쓰레드 시작점
+define(MChapi,00501000)
+Registersymbol(MChapi)
+define(MultiByteX,00501600)
+Registersymbol(MultiByteX)
+////////////////////////////문자 변환 api
+define(LoginMain,00502000)
+Registersymbol(LoginMain)
+////////////////////////////////로그인 api
+define(LoginGui,00503000)
+Registersymbol(LoginGui)
+////////////////////////////////로그인 GUI
+define(memsetapi,00504000)
+Registersymbol(memsetapi)
+define(Getsav,00504500)
+Registersymbol(Getsav)
+////////////////////////////////메모리Set
+define(Switch,00505000)
+Registersymbol(Switch)
+////////////////////////////////메모리Set00605000
+define(image1,00515000)
+Registersymbol(image1)
+define(malloc24,00525000)
+Registersymbol(malloc24)
+define(malloc28,00525600)
+Registersymbol(malloc28)
+define(malloc4,00525800)
+Registersymbol(malloc4)
+define(tests,00526000)
+Registersymbol(tests)
+define(Cap0,00534000)
+Registersymbol(Cap0)
+define(Cap1,00535000)
+Registersymbol(Cap1)
+define(Cap2,00536000)
+Registersymbol(Cap2)
+define(Cap3,00537000)
+Registersymbol(Cap3)
+define(Cap4,00539000)
+Registersymbol(Cap4)
+define(Cap5,0053a000)
+Registersymbol(Cap5)
+define(Cap6,0053b000)
+Registersymbol(Cap6)
+define(Cap7,0053c000)
+Registersymbol(Cap7)
+define(main,0053fd00)
+Registersymbol(main)
+define(Keyboard1,0055c000)
+Registersymbol(Keyboard1)
+define(Keyboard2,0055c800)
+Registersymbol(Keyboard2)
+define(Keyboard3,0055a800)
+Registersymbol(Keyboard3)
+define(KeyData,0055d000)
+Registersymbol(KeyData)
+define(printf0A,0055e000)
+Registersymbol(printf0A)
+define(mp3Type,0055f000)
+Registersymbol(mp3Type)
+
+define(Th,00561000)
+Registersymbol(Th)
+define(SoundX,00562d00)
+Registersymbol(SoundX)
+
+
+define(imageSaveapi,00564900)
+Registersymbol(imageSaveapi)
+define(DrowAPI,00567900)
+Registersymbol(DrowAPI)
+define(CreateImageAPI,00569900)
+Registersymbol(CreateImageAPI)
+define(CreateDC,00568900)
+Registersymbol(CreateDC)
+//Small
+define(icon,00600000)
+Registersymbol(icon)
+////////////////////////////////메모리Set
+define(mainX,00605000)
+Registersymbol(mainX)
+
+define(logos,00610000)
+Registersymbol(logos)
+
+define(logos,00610000)
+Registersymbol(logos)
+define(OKBOX,0061a300)
+Registersymbol(OKBOX)
+define(XBOX,0061b300)
+Registersymbol(XBOX)
+
+define(startlogo,0070d000)
+Registersymbol(startlogo)
+
+define(disablelogo,0070d600)
+Registersymbol(disablelogo)
+define(enableX,0070db00)
+Registersymbol(enableX)
+
+define(Scrin,0070f600)
+Registersymbol(Scrin)
+define(ScrinAC,0070ff00)
+Registersymbol(ScrinAC)
+
+define(CharComboBox,0077A100)
+Registersymbol(CharComboBox)
+
+define(combobxXYAPI,007cc000)
+Registersymbol(combobxXYAPI)
+
+define(WolrdCh,008d1200)
+Registersymbol(WolrdCh)
+define(Wolrdicon1,008d1600)
+Registersymbol(Wolrdicon1)
+define(Ch1,008d1a00)
+Registersymbol(Ch1)
+define(Ch2,008d1f00)
+Registersymbol(Ch2)
+
+
+define(Bufring,00502000)
+Registersymbol(Bufring)
+define(Bufring2,00502600)
+Registersymbol(Bufring2)
+define(Bufring3,00502f00)
+Registersymbol(Bufring3)
+
+define(Kore,009f0000)//문자 사이즈
+Registersymbol(Kore)
+
+define(IATGate,009A0000)//api iat
+Registersymbol(IATGate)
+
+
+define(Msize,00A00000)//문자 사이즈
+Registersymbol(Msize)
+define(hdc,00A08000)//문자 사이즈
+Registersymbol(hdc)
+define(mainDC,00A08004)//문자 사이즈
+Registersymbol(mainDC)
+define(Backbuf,00A08008)//문자 사이즈
+Registersymbol(Backbuf)
+////////////////////////////////////
+define(mainDCimage,00A09000)//이미지만들기
+Registersymbol(mainDCimage)
+define(Backbufimage,00A09004)//이미지만들기
+Registersymbol(Backbufimage)
+
+define(imagesize,00A10000)//로고 좌표
+Registersymbol(imagesize)
+define(Pointer,00A20000)//문자 사이즈
+Registersymbol(Pointer)
+
+
+define(Handle,00A30000)//문자 사이즈
+Registersymbol(Handle)
+define(winHandle,00A36000)//문자 사이즈
+Registersymbol(winHandle)
+
+define(ScrinData,00A70000)//문자 사이즈
+Registersymbol(ScrinData)
+
+define(imagePointer,00A80000)//문자 사이즈
+Registersymbol(imagePointer)
+
+define(copyMemory,00B00000) //복제해서 대입 할 문자열
+Registersymbol(copyMemory)
+
+define(basemeta,00B10000) //기본문자열
+Registersymbol(basemeta) //
+
+define(KeyCopy,00B20000) //기본문자열
+Registersymbol(KeyCopy) //
+
+define(dlllist,00B25000) //기본문자열
+Registersymbol(dlllist) //
+
+ define(apilist,00B2A000) //기본문자열
+Registersymbol(apilist) //
+
+ define(IAT,00F2F000) //기본문자열
+Registersymbol(IAT) //
+
+ define(PathDiagram,015b6000) //기본문자열
+Registersymbol(PathDiagram) //
+ define(XYDiagram,00Bb5000) //기본문자열
+Registersymbol(XYDiagram) //
+ define(loadImageX,00Be4000) //기본문자열
+Registersymbol(loadImageX) //
+
+
+ define(DebugCount,00C00000) //기본문자열
+Registersymbol(DebugCount) //
+ define(40Count,00C00004) //기본문자열
+Registersymbol(40Count) //
+ define(4Count,00C00008) //기본문자열
+Registersymbol(4Count) //
+define(imageDiagramXsubmain,01216400)
+Registersymbol(imageDiagramXsubmain)
+define(imageDiagramX,01207000)
+Registersymbol(imageDiagramX)
+define(imageDiagramXsub,01217000)
+Registersymbol(imageDiagramXsub)
+
+define(scrinRestart,01237000)
+Registersymbol(scrinRestart)
+
+define(scrinRestartsub,01247000)
+Registersymbol(scrinRestartsub)
+
+define(DirectXMainCon,01408000)
+Registersymbol(DirectXMainCon)
+
+define(UIIPointer,Pointer+40)
+Registersymbol(UIIPointer)
+
+define(factory2,factory+4)
+Registersymbol(factory2)
+
+define(MouseMovs,01601c00)
+Registersymbol(MouseMovs)
+define(Mouseallocx,01602c00)
+Registersymbol(Mouseallocx)
+define(Mouseallocy,01602c04)
+Registersymbol(Mouseallocy)
+
+define(MouseallocFloatx,01602f00)
+Registersymbol(MouseallocFloatx)
+define(MouseallocFloaty,01602f04)
+Registersymbol(MouseallocFloaty)
+
+define(MouseallocFloatxsub,01602EF8)
+Registersymbol(MouseallocFloatxsub)
+define(MouseallocFloatysub,01602EFC)
+Registersymbol(MouseallocFloatysub)
+
+define(metaguiID,00672000)
+Registersymbol(metaguiID)
+
+define(metaguiID,00672000)
+Registersymbol(metaguiID)
+
+define(MetaInza,01341000)
+Registersymbol(MetaInza)
+define(metaapiMain,01342000)
+Registersymbol(metaapiMain)
+define(Packtory,01321000)
+Registersymbol(Packtory)
+define(diret,01605ff0)
+Registersymbol(diret)//BrashFloat1D0
+
+define(LgoinBrush12sub,01634ff0)
+Registersymbol(LgoinBrush12sub)//BrashFloat1D0
+
+define(LgoinBrush12,01607ff0)
+Registersymbol(LgoinBrush12)//BrashFloat1D0
+define(LgoinBrush1,01608ff0)
+Registersymbol(LgoinBrush1)//BrashFloat1D0
+define(LgoinBrush2,016095f0)
+Registersymbol(LgoinBrush2)//BrashFloat1D0
+
+define(Direct2DKEYX,01111000)
+Registersymbol(Direct2DKEYX)//Value
+
+define(MetaIn1,01112000)
+Registersymbol(MetaIn1)//문자열 출력할 녀석들
+
+define(MetaIn2,01112500)
+Registersymbol(MetaIn2)//문자열 출력할 녀석들
+
+define(BrashFloat1D0,01114000)
+Registersymbol(BrashFloat1D0)//BrashFloat1D0
+
+
+
+define(MainMetaX,01120000) //api
+Registersymbol(MainMetaX)//api
+
+define(operX,01121000) //api2
+Registersymbol(operX)//api2
+
+define(BrushMainX,01122000) //api3
+Registersymbol(BrushMainX)//api3
+
+define(6CMeta,01113000) //KEYMAIN
+Registersymbol(6CMeta)//KEYMAIN
+define(logoinSX,01113004) //KEYMAIN
+Registersymbol(logoinSX)//KEYMAIN
+define(6CMeta2,0111f000) //KEYMAIN
+Registersymbol(6CMeta2)//KEYMAIN
+
+
+define(KEYSave,01125000) //KEYSave
+Registersymbol(KEYSave)//KEYSave
+define(KeyCount,01125000-4) //KEYCount
+Registersymbol(KeyCount)//KEYCount
+define(KEYSwitch,01125000-8) //KEYCount
+Registersymbol(KEYSwitch)//KEYCount
+
+define(KEYAI,01123000) //KEYMAIN
+Registersymbol(KEYAI)//KEYMAIN
+
+define(KEYAI2,01123400) //KEYMAIN
+Registersymbol(KEYAI2)//KEYMAIN
+
+
+define(KEYSave2,01126000) //KEYSave
+Registersymbol(KEYSave2)//KEYSave
+define(KeyCount2,01126000-4) //KEYCount
+Registersymbol(KeyCount2)//KEYCount
+define(KEYSwitch2,01126000-8) //KEYCount
+Registersymbol(KEYSwitch2)//KEYCount
+
+define(LgoinSwitchContolo,01129000) //LgoinSwitch
+Registersymbol(LgoinSwitchContolo)//LgoinSwitch
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>303</ID>
+      <Description>"오브젝트 사이즈"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+objectsize:
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>208</ID>
+      <Description>"문자열"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+
+basemeta:
+db 'Logo' 00
+
+basemeta+10:
+db 'Label'
+
+basemeta+20:
+db 'CoreStory' 00
+
+basemeta+30:
+db 'button'
+
+basemeta+40:
+db 'CoreStoryClass' 00
+basemeta+50:
+db 'edit' 00
+basemeta+60:
+db 'Static' 00
+basemeta+70:
+db 'combobox' 00
+basemeta+80:
+db 73 'tatic' 00
+
+basemeta+a0:
+db '.\etc\logo\main.png' 00 00
+
+basemeta+c0:
+db '.\etc\logo\loginDIg.png' 00 00
+
+basemeta+e0:
+db '.\etc\logo\idfind.png' 00 00
+
+basemeta+100:
+db '.\etc\logo\okbox.png' 00 00
+
+basemeta+120:
+db '.\etc\logo\canser.png' 00 00
+basemeta+140:
+db '.\etc\logo\Cursor.png' 00 00
+basemeta+160:
+db '.\etc\Sound\login.mp3' 00 00
+basemeta+180:
+db '.\etc\logo\logo.png' 00 00
+
+basemeta+1a0:
+db '.\etc\Start\menu.png' 00 00
+
+basemeta+1c0:
+db '.\etc\Start\ch.png' 00 00
+
+basemeta+1e0:
+db '.\etc\Start\GOTOWOR.png' 00 00
+basemeta+200:
+db '.\etc\Start\icon9.png' 00 00
+//메인 캐릭터 선택창
+basemeta+220:
+db '.\etc\CH\ChSelect.png' 00 00
+///////////
+basemeta+240:
+db '.\etc\CH\ChStart.png' 00 00 //게임스타트
+basemeta+260:
+db '.\etc\CH\ChDelete.png' 00 00 //캐릭터 삭제
+basemeta+280:
+db '.\etc\CH\ChCreate.png' 00 00 //캐릭터 생성
+//캐릭터 커스텀 \etc\CHCustom
+basemeta+2A0:
+db '.\etc\Custom\create.png' 00 00 //00 00   //캐릭터 생성
+
+basemeta+2C0:
+db '.\etc\Custom\check.png' 00 00 //00 00   //캐릭터 생성
+basemeta+2E0:
+db '.\etc\Custom\combox.png' 00 00 //00 00   //캐릭터 생성
+/////////////////////얼굴
+
+
+basemeta+1000:
+db '.\etc\Sound\main.mp3' 00 00
+basemeta+1020:
+db 'KK찡그린얼굴' 00 00
+basemeta+1040:
+db 'KK구긴얼굴' 00 00
+///////////////////머리
+basemeta+1060:
+db 'KK검은색빡빡머리' 00 00
+basemeta+1080:
+db 'KK갈색더벅머리' 00 00
+
+basemeta+10A0:
+db 'KK검은색토벤머리' 00 00
+//////////////////////////////////////하얀 반팔 면티
+basemeta+10C0:
+db 'KK하얀반팔면티' 00 00
+basemeta+10E0:
+db 'KK하얀면나시' 00 00
+basemeta+1100:
+db 'KK회색반팔면티' 00 00
+///////////////////반바지
+basemeta+1100:
+db 'KK파랑청반바지' 00 00
+basemeta+1120:
+db 'KK갈색면바지' 00 00
+basemeta+1140:
+db 'KK초록면바지' 00 00
+////////////////////////////신발
+basemeta+1160:
+db 'KK가죽샌들' 00 00
+basemeta+1180:
+db 'KK빨간색고무장화' 00 00
+basemeta+11A0:
+db 'KK노란색고무장화' 00 00
+/////////////////////////////검
+basemeta+11C0:
+db 'KK검' 00 00
+basemeta+11E0:
+db 'KK도끼' 00 00
+basemeta+1200:
+db 'KK몽둥이' 00 00
+////////////////////////////////////////////////3끝
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>209</ID>
+      <Description>"4byte변수"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Msize:
+dd #13000
+Msize+4:
+dd #2000
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>513</ID>
+      <Description>"diret"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+label(Set1)
+label(Set2)
+
+diret:
+push ecx
+lea ecx,[esp+04]
+sub ecx,eax
+sbb eax,eax
+not eax
+and ecx,eax
+mov eax,esp
+and eax,FFFFF000 { -4096 }
+Set2:
+cmp ecx,eax
+jb Set1//BeatriceServer.exe+12FF721
+mov eax,ecx
+pop ecx
+xchg eax,esp
+mov eax,[eax]
+mov [esp],eax
+repne ret
+Set1:
+sub eax,00001000 { 4096 }
+test [eax],eax
+jmp Set2//BeatriceServer.exe+12FF712
+
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>556</ID>
+      <Description>"BrashList"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+
+Direct2DKEY:
+db 4D 00 65 00 69 00 72 00 79 00 6F 00 00 00 00
+MetaIn:
+db 31 00 32 00 33 00 34 00 35 00 36 00 37 00 38 00 39 00 61 00 62 00 63 00 64 00 65 00 66 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+BrashFloat1D0:
+db 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 80 3F 00 00 80 3F 00 00 80 3F 00 00 80 3F 00 00 00 00 22 08 CF 61 00 00 00 00 02 00 00 00 64 00 00 00 98 35 00 00 98 23 00 00 00 00 00 00 22 08 CF 61 00 00 00 00 0C 00 00 00 14 00 00 00 FC 35 00 00 FC 23 00 00 00 00 00 00 22 08 CF 61 00 00 00 00 0D 00 00 00 B4 02 00 00 10 36 00 00 10 24 00 00 00 00 00 00 22 08 CF 61 00 00 00 00 0E 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 BC 00 00 00
+MetaIn2:
+db 32 00 33 00 33 00 34 00 35 00 36 00 37 00 38 00 39 00 61 00 62 00 63 00 64 00 65 00 66 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+6CMeta:
+db 6c 00 00 00 00
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>304</ID>
+      <Description>"IAT문자열 찍어내기"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+objectsize:
+//
+apilist:
+db 'CoInitialize'
+dlllist:
+db 'ole32.dll'
+
+apilist+20:
+db 'CoCreateInstance'
+dlllist+20:
+db 'combase.dll'
+
+apilist+40:
+db 'CoUninitialize'
+
+dlllist+40:
+db 'combase.dll'
+
+apilist+60:
+db 'malloc'
+
+dlllist+60:
+db 'ucrtbased.dll'
+
+apilist+80:
+db 'printf'
+
+dlllist+80:
+db 'msvcrt.dll'
+
+apilist+A0:
+db 'strlen'
+
+dlllist+A0:
+db 'ucrtbased.dll'
+
+apilist+C0:
+db 'MultiByteToWideChar'
+
+dlllist+C0:
+db 'kernel32.dll'
+
+apilist+E0:
+db 'WideCharToMultiByte'
+
+dlllist+E0:
+db 'kernel32.dll'
+
+apilist+100:
+db 'CreateThread'
+
+dlllist+100:
+db 'kernel32.dll'
+
+apilist+120:
+db 'CloseHandle'
+
+dlllist+120:
+db 'kernel32.dll'
+
+apilist+140:
+db 'BeginPaint'
+
+dlllist+140:
+db 'USER32.dll'
+
+apilist+160:
+db 'CreateCompatibleDC'
+
+dlllist+160:
+db 'GDI32.dll'
+
+dlllist+180:
+db 'USER32.dll' //
+
+apilist+180:
+db 'GetClientRect'
+
+dlllist+1A0:
+db 'ntdll.dll'
+
+apilist+1A0:
+db 'memset'
+
+dlllist+1C0:
+db 'kernel32.dll'
+
+apilist+1C0:
+db 'GetStartupInfoW'
+
+dlllist+1E0:
+db 'USER32.dll'
+
+apilist+1E0:
+db 'LoadIconA'
+
+
+dlllist+200:
+db 'USER32.dll'
+apilist+200:
+db 'DrawTextW'
+
+dlllist+220:
+db 'USER32.dll'
+apilist+220:
+db 'EndPaint'
+
+dlllist+240:
+db 'USER32.dll'
+apilist+240:
+db 'PostQuitMessage'
+
+dlllist+260:
+db 'ntdll.dll'
+apilist+260:
+db 'NtdllDefWindowProc_W'
+
+dlllist+280:
+db 'USER32.dll'
+apilist+280:
+db 'LoadIconW'
+
+dlllist+2A0:
+db 'USER32.dll'
+apilist+2A0:
+db 'LoadCursorW'
+
+dlllist+2C0:
+db 'GDI32.dll'
+apilist+2C0:
+db 'GetStockObject'
+
+dlllist+2E0:
+db 'USER32.dll'
+apilist+2E0:
+db 'RegisterClassW'
+
+dlllist+300:
+db 'USER32.dll'
+apilist+300:
+db 'CreateWindowExW'
+
+dlllist+320:
+db 'USER32.dll'
+apilist+320:
+db 'ShowWindow'
+
+dlllist+340:
+db 'USER32.dll'
+apilist+340:
+db 'UpdateWindow'
+
+dlllist+360:
+db 'USER32.dll'
+apilist+360:
+db 'GetMessageW'
+
+dlllist+380:
+db 'USER32.dll'
+apilist+380:
+db 'TranslateMessage'
+
+dlllist+3A0:
+db 'USER32.dll'
+apilist+3A0:
+db 'DispatchMessageW'
+
+dlllist+3C0:
+db 'USER32.dll'
+apilist+3C0:
+db 'SendMessageA'
+
+dlllist+3E0:
+db 'USER32.dll'
+apilist+3E0:
+db 'LoadImageW'
+
+
+define(USER,dlllist+140)
+Registersymbol(USER)
+
+define(ntdlls,dlllist+180)
+Registersymbol(ntdlls)
+
+define(kerner,dlllist+C0)
+Registersymbol(kerner)
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>305</ID>
+      <Description>"IAT Gate"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+label(loop)
+IATGate:
+mov [ebp+8],0
+mov [ebp+c],0
+loop:
+add [ebp+8],20
+add [ebp+c],4
+mov ecx,apilist-20 { ("CoInitialize") }
+mov ebx,dlllist-20 { ("ole32.dll") }
+mov edi,[ebp+8]
+add ecx,edi
+add ebx,edi
+push ecx
+push ebx
+call dword ptr [GetModules] { -&gt;KERNEL32.GetModuleHandleA }
+push eax
+call dword ptr [GProc] { -&gt;KERNEL32.GetProcAddress }
+mov edi,[ebp+c]
+mov [IAT-4+edi],eax { (76F09BC0) }
+mov edi,[ebp+8]
+cmp [apilist+edi],0
+jne loop
+ret
+
+
+
+[DISABLE]
+
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>211</ID>
+          <Description>"image 월드 좌표"</Description>
+          <LastState/>
+          <Color>0000FF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+// -8&lt;&lt;연산
+imagesize:
+dd #639 //y
+imagesize+4: //displSize
+dd #815 //x
+
+imagesize+8: //displSize 로고
+dd #290 //y
+imagesize+c: //displSize
+dd #300 //x
+
+
+
+imagesize+10: //displSize
+dd #417 //y
+imagesize+14: //displSize
+dd #497
+
+imagesize+18: //displSize
+dd #407 //y
+imagesize+1c: //displSize
+dd #340
+
+imagesize+20: //displSize
+dd #417 //y
+imagesize+24: //displSize
+dd #427 //x
+
+imagesize+28: //월드좌표
+dd #60 //x
+
+imagesize+34: //월드좌표 +200
+dd 26f //x
+imagesize+30: //월드좌표
+dd 18b //x
+
+imagesize+3c: //월드좌표 +200
+dd #406 //x
+imagesize+38: //월드좌표
+dd #190 //x
+
+imagesize+40: //월드좌표 +200 //캐릭터 셀렉트
+dd #165 //x
+imagesize+44: //월드좌표
+dd #165 //x
+
+
+
+
+
+
+/////////////////KeyboardList
+imagesize+100: //MetaSize
+dd #180
+imagesize+104: //KeyboardList1
+dd #325 //y
+imagesize+108: //KeyboardList1
+dd #385 //x
+
+imagesize+10c: //KeyboardList2
+dd #350 //y
+imagesize+110: //KeyboardList2
+dd #385 //x
+
+///////////////////캐릭터 선택창
+
+imagesize+200: //Main선택착
+dd #490 //y
+imagesize+204: //Main선택창
+dd #398 //x
+
+////////////////////////////////////////캐릭터 버튼 이미지 사이즈
+imagesize+300: //Main선택착
+dd #471 //y
+imagesize+304: //Main선택창
+dd #403 //x
+
+imagesize+308: //Main선택착
+dd #471 //y
+imagesize+30c: //Main선택창
+dd #433 //x
+
+imagesize+310: //Main선택착
+dd #471 //y
+imagesize+314: //Main선택창
+dd #465 //x
+
+
+
+
+[DISABLE]
+
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>220</ID>
+              <Description>"사운드 =병렬처리"</Description>
+              <LastState/>
+              <Color>00FF00</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+mp3Type:
+db A9 68 A8 56 D4 0A CE 11 B0 3A 00 20 AF 0B A7 70 00 00 00 00
+mp3Type+20:
+db B3 EB 36 E4 4F 52 CE 11 9F 53 00 20 AF 0B A7 70 00 00 00 00
+mp3Type+40:
+db B1 68 A8 56 D4 0A CE 11 B0 3A 00 20 AF 0B A7 70 00 00 00 00
+
+
+mp3Type+60:
+db B6 68 A8 56 D4 0A CE 11 B0 3A 00 20 AF 0B A7 70 00 00 00 00
+
+
+
+SoundX:
+push ebp
+mov ebp,esp
+sub esp,000000FC { 252 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-3C]
+mov ecx,0000000F { 15 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov [ebp-08],00000000 { 0 }
+mov [ebp-14],00000000 { 0 }
+mov [ebp-20],00000000 { 0 }
+mov esi,esp
+push 00 { 0 }
+call [IAT] //CoInitialize
+mov [ebp-2C],eax
+mov esi,esp
+lea eax,[ebp-08]
+push eax
+push mp3Type//Project5ffff.IID_IGraphBuilder { (1453877417) }
+push 01 { 1 }
+push 00 { 0 }
+push mp3Type+20 { (-466162765) }
+call [IAT+4] //CoCreateInstance
+
+mov [ebp-2C],eax
+mov esi,esp
+lea eax,[ebp-14]
+push eax
+push mp3Type+40//Project5ffff.IID_IMediaControl { (1453877425) }
+mov ecx,[ebp-08]
+mov edx,[ecx]
+mov eax,[ebp-08]
+push eax
+mov ecx,[edx]
+call ecx
+
+mov [ebp-2C],eax
+mov esi,esp
+lea eax,[ebp-20]
+push eax
+push mp3Type+60//00402000+40//00402000+60//Project5ffff.IID_IMediaEvent { (1453877430) }
+mov ecx,[ebp-08]
+mov edx,[ecx]
+mov eax,[ebp-08]
+push eax
+mov ecx,[edx]
+call ecx
+
+mov [ebp-2C],eax
+mov esi,esp
+push 00 { 0 }
+push copyMemory+2000{ ("C:\login.mp3") }
+mov eax,[ebp-08]
+mov ecx,[eax]
+mov edx,[ebp-08]
+push edx
+mov eax,[ecx+34]
+call eax
+
+mov [ebp-2C],eax
+mov eax,[ebp-14]
+mov ecx,[eax]
+mov esi,esp
+mov edx,[ebp-14]
+push edx
+mov eax,[ecx+1C]
+call eax
+
+mov [ebp-2C],eax
+mov esi,esp
+lea eax,[ebp-38]
+push eax
+push -01 { 255 }
+mov ecx,[ebp-20]
+mov edx,[ecx]
+mov eax,[ebp-20]
+push eax
+mov ecx,[edx+24]
+call ecx
+
+mov eax,[ebp-14]
+mov ecx,[eax]
+mov esi,esp
+mov edx,[ebp-14]
+push edx
+mov eax,[ecx+08]
+call eax
+
+mov eax,[ebp-20]
+mov ecx,[eax]
+mov esi,esp
+mov edx,[ebp-20]
+push edx
+mov eax,[ecx+08]
+call eax
+
+mov eax,[ebp-08]
+mov ecx,[eax]
+mov esi,esp
+mov edx,[ebp-08]
+push edx
+mov eax,[ecx+08]
+call eax
+mov esi,esp
+call [IAT+8] //dword ptr [Project5ffff._imp__CoUninitialize] { -&gt;combase.CoUninitialize }
+
+xor eax,eax
+push edx
+mov ecx,ebp
+push eax
+mov edx,4 { (4) }
+
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,000000FC { 252 }
+
+mov esp,ebp
+pop ebp
+ret
+
+
+[DISABLE]
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>210</ID>
+      <Description>"Pointer"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Pointer: //카피 메모리 -40 포인터 연산지 주소 배열
+dd copyMemory+100
+Pointer+8: //카피 메모리 -40 포인터 연산지 주소 배열
+db 0A //printf
+
+Pointer+38: //카피 메모리 -40 포인터 연산지 주소 배열
+dd (float)1 //printf
+
+
+//Pointer+c: //화면 on,off
+
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>212</ID>
+      <Description>"malloc24 = 24"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+malloc24:
+push #400
+call [IAT+C]//ucrtbased.malloc
+add esp,4
+mov [ebp+24],eax //복제된 데이터가 저장될 주소
+sub eax,#150
+mov [ebp+20],eax //복제된 데이터가 저장될 주소
+ret
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>213</ID>
+      <Description>"malloc28 =1000"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+malloc28:
+push #1000
+call [IAT+C]
+add esp,4
+mov [ebp+28],eax //복제된 데이터가 저장될 주소
+ret
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>443</ID>
+      <Description>"malloc4"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+malloc4:
+push #00401000
+call [IAT+C]
+add esp,4
+mov [Pointer+40],eax //복제된 데이터가 저장될 주소
+
+push #00401000 { 1024 } //size
+push 00 { 0 }
+push [Pointer+40] //setPointer
+call ntdll.memset //- 8B 54 24 0C
+//memset
+add esp,0C { 12 }
+
+ret
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>306</ID>
+      <Description>"병렬 쓰레드 = ecx"</Description>
+      <LastState/>
+      <Color>FF0000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Th:
+push 0
+push 0
+push ecx
+push ecx
+push 0
+push 0
+call [IAT+20] //Thread
+push eax
+call [IAT+24]//kernel32.CloseHandle
+ret
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>221</ID>
+      <Description>"이미지 로드 비트맵"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+imageSaveapi:
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copymemory+300 //bakcubpf
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+4],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+180
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+8],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+1c0
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+c],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+200
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+10],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+240
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+14],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+280
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+18],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+300
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+1c],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+340
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+20],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+380
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+24],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+3c0
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+28],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+400
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+2c],eax //-68
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+440
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+30],eax //-68 캐릭터 선택 이미지
+
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+480
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+34],eax //-68 캐릭터 선택창
+
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+4c0
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+38],eax //-68 캐릭터 삭제
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+500
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+3c],eax //-68 캐릭터 생성
+//////////////////////////////2
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+480
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+234],eax //-68 캐릭터 선택창
+
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+4c0
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+238],eax //-68 캐릭터 삭제
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+500
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+23c],eax //-68 캐릭터 생성
+
+
+
+//캐릭터 생성시 나오는 이미지
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+540
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+40],eax
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+580
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+44],eax
+
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+5c0
+push 00 { 0 }
+call USER32.LoadImageW
+mov [imagePointer+48],eax
+
+
+
+
+
+
+
+ret
+
+
+
+
+
+
+
+[DISABLE]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>214</ID>
+      <Description>"printf0A"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+printf0A:
+push Pointer+8 //0A
+call [IAT+10]
+add esp,4
+ret
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>215</ID>
+      <Description>"멀티바이트 변환 logic"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+MChapi://00501000
+push [Msize]//
+push copyMemory //빈공간에 로드할 address
+push basemeta //기본 문자열
+call [IAT+14]//ucrtbased.strlen //ucrtbasaeloasd
+add esp,04
+push [Msize] //size
+push basemeta //기본 문자열
+push 00
+push 0000FDE9 //형식 CP_UTF8 의 형식임을 따른다.
+call [IAT+18] //kernel32.MultiByteToWideChar
+ret
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>216</ID>
+          <Description>"MultiByteX 바이트붙히기 사이즈:ebp+18 내용: ebp+1c"</Description>
+          <LastState/>
+          <Color>808000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+MultiByteX://00501000
+push 00
+push 00
+push [ebp+18]//80 사이즈
+mov eax,[ebp+1c]
+add eax,#300 //+1000주소로 로드
+push eax //Meta //loade??
+push -01 //??
+push [ebp+1c]//loadMemory//01951000 // unicode
+push 00
+push 00
+call [IAT+1C]
+
+mov eax,[ebp+1c]
+add eax,#300 //+1000주소로 로드
+push eax //Meta //loade??
+call [IAT+10]//msvcrt.printf
+add esp,4
+
+push pointer+8
+call [IAT+10]//msvcrt.printf
+add esp,4
+
+mov eax,printf0A
+call Th //병렬 쓰레드 요청
+ret
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>217</ID>
+      <Description>"Getsave"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+Getsav:
+lea eax,[Msize+8]//ebp-50
+push eax
+mov ecx,[Msize+4] //ebp-8
+push ecx
+call [IAT+28]//USER32.BeginPaint//win32u.NtUserBeginPaint //UsersBeginePaint//dword ptr [dllgotosgui._imp__BeginPaint] { -&gt;-&gt;win32u.NtUserBeginPaint } //UsersBeginePaint
+mov [Msize+c],eax //-54
+//mov eax,[ebp-54]
+//mov [Msize-54],eax
+mov eax,[Msize+c] //ebp-8
+push eax
+call [IAT+2C]//GDI32.CreateCompatibleDC
+mov [Msize+10],eax //5c
+ret
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>218</ID>
+      <Description>"buf"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Scrin:
+push ScrinData
+push [Handle]
+call [IAT+30]//USER32.GetClientRect
+ret
+
+[disable]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>219</ID>
+      <Description>"메모리 셋api"</Description>
+      <LastState/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+label(goto1)
+label(goto2)
+memsetapi:
+push ebp
+mov ebp,esp
+sub esp,48
+push 44
+push 00
+lea eax,[ebp-48]
+push eax
+call [IAT+34]//ntdll.memset
+add esp,0C
+lea ecx,[ebp-48]
+push ecx
+call [IAT+38]//kernel32.GetStartupInfoW
+mov edx,[ebp-1C]
+and edx,01
+je goto1
+movzx eax,wordptr[ebp-18]
+mov [ebp-04],eax
+jmp goto2
+goto1:
+mov [ebp-04],0000000A
+goto2:
+mov ax,[ebp-04]
+mov esp,ebp
+pop ebp
+ret
+
+
+
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>222</ID>
+      <Description>"icon"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+icon:
+mov [ebp-08],eax
+mov esi,esp
+push #101// 6C { 108 }
+mov eax,[ebp+08]
+push eax
+call [IAT+3C]//USER32.LoadIconA
+mov [ebp-14],eax
+mov esi,esp
+mov eax,[ebp-14]
+push eax
+push 00 { 0 }
+push 00000080 { 128 }
+mov ecx,[ebp-08]
+push ecx
+call [IAT+78]//USER32.SendMessageA
+ret
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"MainAPI =병렬처리"</Description>
+      <LastState/>
+      <Color>00FF00</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+LoginMain:
+push ebp
+mov ebp,esp
+sub esp,08
+call memsetapi
+movzx eax,ax
+mov [ebp-04],eax
+mov [ebp-08],eax
+mov ecx,[ebp-04]
+push ecx
+mov edx,[ebp-08]
+push edx
+push 00
+push 00400000//header
+call LoginGui
+mov esp,ebp
+pop ebp
+ret
+ 
+ 
+[DISABLE]
+
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>20</ID>
+          <Description>"SWitch"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+label(xors)//초기화
+label(Post)//포스트
+label(UsersBeginePaint)//처음 그리기
+label(GetSystem)//시스템으로 가다
+label(GetSystem2)
+label(EndX)//마지막
+
+labeL(LgoAPi)
+label(boxApis)
+label(mouseX)
+
+
+
+
+Switch:
+cmp [Msize-4],0
+jne mouseX
+push ebp
+mov ebp,esp
+sub esp,00000130 { 304 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-70]
+mov ecx,0000001C { 28 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov eax,[ebp+0C]
+mov [ebp-00000130],eax
+//cmp dword ptr [ebp-00000130],200 { 15 }
+//je mouseX//dllgotosgui.WndProc5+59
+cmp dword ptr [ebp-00000130],111 { 1 }
+je LgoAPi
+cmp dword ptr [ebp-00000130],01 { 1 }
+je xors
+cmp dword ptr [ebp-00000130],02 { 2 }
+je Post//dllgotosgui.WndProc5+C5
+cmp dword ptr [ebp-00000130],0F { 15 }
+je UsersBeginePaint//dllgotosgui.WndProc5+59
+
+jmp GetSystem//GetSystem//dllgotosgui.WndProc5+DA
+xors:
+xor eax,eax
+jmp EndX//인자를 초기화후 가준다.
+UsersBeginePaint:
+lea eax,[ebp-000000AC]
+cmp [Msize-4],0
+jne GetSystem2
+mov [Msize-4],eax
+
+lea eax,[ebp-50]//ebp-50
+push eax
+mov ecx,[ebp+8] //ebp-8
+push ecx
+call USER32.BeginPaint//win32u.NtUserBeginPaint //UsersBeginePaint//dword ptr [dllgotosgui._imp__BeginPaint] { -&amp;gt;-&amp;gt;win32u.NtUserBeginPaint } //UsersBeginePaint
+mov [hdc],eax //-54
+//mov eax,[ebp-54]
+//mov [Msize-54],eax
+
+xor eax,eax
+jmp EndX
+Post:
+mov esi,esp
+push 00 { 0 }
+call USER32.PostQuitMessage
+xor eax,eax
+jmp EndX
+GetSystem:
+mov esi,esp
+mov eax,[ebp+14]
+push eax
+mov ecx,[ebp+10]
+push ecx
+mov edx,[ebp+0C]
+push edx
+mov eax,[ebp+08]
+push eax
+call ntdll.NtdllDefWindowProc_W
+
+EndX:
+push edx
+mov ecx,ebp
+push eax
+mov edx,2
+
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,00000130 { 304 }
+mov esp,ebp
+pop ebp
+ret 0010 { 16 }
+
+
+GetSystem2:
+call mainX
+jmp GetSystem
+
+
+
+LgoAPi:
+mov eax,[ebp+10]
+and eax,0000FFFF { 65535 }
+movzx ecx,ax
+mov [ebp-00000118],ecx
+cmp dword ptr [ebp-00000118],00 { 0 }
+//call boxa
+je boxApis//
+cmp dword ptr [ebp-00000118],01 { 1 }
+je boxApis
+jmp EndX//WindowsProject3D.WndProc+168
+boxApis:
+
+jmp EndX//WindowsProject3D.WndProc+168
+
+label(dbvmr)
+label(dbvmrDF)
+label(keydatagate)
+label(keydatagate2)
+label(keydatagateB)
+label(keydatagateB2)
+mouseX:
+mov ebx,[ebp+10]
+test ebx,ebx
+je dbvmr
+mov EDI,[ebp+14]
+test EDI,EDI
+je dbvmr
+cmp ebx,#258
+je keydatagate
+dbvmr:
+cmp [basep],0
+jne dbvmrDF
+mov [basep],ebp
+push #1
+call sleep
+ret
+
+dbvmrDF:
+push #1
+call sleep
+ret
+
+label(Startcond)
+
+keydatagate:
+cmp [logoinSX],1
+je Startcond
+cmp [logoinSX],2
+je keydatagateB
+Startcond:
+cmp edi,8
+je keydatagate2
+mov ebx,[KeyCount]
+mov [KEYSave+ebx],edi
+add [KeyCount],2//-4
+push #1
+call sleep
+ret
+
+keydatagate2:
+cmp [KeyCount],0
+je dbvmr
+sub [KeyCount],2//-4
+mov ebx,[KeyCount]
+mov [KEYSave+ebx],0
+push #1
+call sleep
+ret
+
+keydatagateB:
+cmp edi,8
+je keydatagateB2
+mov ebx,[KeyCount2]
+mov [KEYSave2+ebx],edi
+add [KeyCount2],2//-4
+push #1
+call sleep
+ret
+
+
+keydatagateB2:
+cmp [KeyCount2],0
+je dbvmr
+sub [KeyCount2],2//-4
+mov ebx,[KeyCount2]
+mov [KEYSave2+ebx],0
+push #1
+call sleep
+ret
+[DISABLE]
+
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>17</ID>
+              <Description>"CreateWindowsA"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+define(Direct2DKEY,00601000)
+Registersymbol(Direct2DKEY)
+
+define(UnicodeDirect2DX1,00601400){ ("dx2_ts00") }
+Registersymbol(UnicodeDirect2DX1)
+define(UnicodeDirect2DX2,00601440) { ("2_ts00") }
+Registersymbol(UnicodeDirect2DX2)
+
+define(UnicodeDirect2DX3,00601480) { ("2_ts00") }
+Registersymbol(UnicodeDirect2DX3)
+
+define(factory,00603480) { ("2_ts00") }
+Registersymbol(factory)
+
+
+Direct2DKEY:
+db 47 22 15 06 50 6F 5A 46 92 45 11 8B FD 3B 60 07 00 00 00 00 00 00
+UnicodeDirect2DX1:
+db 64 00 78 00 32 00 5F 00 74 00 73 00 30 00 30 00 00 00 00 00
+UnicodeDirect2DX2:
+db 32 00 5F 00 74 00 73 00 30 00 30 00 00 00 00 00 00
+UnicodeDirect2DX3:
+db 74 00 73 00 30 00 30 00 00 00 00 00
+
+
+
+label(end)
+label(endedx)
+label(WhileX)
+LoginGui:
+push ebp
+mov ebp,esp
+sub esp,0000013C { 316 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-7C]
+mov ecx,0000001F { 31 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+call combase.CoInitializeEx
+push factory//이 부분 변경 해야 할 부분00402000//WindowsProjeddct5.dx2p_factory { (00452A58) } //팩토리 저장공간
+push 00 { 0 }
+push Direct2DKEY//WindowsProjeddct5._GUID_06152247_6f50_465a_9245_118bfd3b6007
+push 00
+call d2d1.D2D1CreateFactory
+test eax,eax
+je end//WindowsProjeddct5.WinMain+52
+xor eax,eax
+jmp endedx//WindowsProjeddct5.WinMain+1F6
+end:
+mov eax,[UnicodeDirect2DX1] { ("dx2_ts00") }
+mov [ebp-48],eax
+mov ecx,[UnicodeDirect2DX2] { ("2_ts00") }
+mov [ebp-44],ecx
+mov edx,[UnicodeDirect2DX3] { ("ts00") }
+mov [ebp-40],edx
+mov eax,00300030 // 본례는 다름
+mov [ebp-3C],eax
+mov cx,0
+mov [ebp-38],cx
+mov [ebp-24],00000000 { 0 }
+mov [ebp-20],00000000 { 0 }
+mov [ebp-10],00000000 { 0 }
+mov esi,esp
+push 00007F00 { 32512 }
+push 00 { 0 }
+call USER32.LoadCursorW
+mov [ebp-14],eax
+mov esi,esp
+push 00007F00 { 32512 }
+push 00 { 0 }
+call USER32.LoadIconW
+mov [ebp-18],eax
+mov eax,[ebp+08]
+mov [ebp-1C],eax
+mov [ebp-28],Switch//WindowsProjeddct5.exe+110FF { (233) }
+lea eax,[ebp-48]
+mov [ebp-08],eax
+mov [ebp-0C],00000000 { 0 }
+mov [ebp-2C],00000003 { 3 }
+mov esi,esp
+lea eax,[ebp-2C]
+push eax
+call USER32.RegisterClassW
+mov esi,esp
+push 00 { 0 }
+mov eax,[ebp+08]
+push eax
+push 00 { 0 }
+push 00 { 0 }
+push #600 { 540 }
+push #800 { 840 }
+push 00 { 0 }
+push 00 { 0 }
+push 00CF0000 { 13565952 }
+push UnicodeDirect2DX1//WindowsProjeddct5.exe+18B60 { ("dx2_ts00") }
+lea ecx,[ebp-48]
+push ecx
+push 00 { 0 }
+call USER32.CreateWindowExW
+mov [Handle],eax
+
+mov [ebp-54],eax
+mov esi,esp
+mov eax,[ebp+14]
+push eax
+mov ecx,[ebp-54]
+push ecx
+call win32u.NtUserShowWindow
+mov esi,esp
+mov eax,[ebp-54]
+push eax
+call USER32.UpdateWindow
+WhileX:
+mov esi,esp
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+lea eax,[ebp-78]
+push eax
+call USER32.GetMessageW
+test eax,eax
+je endedx //cmpsx//WindowsProjeddct5.WinMain+1A3
+mov esi,esp
+lea eax,[ebp-78]
+push eax
+call USER32.TranslateMessage
+mov esi,esp
+lea eax,[ebp-78]
+push eax
+call USER32.DispatchMessageW
+jmp WhileX//WindowsProjeddct5.WinMain+15E
+
+cmpsx:
+libACC:
+mov eax,[00401000] { (0) }
+mov ecx,[eax]
+mov esi,esp
+mov edx,[00401000]//[WindowsProjeddct5.dx2p_bitmap] { (0) }
+push edx
+mov eax,[ecx+08]
+call eax
+mov eax,[factory] { (00452A58) }
+mov ecx,[eax]
+mov esi,esp
+mov edx,[factory] { (00452A58) }
+push edx
+mov eax,[ecx+08]
+call eax
+mov esi,esp
+call combase.CoUninitialize
+
+mov eax,[ebp-70]
+endedx:
+RET
+push edx
+mov ecx,ebp
+push eax
+mov edx,2
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,0000013C { 316 }
+mov esp,ebp
+pop ebp
+ret 0010 { 16 }
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>309</ID>
+              <Description>"CreateImage"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+CreateImageAPI:
+push 00002010 { 8208 }
+push 00 { 0 }
+push 00 { 0 }
+push 00 { 0 }
+push copyMemory+140 //backbuf
+push 00 { 0 }
+call [IAT+7C]//USER32.LoadImageW
+mov [mainDCimage],eax //-68
+ret
+
+
+[DISABLE]
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>311</ID>
+              <Description>"CreateDC"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+CreateDC:
+mov eax,[hdc] //ebp-8
+push eax
+call GDI32.CreateCompatibleDC
+mov [mainDC],eax //5c
+
+push [mainDCimage] //imageH
+push [mainDC] //CLass &lt;&lt;
+call GDI32.SelectObject
+
+ret
+
+[DISABLE]
+
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"쓰레드 스타트"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+main: //startapiX
+push eax
+mov eax,00000320 { 71696 }
+call diret
+add esp,324
+mov ebp,esp
+add ebp,c
+
+call IATGate //IAT뱉어내게 하기
+call MChapi//문자열 유니코드 변환
+
+//mov ecx,SoundX
+//call Th //사운드 쓰레드 콜
+mov ecx,LoginMain //GUI쓰레드 콜
+call Th //쓰레드 콜
+ret
+
+createThread(main)
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>349</ID>
+      <Description>"메인 팩토리 2 인자 생성기 or malloc4"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+define(ACMent1,01402000)
+Registersymbol(ACMent1)
+define(ACMent2,01403000)
+Registersymbol(ACMent2)
+
+define(FloatX,01422300)
+Registersymbol(FloatX)
+define(FloatY,01422304)
+Registersymbol(FloatY)
+
+define(factoryCreate,01400000)
+Registersymbol(factoryCreate)
+ACMent1:
+call malloc4
+
+push ebp
+mov ebp,esp
+sub esp,000000E4 { 228 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-24]
+mov ecx,00000009 { 9 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov eax,[ebp+0C]
+mov [ebp-20],eax
+mov eax,[ebp+10]
+mov ecx,[eax]
+mov edx,[eax+04]
+mov [ebp-1C],ecx
+mov [ebp-18],edx
+movss xmm0,[ebp+14]
+movss [ebp-14],xmm0
+movss xmm0,[ebp+18]
+movss [ebp-10],xmm0
+mov eax,[ebp+1C]
+mov [ebp-0C],eax
+mov eax,[ebp+20]
+mov [ebp-08],eax
+mov ecx,00000007 { 7 }
+lea esi,[ebp-20]
+mov edi,[ebp+08]
+repe movsd
+mov eax,[ebp+08]
+push edx
+mov ecx,ebp
+push eax
+mov edx,1//[WindowsProjeddct5.D2D1::RenderTargetProperties+90] { (1) }
+pop eax
+pop edx
+pop edi
+pop esi
+pop ebx
+add esp,000000E4 { 228 }
+mov esp,ebp
+pop ebp
+ret
+
+ACMent2:
+push ebp
+mov ebp,esp
+sub esp,000000CC { 204 }
+push ebx
+push esi
+push edi
+push ecx
+lea edi,[ebp-0C]
+mov ecx,00000003 { 3 }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+pop ecx
+mov [ebp-08],ecx
+mov esi,esp
+mov eax,[ebp+10]
+push eax
+mov ecx,[ebp+0C]
+push ecx
+mov edx,[ebp+08]
+push edx
+mov eax,[ebp-08]
+mov ecx,[eax]
+mov edx,[ebp-08]
+push edx
+mov eax,[ecx+38]
+call eax
+pop edi
+pop esi
+pop ebx
+add esp,000000CC { 204 }
+mov esp,ebp
+pop ebp
+ret 000C { 12 }
+
+
+
+
+
+factoryCreate:
+push ebp
+mov ebp,esp
+sub esp,00000170 { 368 }
+push ebx
+push esi
+push edi
+lea edi,[ebp-000000B0]
+mov ecx,2c { 0000002C }
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov esi,esp
+lea eax,[ebp-14]
+push eax
+mov ecx,[Handle]
+push ecx
+call USER32.GetClientRect
+
+mov eax,[ebp-0c]
+mov edx,[ebp-08]
+
+mov [ebp-000000FC],eax
+mov [ebp-000000F8],edx
+
+
+mov ecx,[Handle]
+mov [ebp-000000EC],ecx
+mov [ebp-000000E8],eax
+mov [ebp-000000E4],edx
+mov [ebp-000000E0],0
+mov [ebp-00000148],0
+mov [ebp-00000144],0
+
+push 00 { 0 }
+push 00 { 0 }
+push [Handle]
+xorps xmm0,xmm0
+movss [esp],xmm0
+push [Handle]
+xorps xmm0,xmm0
+movss [esp],xmm0
+lea eax,[ebp-00000148]
+push eax
+push 00 { 0 }
+lea ecx,[ebp-0000016C]
+push ecx //쓰레기 코드 청소
+
+call ACMent1
+add esp,1C { 28 }
+
+push factory+4 { (0) } //factory+4
+
+mov eax,[Handle]
+mov [ebp-10],eax
+lea edx,[ebp-10]
+mov [edx+c],0
+mov [edx+10],0
+push edx
+lea edx,[ebp-00000138]
+push edx //빈공간 생성
+mov eax,[factory]
+mov ecx,[eax]
+mov edx,[factory]//[ebp-08]
+push edx
+mov eax,[ecx+38]
+call eax
+
+cvtsi2ss xmm0,[ebp-e8]
+movss [FloatX],xmm0 { (0.00) } //Y저장
+cvtsi2ss xmm0,[ebp-e8+4]
+movss [FloatY],xmm0 { (0.00) } //X저장
+mov ebx,[ebp+4]
+mov [esp],ebx //terminateThread
+ret
+
+
+createThread(factoryCreate)
+
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>351</ID>
+          <Description>"메인 팩토리 3 인자 생성기"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+define(factoryCreate3X,01401000)
+Registersymbol(factoryCreate3X)
+
+
+define(pathX,01402000)
+Registersymbol(pathX)
+define(WICImagingFactory2,01403000)
+Registersymbol(WICImagingFactory2)
+define(GUIID,01404000)
+Registersymbol(GUIID)
+define(factoryX,01405000)
+Registersymbol(factoryX)
+define(GUIFormat,01403400)
+Registersymbol(GUIFormat)
+WICImagingFactory2:
+db E8 06 7D 31 24 5F 3D 43 BD F7 79 CE 68 D8 AB C2 00 00 00 00 CA 49 E7 F0 EF ED 89 45 A7 3A EE 0E 62 6A 2A 2B 00 00 00 00 FD 30 7A 25 B6 06 2B 46 AE A4 63 F7 0B 86 E5 33 00 00 00 00 7B A1 9E 38 78 50 DE 4C B6 EF 25 C1 51 75 C7 51 00 00 00 00//
+
+GUIID:
+db A9 C8 5E EC 95 C3 14 43 9C 77 54 D7 A9 35 FF 70 00 00 80 3F 6E 00 65 00 77 00 5F 00 30 00 30 00 31 00 2E 00 70 00 6E 00 67 00 00 00 00 00 00 00 64 00 78 00 32 00 5F 00 74 00 73 00 30 00 30 00 00 00 00 00 00
+
+GUIFormat:
+db 24 C3 DD 6F 03 4E FE 4B B1 85 3D 77 76 8D C9 10 00 00 00 00 24 C3 DD 6F 03 4E FE 4B B1 85 3D 77 76 8D C9 11 00 00 00 00 95 6B 8C D9 FE 3E D6 47 BB 25 EB 17 48 AB 0C F1 00 00 00 00
+
+labeL(ebp14)
+labeL(ebp20)
+labeL(ebp2c)
+
+
+factoryCreate3X:
+push factoryX
+push GUIID//WindowsProjeddct5._GUID_ec5ec8a9_c395_4314_9c77_54d7a935ff70 { (-329332567) }
+push 01 { 1 }
+push 00 { 0 }
+push WICImagingFactory2//WindowsProjeddct5.CLSID_WICImagingFactory2 { (830277352) }
+call combase.CoCreateInstance
+
+
+
+
+
+//방 할당
+call malloc24
+push 1
+call sleep
+mov edi,[ebp+20]
+mov ecx,[ebp+1c]
+mov [ebp+1c],ecx//copyMemory+140
+mov eax,[factoryX]
+mov [edi+c],ecx
+mov [edi-8],eax
+mov eax,[factory+4]
+mov [edi+8],eax
+mov [edi-38],00000000 { 0 }
+mov esi,esp
+ebp14:
+lea eax,[edi-14]
+push eax //빈공란 데이터 이너미
+push 00 { 0 }
+push 80000000 { -2147483648 }
+push 00 { 0 }
+mov ecx,[edi+0C]
+push ecx
+mov edx,[edi-08]
+mov eax,[edx]
+mov ecx,[edi-08]
+push ecx
+mov edx,[eax+0C]
+call edx
+cmp [edi-14],0
+je ebp14
+cmp [edi-14],-1
+je ebp14
+
+ebp20:
+//// WindowsPro////ddct5.LoadMyImage+1A0
+mov edi,[ebp+20]
+mov esi,esp
+lea eax,[edi-20]
+push eax
+push 00 { 0 }
+mov ecx,[edi-14]
+mov edx,[ecx]
+mov eax,[edi-14]
+push eax
+mov ecx,[edx+34]
+call ecx
+cmp [edi-20],0
+je ebp20
+cmp [edi-20],-1
+je ebp20
+
+
+ebp2c:
+mov edi,[ebp+20]
+//// WindowsPro////ddct5.LoadMyImage+189
+mov esi,esp
+lea eax,[edi-2C]
+push eax
+mov ecx,[edi-08]
+mov edx,[ecx]
+mov eax,[edi-08]
+push eax
+mov ecx,[edx+28]
+call ecx
+cmp [edi-2c],0
+je ebp2c
+cmp [edi-2c],-1
+je ebp2c
+
+
+
+mov edi,[ebp+20]
+//// WindowsPro////ddct5.LoadMyImage+172
+mov esi,esp
+push 00 { 0 }
+sub esp,08 { 8 }
+xorps xmm0,xmm0
+movsd [esp],xmm0
+push 00 { 0 }
+push 00 { 0 }
+push GUIFormat////ddct5.GUID_WICPixelFormat32bppPBGRA { 0041A2EC }
+mov eax,[edi-20]
+push eax
+mov ecx,[edi-2C]
+mov edx,[ecx]
+mov eax,[edi-2C]
+push eax
+mov ecx,[edx+20]
+call ecx
+
+cmp [edi-20],0
+je ebp20
+cmp [edi-20],-1
+je ebp20
+
+
+mov edi,[ebp+20]
+//// WindowsPro////ddct5.LoadMyImage+15B
+mov esi,esp
+push [ebp+14] //factory+8 //load bit map ////ddct5.dx2p_bitmap { (0) }
+push 00 { 0 }
+mov eax,[edi-2C]
+push eax
+mov ecx,[edi+08]
+mov edx,[ecx]
+mov eax,[edi+08]
+push eax
+mov ecx,[edx+14]
+call ecx
+
+cmp [edi-2c],0
+je ebp2c
+cmp [edi-2c],-1
+je ebp2c
+
+
+
+mov edi,[ebp+20]
+//// WindowsPro////ddct5.LoadMyImage+15B
+mov [edi-38],00000001 { 1 }
+mov eax,[edi-2C]
+mov ecx,[eax]
+mov esi,esp
+mov edx,[edi-2C]
+push edx
+mov eax,[ecx+08]
+call eax
+cmp [edi-2c],0
+je ebp2c
+cmp [edi-2c],-1
+je ebp2c
+
+
+mov edi,[ebp+20]
+mov eax,[edi-20]
+mov ecx,[eax]
+mov esi,esp
+mov edx,[edi-20]
+push edx
+mov eax,[ecx+08]
+call eax
+cmp [edi-2c],0
+je ebp20
+cmp [edi-2c],-1
+je ebp20
+
+mov edi,[ebp+20]
+mov eax,[edi-14]
+mov ecx,[eax]
+mov esi,esp
+mov edx,[edi-14]
+push edx
+mov eax,[ecx+08]
+call eax
+
+
+mov edi,[ebp+20]
+mov eax,[edi-08]
+mov ecx,[eax]
+mov esi,esp
+mov edx,[edi-08]
+push edx
+mov eax,[ecx+08]
+call eax
+
+push [ebp+24]
+call ucrtbased.free
+add esp,4
+
+
+ret
+
+
+
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>404</ID>
+          <Description>"메인 팩토리 3,4 인자 생성기 //터미네이터가 불안정함"</Description>
+          <LastState/>
+          <Color>FF00FF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+loadImageX:
+mov eax,[Pointer]
+add [40Count],40
+mov edi,[40Count]//변경//변경
+add eax,edi
+mov [ebp+1c],eax
+mov [ebp+14],factory+4//고정
+add [4Count],4
+mov eax,[4Count]//변경//변경
+add [ebp+14],eax //변경
+call factoryCreate3X
+ret
+
+
+
+
+XYDiagram: //ebx 20카운팅 ecx 4카운팅
+add [ebp+c],4
+add [ebp+8],20
+mov edi,[ebp+c]
+mov ecx,[factory+8+edi-4] { (08033D70) }
+mov ecx,[ecx-84]
+mov [ebp-e8],ecx
+cvtsi2ss xmm0,[ebp-e8]
+mov ecx,[UIIPointer]
+mov ebx,[ebp+8]
+add ecx,ebx
+movss [ecx-4+edi],xmm0 { (0.00) } //Y저장
+
+add [ebp+c],4
+mov edi,[ebp+c]
+mov ecx,[factory+8+edi-8] { (08033D70) }
+mov ecx,[ecx-84+4]
+mov [ebp-e4],ecx
+mov ecx,[UIIPointer]
+cvtsi2ss xmm0,[ebp-e4]
+mov ebx,[ebp+8]
+add ecx,ebx
+movss [ecx-4+edi],xmm0 { (0.00) } //Y저장
+ret
+
+PathDiagram:
+mov eax,[esp]
+mov [ebp+4],eax//terminateSave
+
+push eax
+mov eax,00000320 { 71696 }
+call diret
+
+add esp,124
+
+call loadImageX//1
+push 1
+call sleep
+call loadImageX //2
+push 1
+call sleep
+call loadImageX //3
+push 1
+call sleep
+call loadImageX //4
+push 1
+call sleep
+call loadImageX //5
+push 1
+call sleep
+call loadImageX //6
+push 1
+call sleep
+
+mov [ebp+8],0
+mov [ebp+c],0
+call XYDiagram//1
+push 1
+call sleep
+sub [ebp+c],4
+call XYDiagram//2
+push 1
+call sleep
+sub [ebp+c],4
+call XYDiagram//3
+push 1
+call sleep
+sub [ebp+c],4
+call XYDiagram//4
+push 1
+call sleep
+sub [ebp+c],4
+call XYDiagram//5
+push 1
+call sleep
+sub [ebp+c],4
+call XYDiagram//6
+push 1
+call sleep
+
+add esp,200
+mov ebp,esp
+add ebp,c
+
+
+
+mov eax,[ebp+4]
+mov [esp],eax
+ret
+
+createThread(PathDiagram)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>558</ID>
+          <Description>"브러쉬 인자 생성기"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+metaguiID:
+db 5A EE 59 B8 38 D8 5B 4B A2 E8 1A DC 7D 93 DB 48 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+MetaInza:
+push Packtory { (02600D28) }
+push metaguiID { (0.00) }
+push 00 { 0 }
+call DWrite.DWriteCreateFactory
+ret
+
+createThread(MetaInza)
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>559</ID>
+          <Description>"브러쉬 메인 그리기 생성기"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+
+label(goto1)
+label(goto2)
+label(goto3)
+operX:
+push ebp
+mov ebp,esp
+jmp goto1//"WindowsProjeddct5.operator new"+12 { -&gt;WindowsProjeddct5.operator new+12 }
+goto3:
+push [ebp+08]
+call ucrtbase.callnewh//WindowsProjeddct5._callnewh { -&gt;-&gt;ucrtbase.callnewh }
+pop ecx
+test eax,eax
+je goto2//"WindowsProjeddct5.operator new"+21 { -&gt;WindowsProjeddct5.operator new+21 }
+goto1:
+push [ebp+08]
+call ucrtbase.malloc //WindowsProjeddct5.malloc { -&gt;-&gt;ucrtbase.malloc }
+pop ecx
+test eax,eax
+je goto3//"WindowsProjeddct5.operator new"+5 { -&gt;WindowsProjeddct5.operator new+5 }
+pop ebp
+ret
+goto2:
+ret
+//cmp dword ptr [ebp+08],-01 { 255 }
+//je WindowsProjeddct5.__scrt_throw_std_bad_array_new_length
+//jmp WindowsProjeddct5.__scrt_throw_std_bad_alloc
+
+
+label(7fffx)
+label(leaesi)
+label(7fffex2)
+label(lea23x)
+label(leaACDobule)
+label(scrtX)
+label(NullPointerX)
+label(addebpC)
+label(xorgateX)
+label(returnd)
+label(DeleateX)
+label(returnDi)
+MainMetaX:
+push ebp
+mov ebp,esp
+push ecx
+mov eax,[ebp+0C]
+push ebx
+push esi
+push edi
+mov edi,ecx
+mov ecx,[edi+14]
+mov [ebp-04],ecx
+cmp eax,ecx
+ja 7fffx//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+45 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+45 }
+mov ebx,edi
+cmp ecx,08 { 8 }
+jb leaesi//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+1F { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+1F }
+mov ebx,[edi]
+lea esi,[eax+eax]
+leaesi:
+mov [edi+10],eax
+push esi
+push KEYSave//WindowsProjeddct5.exe+3278 { ("My Test Text!!") }
+push ebx
+call VCRUNTIME140.memcpy
+add esp,0C { 12 }
+xor eax,eax
+mov [esi+ebx],ax
+mov eax,edi
+pop edi
+pop esi
+pop ebx
+mov esp,ebp
+pop ebp
+ret 0008 { 8 }
+7fffx:
+mov esi,eax
+or esi,07 { 7 }
+cmp esi,7FFFFFFE { 2147483646 }
+jna 7fffex2//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+69 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+69 }
+mov esi,7FFFFFFE { 2147483646 }
+mov eax,FFFFFFFE { -2 }
+jmp lea23x//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+A3 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+A3 }
+7fffex2:
+mov edx,ecx
+mov eax,7FFFFFFE { 2147483646 }
+shr edx,1
+sub eax,edx
+cmp ecx,eax
+jna leaACDobule//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+84 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+84 }
+mov esi,7FFFFFFE { 2147483646 }
+mov eax,FFFFFFFE { -2 }
+jmp lea23x//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+A3 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+A3 }
+leaACDobule:
+lea eax,[edx+ecx]
+cmp esi,eax
+cmovb esi,eax
+lea eax,[esi+01]
+cmp eax,7FFFFFFF { 2147483647 }
+ja scrtX//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+146 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+146 }
+add eax,eax
+cmp eax,00001000 { 4096 }
+jb NullPointerX//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+CA { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+CA }
+lea23x:
+lea ecx,[eax+23]
+cmp ecx,eax
+jbe scrtX//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+146 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+146 }
+push ecx
+call operX//"WindowsProjeddct5.operator new"
+add esp,04 { 4 }
+test eax,eax
+je ucrtbase.invalid_parameter_noinfo_noreturn //7000000상위 api "WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+140 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+140 }
+lea ebx,[eax+23]
+and ebx,-20 { 224 }
+mov [ebx-04],eax
+jmp addebpC//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+DD { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+DD }
+NullPointerX:
+test eax,eax
+je xorgateX//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+DB { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+DB }
+push eax
+call operX//"WindowsProjeddct5.operator new"
+add esp,04 { 4 }
+mov ebx,eax
+jmp addebpC//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+DD { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+DD }
+xorgateX:
+xor ebx,ebx
+addebpC:
+mov eax,[ebp+0C]
+mov [edi+14],esi
+mov [edi+10],eax
+lea esi,[eax+eax]
+push esi
+push KEYSave//WindowsProjeddct5.exe+3278 { ("My Test Text!!") }
+push ebx
+call VCRUNTIME140.memcpy
+xor eax,eax
+add esp,0C { 12 }
+mov [esi+ebx],ax
+mov eax,[ebp-04]
+cmp eax,08 { 8 }
+jb returnd//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+133 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+133 }
+lea ecx,[eax*2+00000002]
+mov eax,[edi]
+cmp ecx,00001000 { 4096 }
+jb DeleateX//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+129 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+129 }
+mov edx,[eax-04]
+add ecx,23 { 35 }
+sub eax,edx
+add eax,-04 { 252 }
+cmp eax,1F { 31 }
+ja returnDi//"WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign"+140 { -&gt;WindowsProjeddct5.std::basic_string&lt;wchar_t,std::char_traits&lt;wchar_t&gt;,std::allocator&lt;wchar_t&gt; &gt;::assign+140 }
+mov eax,edx
+DeleateX:
+push ecx
+push eax
+call ucrtbase.free//"WindowsProjeddct5.operator delete"
+add esp,08 { 8 }
+returnd:
+mov [edi],ebx
+mov eax,edi
+pop edi
+pop esi
+pop ebx
+mov esp,ebp
+pop ebp
+ret 0008 { 8 }
+returnDi:
+call ucrtbase.invalid_parameter_noinfo_noreturn
+scrtX:
+//call WindowsProjeddct5.__scrt_throw_std_bad_array_new_length
+//call WindowsProjeddct5.std::_Xlen_string
+int 3
+int 3
+int 3
+int 3
+
+
+
+
+BrushMainX:
+
+push eax
+mov eax,00000420 { 71696 }
+call diret
+
+mov eax,[factory+4] { (02790B30) }
+lea edx,[ebp-000000A0]
+movaps xmm0,[BrashFloat1D0+10] { (1.00) }
+movups [ebp-000000A0],xmm0
+push edx
+mov ecx,[eax]
+push eax
+call dword ptr [ecx+000000BC]
+mov eax,[factory+4] { (085B5340) }
+lea edx,[ebp+0C]
+movaps xmm0,[BrashFloat1D0] { (0) }
+push edx
+push 00 { 0 }
+mov [ebp+0C],00000000 { 0 }
+lea edx,[ebp-20]
+movups [ebp-20],xmm0
+mov ecx,[eax]
+push edx
+push eax
+call dword ptr [ecx+20]
+
+mov eax,[Packtory] { (085C46A0) }
+lea edx,[ebp+14]
+push edx
+push Direct2DKEYX-4 { (0) }
+mov [ebp+14],00000000 { 0 }
+mov ecx,[eax]
+push ecx
+mov [esp],43000000 { 128.00 }
+push 05 { 5 }
+push 00 { 0 }
+push 00000090 { 144 }
+push 00 { 0 }
+push Direct2DKEYX { ("Meiryo") }
+push eax
+call dword ptr [ecx+3C]
+
+
+
+push 0E { 14 }
+xor eax,eax
+mov [ebp-44],00000000 { 0 }
+push ecx
+lea ecx,[ebp-44]
+mov [ebp-34],00000000 { 0 }
+mov [ebp-30],00000007 { 7 }
+mov [ebp-44],ax
+call MainMetaX
+
+//
+
+
+
+mov esi,[ebp+c]//[ebp+c]
+mov [ebp-4c],(float)840
+mov [ebp-4c+4],(float)540
+movss xmm0,[ebp-4C]
+
+push 00
+push 00
+push esi
+lea esi,[ebp-6C]//임의의 방 할당
+movss [ebp-64],xmm0
+movss xmm0,[ebp-48]
+push esi
+mov edi,[ebp+14]
+push edi
+push [ebp-34]
+mov [ebp-6C],00000000
+mov [ebp-68],00000000
+movss [ebp-60],xmm0
+mov eax,[factory+4]
+mov ecx,[eax]
+mov edx,KEYSave
+push edx
+push eax
+call dword ptr [ecx+6C]
+
+
+add esp,424
+mov ebp,esp
+add ebp,c
+ret
+
+//createThread(BrushMainX)
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>567</ID>
+              <Description>"LoginBrush"</Description>
+              <LastState/>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+LgoinBrush1:
+mov eax,[factory+4] { (085B5340) }
+lea edx,[ebp+0C]
+movaps xmm0,[BrashFloat1D0] { (0) }
+push edx
+push 00 { 0 }
+mov [ebp+0C],00000000 { 0 }
+lea edx,[ebp-20]
+movups [ebp-20],xmm0
+mov ecx,[eax]
+push edx
+push eax
+call dword ptr [ecx+20]
+mov eax,[Packtory] { (085C46A0) }
+lea edx,[ebp+14]
+push edx
+push Direct2DKEYX-4 { (0) }
+mov [ebp+14],00000000 { 0 }
+mov ecx,[eax]
+push ecx
+mov [esp],(float)15 { 128.00 }
+push 5 { 5 }
+push 00 { 0 }
+push 00000100 { 144 } //글씨 굵기
+push 0 { 0 }
+push Direct2DKEYX { (0) }
+push eax
+call dword ptr [ecx+3C]
+push 1a { 14 }//size
+xor eax,eax
+mov [ebp-44],00000000 { 0 }
+push ecx
+lea ecx,[ebp-44]
+mov [ebp-34],00000000 { 0 }
+mov [ebp-30],00000007 { 7 }
+mov [ebp-44],ax
+call MainMetaX
+mov esi,[ebp+0C]
+mov [ebp-4C],(float)840 { 840.00 }
+mov [ebp-48],(float)540  { 540.00 }
+movss xmm0,[ebp-4C]
+push 0 { 0 }
+push 0 { 1 }
+push esi
+lea esi,[ebp-6C]
+movss [ebp-64],xmm0
+movss xmm0,[ebp-48]
+push esi
+mov edi,[ebp+14]
+push edi
+push [ebp-34]
+mov [ebp-6C],(float)333 { 0 }//x
+mov [ebp-68],(float)328 { 0 }//y
+movss [ebp-60],xmm0
+mov eax,[factory+4] { (085B5340) }
+mov ecx,[eax]
+mov edx,KEYSave { ("Cy Test Text!!") }
+push edx
+push eax
+call dword ptr [ecx+6C]
+ret
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>595</ID>
+                  <Description>"LoginBrushsub"</Description>
+                  <LastState/>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+
+
+LgoinBrush12sub:
+mov eax,[factory+4] { (085B5340) }
+lea edx,[ebp+0C]
+movaps xmm0,[BrashFloat1D0] { (0) }
+push edx
+push 00 { 0 }
+mov [ebp+0C],00000000 { 0 }
+lea edx,[ebp-20]
+movups [ebp-20],xmm0
+mov ecx,[eax]
+push edx
+push eax
+call dword ptr [ecx+20]
+mov eax,[Packtory] { (085C46A0) }
+lea edx,[ebp+14]
+push edx
+push Direct2DKEYX-4 { (0) }
+mov [ebp+14],00000000 { 0 }
+mov ecx,[eax]
+push ecx
+mov [esp],(float)15 { 128.00 }
+push 5 { 5 }
+push 00 { 0 }
+push 00000100 { 144 } //글씨 굵기
+push 0 { 0 }
+push Direct2DKEYX { (0) }
+push eax
+call dword ptr [ecx+3C]
+push 14 { 14 }//size
+xor eax,eax
+mov [ebp-44],00000000 { 0 }
+push ecx
+lea ecx,[ebp-44]
+mov [ebp-34],00000000 { 0 }
+mov [ebp-30],00000007 { 7 }
+mov [ebp-44],ax
+call MainMetaX
+mov esi,[ebp+0C]
+mov [ebp-4C],(float)840 { 840.00 }
+mov [ebp-48],(float)540  { 540.00 }
+movss xmm0,[ebp-4C]
+push 0 { 0 }
+push 0 { 1 }
+push esi
+lea esi,[ebp-6C]
+movss [ebp-64],xmm0
+movss xmm0,[ebp-48]
+push esi
+mov edi,[ebp+14]
+push edi
+push [ebp-34]
+mov [ebp-6C],(float)328 { 0 }//x
+mov [ebp-68],(float)355{ 0 }//y
+movss [ebp-60],xmm0
+mov eax,[factory+4] { (085B5340) }
+mov ecx,[eax]
+mov edx,6CMeta { ("Cy Test Text!!") }
+push edx
+push eax
+call dword ptr [ecx+6C]
+ret
+
+label(StartBrush12)
+
+LgoinBrush12:
+cmp [logoinSX],2
+je LgoinBrush12sub
+cmp [logoinSX],1
+je StartBrush12
+ret
+
+StartBrush12:
+mov eax,[factory+4] { (085B5340) }
+lea edx,[ebp+0C]
+movaps xmm0,[BrashFloat1D0] { (0) }
+push edx
+push 00 { 0 }
+mov [ebp+0C],00000000 { 0 }
+lea edx,[ebp-20]
+movups [ebp-20],xmm0
+mov ecx,[eax]
+push edx
+push eax
+call dword ptr [ecx+20]
+mov eax,[Packtory] { (085C46A0) }
+lea edx,[ebp+14]
+push edx
+push Direct2DKEYX-4 { (0) }
+mov [ebp+14],00000000 { 0 }
+mov ecx,[eax]
+push ecx
+mov [esp],(float)15 { 128.00 }
+push 5 { 5 }
+push 00 { 0 }
+push 00000100 { 144 } //글씨 굵기
+push 0 { 0 }
+push Direct2DKEYX { (0) }
+push eax
+call dword ptr [ecx+3C]
+push 14 { 14 }//size
+xor eax,eax
+mov [ebp-44],00000000 { 0 }
+push ecx
+lea ecx,[ebp-44]
+mov [ebp-34],00000000 { 0 }
+mov [ebp-30],00000007 { 7 }
+mov [ebp-44],ax
+call MainMetaX
+mov esi,[ebp+0C]
+mov [ebp-4C],(float)840 { 840.00 }
+mov [ebp-48],(float)540  { 540.00 }
+movss xmm0,[ebp-4C]
+push 0 { 0 }
+push 0 { 1 }
+push esi
+lea esi,[ebp-6C]
+movss [ebp-64],xmm0
+movss xmm0,[ebp-48]
+push esi
+mov edi,[ebp+14]
+push edi
+push [ebp-34]
+mov [ebp-6C],(float)329 { 0 }//x
+mov [ebp-68],(float)328 { 0 }//y
+movss [ebp-60],xmm0
+mov eax,[factory+4] { (085B5340) }
+mov ecx,[eax]
+mov edx,6CMeta { ("Cy Test Text!!") }
+push edx
+push eax
+call dword ptr [ecx+6C]
+ret
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>600</ID>
+      <Description>"LoginBrush2"</Description>
+      <LastState/>
+      <Color>669974</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+LgoinBrush2:
+mov eax,[factory+4] { (085B5340) }
+lea edx,[ebp+0C]
+movaps xmm0,[BrashFloat1D0] { (0) }
+push edx
+push 00 { 0 }
+mov [ebp+0C],00000000 { 0 }
+lea edx,[ebp-20]
+movups [ebp-20],xmm0
+mov ecx,[eax]
+push edx
+push eax
+call dword ptr [ecx+20]
+mov eax,[Packtory] { (085C46A0) }
+lea edx,[ebp+14]
+push edx
+push Direct2DKEYX-4 { (0) }
+mov [ebp+14],00000000 { 0 }
+mov ecx,[eax]
+push ecx
+mov [esp],(float)15 { 128.00 }
+push 5 { 5 }
+push 00 { 0 }
+push 00000100 { 144 } //글씨 굵기
+push 0 { 0 }
+push Direct2DKEYX { (0) }
+push eax
+call dword ptr [ecx+3C]
+push 1a { 14 }//size
+xor eax,eax
+mov [ebp-44],00000000 { 0 }
+push ecx
+lea ecx,[ebp-44]
+mov [ebp-34],00000000 { 0 }
+mov [ebp-30],00000007 { 7 }
+mov [ebp-44],ax
+call MainMetaX
+mov esi,[ebp+0C]
+mov [ebp-4C],(float)840 { 840.00 }
+mov [ebp-48],(float)540  { 540.00 }
+movss xmm0,[ebp-4C]
+push 0 { 0 }
+push 0 { 1 }
+push esi
+lea esi,[ebp-6C]
+movss [ebp-64],xmm0
+movss xmm0,[ebp-48]
+push esi
+mov edi,[ebp+14]
+push edi
+push [ebp-34]
+mov [ebp-6C],(float)333 { 0 }//x
+mov [ebp-68],(float)355 { 0 }//y
+movss [ebp-60],xmm0
+mov eax,[factory+4] { (085B5340) }
+mov ecx,[eax]
+mov edx,KEYSave2 { ("Cy Test Text!!") }
+push edx
+push eax
+call dword ptr [ecx+6C]
+ret
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>355</ID>
+      <Description>"메인 팩토리 3 그리기"</Description>
+      <LastState/>
+      <Color>800000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+imageDiagramXsubmain:
+push 00 { 0 }
+push 01 { 1 }
+push ecx
+movss xmm0,[Pointer+38] { (1.00) } //floatPointer
+movss [esp],xmm0
+mov eax,[UIIPointer]//
+add eax,18
+push eax//FloatX-8
+mov edi,[ebp+14]
+add eax,edi
+mov eax,[factory+8] { (08033D70) }
+push eax
+mov ecx,[factory+4] { (0343E1B8) }
+mov edx,[ecx]
+mov eax,[factory+4] { (0343E1B8) }
+push eax
+mov ecx,[edx+68]
+call ecx
+ret
+
+
+imageDiagramXsub:
+push 00 { 0 }
+push 01 { 1 }
+push ecx
+movss xmm0,[Pointer+38] { (1.00) } //floatPointer
+movss [esp],xmm0
+mov eax,[UIIPointer]//
+add eax,18
+mov edi,[ebp+24]
+add eax,edi
+push eax//FloatX-8
+mov edi,[ebp+14]
+add eax,edi
+mov eax,[factory+8+edi] { (08033D70) }
+push eax
+mov ecx,[factory+4] { (0343E1B8) }
+mov edx,[ecx]
+mov eax,[factory+4] { (0343E1B8) }
+push eax
+mov ecx,[edx+68]
+call ecx
+ret
+
+
+
+imageDiagramX:
+//call BrushMainX
+//1
+mov [ebp+14],0
+mov [ebp+24],0
+
+//
+call imageDiagramXsubmain //1
+
+add [ebp+24],24
+add [ebp+14],4
+call imageDiagramXsub //2
+add [ebp+24],24
+add [ebp+14],4
+call imageDiagramXsub //3
+add [ebp+24],24
+add [ebp+14],4
+call imageDiagramXsub //4
+add [ebp+24],24
+add [ebp+14],4
+call imageDiagramXsub //4
+add [ebp+24],24
+add [ebp+14],4
+call imageDiagramXsub //5
+ret
+
+
+
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>441</ID>
+          <Description>"메인 팩토리 3,4 인자 생성기"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+DirectXMainCon:
+push ebp
+mov ebp,esp
+sub esp,000000C0 { 192 }
+push ebx
+push esi
+push edi
+mov edi,ebp
+xor ecx,ecx
+mov eax,CCCCCCCC { -858993460 }
+repe stosd
+mov eax,[factory+4] { (0343E1B8) }
+mov ecx,[eax]
+mov esi,esp
+mov edx,[factory+4] { (0343E1B8) }
+push edx
+mov eax,[ecx+000000C0]
+call eax
+call imageDiagramX
+
+call LgoinBrush12
+call LgoinBrush1
+
+call LgoinBrush2
+
+push 00 { 0 }
+push 00 { 0 }
+mov eax,[factory+4] { (0343E1B8) }
+mov ecx,[eax]
+mov edx,[factory+4] { (0343E1B8) }
+push edx
+mov eax,[ecx+000000C4]
+call eax
+lea esp,[ebp+4]
+lea ebp,[ebp+4]
+
+inc [DebugCount]
+push 1
+call sleep
+mov edi,0
+mov eax,0
+mov ebx,0
+mov ecx,0
+jmp DirectXMainCon
+
+
+
+createThread(DirectXMainCon)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>471</ID>
+              <Description>"화면조정"</Description>
+              <LastState/>
+              <Color>FF00FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+scrinRestartsub:
+add [ebp+24],24
+mov ecx,[Pointer+40]
+mov edi,[ebp+24]
+lea ecx,[ecx+44+edi]
+movss xmm0,[ecx] { (1520.00) }
+addss xmm0,[ebp+c] { (244.00) }
+movss [ecx],xmm0 { (1520.00) }
+movss xmm0,[ebp+c] { (1520.00) }
+movss [ecx-8],xmm0 { (1520.00) }
+mov ecx,[Pointer+40]
+mov edi,[ebp+24]
+lea ecx,[ecx+48+edi]
+movss xmm0,[ecx] { (1520.00) }
+addss xmm0,[ebp+10] { (296.00) }
+movss [ecx],xmm0 { (1520.00) }
+movss xmm0,[ebp+10] { (1520.00) }
+movss [ecx-8],xmm0 { (1520.00) }
+ret
+
+scrinRestart:
+//1화면
+mov [ebp+c],(float)244
+mov [ebp+10],(float)296
+mov ecx,[Pointer+40]
+lea ecx,[ecx+44]
+movss xmm0,[ecx] { (1520.00) }
+addss xmm0,[ebp+c] { (244.00) }
+movss [ecx],xmm0 { (1520.00) }
+movss xmm0,[ebp+c] { (1520.00) }
+movss [ecx-8],xmm0 { (1520.00) }
+mov ecx,[Pointer+40]
+lea ecx,[ecx+48]
+movss xmm0,[ecx] { (1520.00) }
+addss xmm0,[ebp+10] { (296.00) }
+movss [ecx],xmm0 { (1520.00) }
+movss xmm0,[ebp+10] { (1520.00) }
+movss [ecx-8],xmm0 { (1520.00) }
+//로그인 로고
+mov [ebp+24],0
+//2아이디 패스워드
+mov [ebp+c],(float)283
+mov [ebp+10],(float)413
+call scrinRestartsub
+//3 확인
+mov [ebp+c],(float)369
+mov [ebp+10],(float)424
+call scrinRestartsub
+//4 취소
+mov [ebp+c],(float)441
+mov [ebp+10],(float)423
+call scrinRestartsub
+
+//5마우스
+mov [ebp+c],(float)441
+mov [ebp+10],(float)423
+call scrinRestartsub
+
+ret
+
+
+createThread(scrinRestart)
+
+
+
+[DISABLE]
+
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>486</ID>
+              <Description>"마우스 디버그+깜빡임 관리기"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+label(loginSetZero)
+label(loginSetZero2)
+label(woncodezero)
+MouseMovs:
+mov [ebp+20],0
+mov [ebp+24],0
+woncodezero:
+push Mouseallocx//[Msize+f4]
+call USER32.GetPhysicalCursorPos
+push Mouseallocx
+push [Handle]
+call USER32.ScreenToClient
+mov eax,[Mouseallocx]
+mov ebx,[Mouseallocy]
+mov ecx,[factory+8+8+c]
+mov edi,[ecx-84]
+mov esi,[ecx-80]
+add edi,eax
+add esi,ebx
+
+mov [ebp+10],eax
+mov [ebp+14],ebx
+mov [ebp+18],edi
+mov [ebp+1c],esi
+xor eax,eax
+xor ebx,ebx
+xor edi,edi
+xor esi,esi
+
+mov ecx,[Pointer+40]
+lea ecx,[ecx+cc]
+cvtsi2ss xmm0,[ebp+10]
+movss [ecx],xmm0 { (0.00) } //Y저장
+cvtsi2ss xmm0,[ebp+14]
+movss [ecx+4],xmm0 { (0.00) } //X저장
+
+cvtsi2ss xmm0,[ebp+18]
+movss [ecx+8],xmm0 { (0.00) } //Y저장
+cvtsi2ss xmm0,[ebp+1c]
+movss [ecx+c],xmm0 { (0.00) } //X저장
+
+inc [ebp+20]
+cmp [ebp+20],#80
+jae loginSetZero2
+cmp [ebp+20],#40
+jae loginSetZero
+push 1
+call sleep
+jmp woncodezero
+
+loginSetZero:
+mov [6CMeta],0
+push 1
+call sleep
+jmp woncodezero
+
+
+loginSetZero2:
+mov [ebp+20],0
+mov [6CMeta],6c
+jmp woncodezero
+
+createThread(MouseMovs)
+
+
+
+
+[DISABLE]
+
+
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>606</ID>
+              <Description>"로그인 스위치 관리기//x 326 506////////// y 330 349 /x 326 506////////// y 357 374"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+label(EamulX1)
+
+label(EamulY1)
+label(EamulY2)
+label(EamulYB2)
+label(login1)
+label(login2)
+
+LgoinSwitchContolo:
+push 1
+call sleep
+mov eax,[basep]
+test eax,eax
+je LgoinSwitchContolo
+lea eax,[eax+30]
+test eax,eax
+je LgoinSwitchContolo
+cmp [eax],#161
+jne LgoinSwitchContolo
+cmp [Mouseallocx],#326
+jae EamulX1
+jmp LgoinSwitchContolo
+
+EamulX1:
+cmp [Mouseallocx],#506
+jbe EamulY1
+jmp LgoinSwitchContolo
+
+
+EamulY1:
+cmp [Mouseallocy],#357
+jae EamulYB2
+cmp [Mouseallocy],#330
+jae EamulY2
+jmp LgoinSwitchContolo
+
+EamulY2:
+cmp [Mouseallocy],#349
+jbe login1
+jmp LgoinSwitchContolo
+
+EamulYB2:
+cmp [Mouseallocy],#374
+jbe login2
+jmp LgoinSwitchContolo
+
+login1:
+mov [logoinSX],1
+jmp LgoinSwitchContolo
+
+login2:
+mov [logoinSX],2
+jmp LgoinSwitchContolo
+createThread(LgoinSwitchContolo)
+[DISABLE]
+
+
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>487</ID>
+              <Description>"Debug"</Description>
+              <ShowAsSigned>1</ShowAsSigned>
+              <Color>808000</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>6CMeta</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>449</ID>
+                  <Description>"메일창0 암호창1 "</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>FFFF00</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>logoinSX</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>406</ID>
+      <Description>"x"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>FF0000</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>factory+8</Address>
+      <Offsets>
+        <Offset>-84</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>440</ID>
+      <Description>"y"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>FF0000</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>factory+8</Address>
+      <Offsets>
+        <Offset>-80</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>438</ID>
+      <Description>"좌표 크기 306"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>FF0000</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>factory+8+4</Address>
+      <Offsets>
+        <Offset>-84</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>448</ID>
+      <Description>"좌표 크기169"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>FF0000</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>factory+8+4</Address>
+      <Offsets>
+        <Offset>-80</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>478</ID>
+      <Description>"좌표 크기 306"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>FF0000</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>factory+8+8+c</Address>
+      <Offsets>
+        <Offset>-84</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>477</ID>
+      <Description>"좌표 크기169"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>FF0000</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>factory+8+8+c</Address>
+      <Offsets>
+        <Offset>-80</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>294</ID>
+      <Description>"마우스 좌표 테스트"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+00601c00:
+
+push 00610000//[Msize+f4]
+call USER32.GetPhysicalCursorPos
+push 00610000
+push [Handle]
+call USER32.ScreenToClient
+
+cvtsi2ss xmm0,[00610000]
+movss [00620000],xmm0 { (0.00) } //Y저장
+cvtsi2ss xmm0,[00610004]
+movss [00620004],xmm0 { (0.00) } //X저장
+
+
+
+
+jmp 00601c00
+
+
+createThread(00601c00)
+
+
+ 
+ 
+[DISABLE]
+
+/*
+
+movss xmm0,[WindowsProjeddct5.xyb] { (60.00) }
+subss xmm0,[WindowsProjeddct5._real] { (10.00) }
+movss [WindowsProjeddct5.xyb],xmm0 { (60.00) }
+
+*/
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>453</ID>
+      <Description>"244"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>3c</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>462</ID>
+      <Description>"296"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>40</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>464</ID>
+      <Description>"삼각함수 마우스 포인터1"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>0000FF</Color>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>44+24+24+24+24-8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>465</ID>
+      <Description>"삼각함수 마우스 포인터2"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>0000FF</Color>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>48+24+24+24+24-8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>489</ID>
+      <Description>"마우스 연산 X Float"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>FF0000</Color>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>44+24+24+24+24</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>490</ID>
+      <Description>"마우스 연산 Y Float"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>FF0000</Color>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>48+24+24+24+24</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>461</ID>
+      <Description>"마우스 디버그"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+00601c00:
+
+push 00610000//[Msize+f4]
+call USER32.GetPhysicalCursorPos
+push 00610000
+push [Handle]
+call USER32.ScreenToClient
+
+cvtsi2ss xmm0,[00610000]
+movss [00620000],xmm0 { (0.00) } //Y저장
+cvtsi2ss xmm0,[00610004]
+movss [00620004],xmm0 { (0.00) } //X저장
+
+
+
+
+jmp 00601c00
+
+
+createThread(00601c00)
+
+
+
+
+[DISABLE]
+
+/*
+
+movss xmm0,[WindowsProjeddct5.xyb] { (60.00) }
+subss xmm0,[WindowsProjeddct5._real] { (10.00) }
+movss [WindowsProjeddct5.xyb],xmm0 { (60.00) }
+
+*/
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>474</ID>
+          <Description>"x"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <Color>808000</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>6CMeta</Address>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>475</ID>
+              <Description>"y"</Description>
+              <ShowAsSigned>1</ShowAsSigned>
+              <Color>808000</Color>
+              <VariableType>Float</VariableType>
+              <Address>00620000+4</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>480</ID>
+      <Description>"283"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>3c+24</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>481</ID>
+      <Description>"413"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>40+24</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>482</ID>
+      <Description>"550"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>44+24</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>483</ID>
+      <Description>"465"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>Pointer+40</Address>
+      <Offsets>
+        <Offset>48+24</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>596</ID>
+      <Description>"4byte Mouse Pointer X"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>0000FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Mouseallocx</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>597</ID>
+      <Description>"4byte Mouse Pointer Y"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>0000FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Mouseallocx+4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>598</ID>
+      <Description>"kerner32 Mouse Pointer X"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>808080</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>basep</Address>
+      <Offsets>
+        <Offset>2F8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>603</ID>
+      <Description>"kerner32 Mouse Pointer Y"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>808080</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>basep</Address>
+      <Offsets>
+        <Offset>2FC</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>610</ID>
+      <Description>"Mouse Click 162"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <Color>808080</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>basep</Address>
+      <Offsets>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>607</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>basep</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>608</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>0367FC48</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>609</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>0367FC68</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"Luncher.exe"+D220D6</Address>
+      <Comment>ebp+c
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>
